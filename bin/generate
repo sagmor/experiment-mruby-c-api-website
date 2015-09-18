@@ -1,0 +1,25 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+# Fetch latest MRuby changes
+git submodule update src
+
+base="src/include"
+
+# Generate documentation
+for path in $base/*.h $base/mruby/*.h ; do
+	header=${path#$base/}
+	echo "Processing $header"
+	headerdoc2html \
+		--allow-javadoc-syntax \
+		--output-directory "docs/$(dirname $header)" \
+		--config-file .headerdoc \
+		--process-everything \
+		--quiet \
+		$path
+done
+
+gatherheaderdoc \
+	-c .headerdoc \
+	docs index.html
