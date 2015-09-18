@@ -7,10 +7,17 @@ git submodule update src
 
 base="src/include"
 
+if [[ $# -ne 0 ]]; then
+	files=( $@ )
+else
+	files=( $(ls $base/*.h $base/*/*.h) )
+fi
+
+echo "Processing ${files[@]}"
 # Generate documentation
-for path in $base/*.h $base/mruby/*.h ; do
+for path in $files ; do
 	header=${path#$base/}
-	echo "Processing $header"
+	echo " - Now processing $header"
 	headerdoc2html \
 		--allow-javadoc-syntax \
 		--output-directory "docs/$(dirname $header)" \
@@ -20,6 +27,7 @@ for path in $base/*.h $base/mruby/*.h ; do
 		$path
 done
 
+# Generate master TOC
 gatherheaderdoc \
 	-c .headerdoc \
-	docs index.html
+	docs docs/toc.html
