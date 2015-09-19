@@ -1,1 +1,4 @@
+copyrightOwner => MRuby developers
+defaultFrameName => index.html
 apiUIDPrefix => mruby_c_api
+stripDotH => 1

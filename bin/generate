@@ -15,7 +15,7 @@ fi
 
 echo "Processing ${files[@]}"
 # Generate documentation
-for path in $files ; do
+for path in ${files[@]} ; do
 	header=${path#$base/}
 	echo " - Now processing $header"
 	headerdoc2html \
@@ -30,4 +30,4 @@ done
 # Generate master TOC
 gatherheaderdoc \
 	-c .headerdoc \
-	docs docs/toc.html
+	docs toc.html
