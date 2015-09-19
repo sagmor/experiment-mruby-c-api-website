@@ -30,4 +30,4 @@ done
 # Generate master TOC
 gatherheaderdoc \
 	-c .headerdoc \
-	docs toc.html
+	. index.html
