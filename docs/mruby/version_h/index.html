@@ -1,0 +1,446 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>version.h</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<meta name="xcode-display" content="render">
+<style type="text/css"><!--body {border: 0px; margin: 0px;}div {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}td {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}span.hd_tocAccessSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroupSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroup { display: block; font-weight: bold; font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; margin-left: 0px; padding-left: 40px; }span.hd_tocGroup + span.hd_tocAccess { padding-top: 5px; }td.toc_contents_text {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; }li.tocSubEntry {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}p {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}h2.h2tight { margin-top: 0px; padding-top: 0px; }h1 { margin-top: 13px; padding-top: 0px; }h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}h5 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10.1pt; font-weight: bold;}pre {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666; font-size: 10pt;}pre a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}pre a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}body  {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt; padding-left: 0px; padding-top: 0px; margin-left: 0px; margin-top: 0px; border: none; }#hd_outermost_table { margin-left: 0px; border-spacing: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; }#hd_outermost_table > tbody > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tbody > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-top: 3px; }.afterName { display: none; }.list_indent { margin-left: 40px; }.declaration_indent { margin-left: 40px; margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px; min-height: 12px; vertical-align: middle; }.declaration_indent pre { margin-top: 20px; padding-top: 0px; margin-bottom: 20px; padding-bottom: 0px; }.gapBeforeFooter { display: none; }hr { height: 0px; min-height: 0px; border-top: none; border-left: none; border-right: none; border-bottom: 1px solid #909090;}hr.afterHeader { display: none }.param_group_indent { margin-left: 25px; }.param_indent { margin-left: 40px; margin-top: 0px; padding-top: 0px; }.param_indent dl { margin-top: 4px; padding-top: 0px; }dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.param_indent dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.group_indent { margin-left: 40px; }.group_desc_indent { margin-left: 20px; }.warning_indent { margin-left: 40px; }.important_indent { margin-left: 40px; }.note_indent { margin-left: 40px; }h3 {       color: #3C4C6C;}.tight {       margin-top: 2px; margin-bottom: 0px;       padding-top: 0px; padding-bottom: 0px;}h3 a {       color: #3C4C6C;	font-size: 16px;	font-style: normal;	font-variant: normal;	font-weight: bold;	height: 0px;	line-height: normal;}.hd_tocAccess { display: block; margin-left: 40px; font-style: italic; font-size: 10px; font-weight: normal; color: #303030; }.tocSubheading { margin-bottom: 4px; }--></style>
+<style><!--
+body {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+.toc_contents_text {
+    padding-left: 1em;
+    text-indent: -1em;
+}
+
+ul.tocSubEntryList li.tocSubEntry {
+    list-style: none;
+}
+
+#colorbox {
+		display: none;
+}
+.spec_sheet_line {
+		margin-bottom: 1px;
+}
+.collapsible {
+		display: none;
+}
+.toc_leadspace {
+		width: 10; min-width: 10;
+}
+.disclosure_triangle_td {
+		width: 14; min-width: 14;
+		font-size: 10px;
+		vertical-align: middle;
+}
+.specbox td {
+		font-size: 13px;
+}
+.specbox td a {
+		font-size: 13px;
+}
+.specbox td code {
+		font-size: 13px;
+}
+.specbox td tt {
+		font-size: 13px;
+}
+.specbox td pre {
+		font-size: 13px;
+}
+.specbox a {
+		font-size: 12px;
+}
+.disclosure_triangle_td a {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:link {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:active {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:visited:hover {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:hover {
+		text-decoration: none;
+}
+.hd_toc_box {
+		padding-top: 10px;
+		padding-right: 15px;
+}.tocSeparator {
+		margin-top: 15px;
+		padding-bottom: 0px;
+		margin-bottom: 0px;
+}
+.tocSubEntryList {
+		margin-left: 0px;
+		padding-left: 40px;
+		padding-top: 0px;
+		margin-top: 2px;
+		padding-bottom: 0px;
+		margin-bottom: 8px;
+}
+.hd_toc_heading_table {
+		margin-top: 2px;
+		margin-bottom: 2px;
+}
+.hd_toc_entry_table {
+		margin-top: 2px;
+		margin-bottom: 2px;
+}
+.tocSubEntry {
+		margin-left: 0px;
+		padding-left: 0px;
+		margin-top: 0px;
+		margin-bottom: 1px;
+}
+.tocSubEntry a {
+		font-size: 10pt;
+}
+.tocSubheading {
+		padding-left: 14px;
+		margin-left: 0px;
+		margin-top: 5px;
+		padding-top: 0px;
+		font-size: 16px;
+		color: #808080;
+}
+
+#hd_outermost_table { margin-left: 0px; border-spacing: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }
+#hd_outermost_table > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }
+#hd_outermost_table > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; }
+#hd_outermost_table > tbody > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }
+#hd_outermost_table > tbody > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-top: 3px; }
+
+#tocMenu {
+		border-right: 1px solid #c0c0c0;
+		background-color: #f4f4ff;
+		top:0px;
+		left:0px;
+		width:230px;
+		height:100%;
+}
+#bodyContents {
+		width: auto;
+		padding-left: 15px;
+}
+--></style>
+<style id="disable_before_iOS_5"><!--
+#tocMenu {
+		position: fixed;
+		height: 100%;
+		overflow: auto;
+}
+#bodyContents {
+		width: auto;
+		left: 235px;
+		right: 0;
+		padding-left: 15px;
+		position: fixed;
+		height: 100%;
+		overflow-y: scroll;
+}
+--></style>
+<script language="JavaScript" type="text/javascript"><!--
+    if (navigator.platform && (navigator.platform.match(/iPad/) || navigator.platform.match(/iPhone/) || navigator.platform.match(/iPod/))) {
+        if (navigator.userAgent.match(/OS 1(_\d)+/) ||
+            navigator.userAgent.match(/OS 2(_\d)+/) ||
+            navigator.userAgent.match(/OS 3(_\d)+/) ||
+            navigator.userAgent.match(/OS 4(_\d)+/)) {
+                /* Earlier iOS versions require different scrolling gestures with position: fixed. */
+                var del_style_elt = document.getElementById("disable_before_iOS_5");
+                if (del_style_elt) del_style_elt.parentNode.removeChild(del_style_elt);
+        }
+    }
+// --></script><script language="JavaScript" type="text/javascript"><!--
+function getNewHTTPObject()
+{
+        var xmlhttp;
+
+        /** Special IE only code ... */
+        /*@cc_on
+          @if (@_jscript_version >= 5)
+              try
+              {
+                  xmlhttp = new ActiveXObject('Msxml2.XMLHTTP');
+              }
+              catch (e)
+              {
+                  try
+                  {
+                      xmlhttp = new ActiveXObject('Microsoft.XMLHTTP');
+                  }
+                  catch (E)
+                  {
+                      xmlhttp = false;
+                  }
+             }
+          @else
+             xmlhttp = false;
+        @end @*/
+
+        /** Every other browser on the planet */
+        if (!xmlhttp && typeof XMLHttpRequest != 'undefined')
+        {
+            try
+            {
+                xmlhttp = new XMLHttpRequest();
+            }
+            catch (e)
+            {
+                xmlhttp = false;
+            }
+        }
+
+        return xmlhttp;
+}
+
+function hidetoc() {
+	var toc = document.getElementById('tocMenu');
+	var src = toc.getAttribute('src');
+	var xhr = getNewHTTPObject();
+	xhr.open('GET', src, true);
+	xhr.onreadystatechange = function() {
+		if(xhr.readyState == 4) {
+			var toc = document.getElementById('tocMenu');
+			toc.innerHTML = xhr.responseText;
+		}
+	}
+	xhr.send(null);
+	var origURL = parent.document.URL;
+	var contentURL = origURL.substring(origURL.indexOf('?')+1, origURL.length);
+	if (contentURL.length == origURL.length) {
+		jumpPos = origURL.substring(origURL.indexOf('#')+1, origURL.length);
+	}
+	if (contentURL == "hidetoc") {
+		var body = document.getElementById('bodyContents');
+		if (toc && body) {
+			toc.style.display = 'none';
+			body.style.marginLeft = '0px';
+		}
+	}
+}
+
+function disclosure_triangle(elt) {
+   var linkelt = elt;
+   while (elt && elt.tagName != 'TABLE') { elt = elt.parentNode;}
+   if (!elt) { return; }
+   while (elt && elt.tagName != 'DIV') { elt = elt.nextSibling;}
+   if (!elt) { return; }
+   if (parseInt(linkelt.getAttribute('state'))) {
+      // It's open.  Close it
+      linkelt.innerHTML = '&#x25B7;';
+      linkelt.setAttribute('state', 0);
+      linkelt.setAttribute('class', 'closed_disclosure_triangle');
+      elt.style.display = 'none';
+   } else {
+      // It's closed.  Open it
+      linkelt.innerHTML = '&#x25BC;';
+      linkelt.setAttribute('state', 1);
+      linkelt.setAttribute('class', 'open_disclosure_triangle');
+      elt.style.display = 'block';
+   }
+}
+--></script><style type="text/css"><!--body {border: 0px; margin: 0px;}div {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}td {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}span.hd_tocAccessSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroupSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroup { display: block; font-weight: bold; font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; margin-left: 0px; padding-left: 40px; }span.hd_tocGroup + span.hd_tocAccess { padding-top: 5px; }td.toc_contents_text {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; }li.tocSubEntry {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}p {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}h2.h2tight { margin-top: 0px; padding-top: 0px; }h1 { margin-top: 13px; padding-top: 0px; }h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}h5 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10.1pt; font-weight: bold;}pre {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666; font-size: 10pt;}pre a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}pre a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}body  {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt; padding-left: 0px; padding-top: 0px; margin-left: 0px; margin-top: 0px; border: none; }#hd_outermost_table { margin-left: 0px; border-spacing: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; }#hd_outermost_table > tbody > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tbody > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-top: 3px; }.afterName { display: none; }.list_indent { margin-left: 40px; }.declaration_indent { margin-left: 40px; margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px; min-height: 12px; vertical-align: middle; }.declaration_indent pre { margin-top: 20px; padding-top: 0px; margin-bottom: 20px; padding-bottom: 0px; }.gapBeforeFooter { display: none; }hr { height: 0px; min-height: 0px; border-top: none; border-left: none; border-right: none; border-bottom: 1px solid #909090;}hr.afterHeader { display: none }.param_group_indent { margin-left: 25px; }.param_indent { margin-left: 40px; margin-top: 0px; padding-top: 0px; }.param_indent dl { margin-top: 4px; padding-top: 0px; }dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.param_indent dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.group_indent { margin-left: 40px; }.group_desc_indent { margin-left: 20px; }.warning_indent { margin-left: 40px; }.important_indent { margin-left: 40px; }.note_indent { margin-left: 40px; }h3 {       color: #3C4C6C;}.tight {       margin-top: 2px; margin-bottom: 0px;       padding-top: 0px; padding-bottom: 0px;}h3 a {       color: #3C4C6C;	font-size: 16px;	font-style: normal;	font-variant: normal;	font-weight: bold;	height: 0px;	line-height: normal;}.hd_tocAccess { display: block; margin-left: 40px; font-style: italic; font-size: 10px; font-weight: normal; color: #303030; }.tocSubheading { margin-bottom: 4px; }--></style>
+</head>
+<body bgcolor="#ffffff" onload="hidetoc();">
+<!-- headerDoc=Header;  uid=//mruby_c_api/doc/header/version.h;   name=version.h -->
+<a name="//mruby_c_api/doc/header/version.h"></a>
+<table id="hd_outermost_table" height="100%" width="100%"><tr>
+<td valign="top" id="tocMenu" src="toc.html"></td>
+<td id="bodyContents" valign="top">
+<a name="top"></a>
+<h1><a name="version.h">version.h</a></h1>
+<h2>Introduction</h2>
+<p><!-- headerDoc=abstract;uid=//mruby_c_api/doc/header/version.h;name=start --><!-- begin abstract -->Use the links in the table of contents to the left to access the documentation.<br><!-- end abstract --><!-- headerDoc=abstract;uid=//mruby_c_api/doc/header/version.h;name=end --></p>
+<hr class="afterClassOrHeaderInfo">
+<br><a name="HeaderDoc_pdefines"></a>
+<h2 class="h2tight">Macro Definitions</h2>
+<dl>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/MRB_STRINGIZE" target="_top">MRB_STRINGIZE</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/MRB_STRINGIZE0" target="_top">MRB_STRINGIZE0</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/MRUBY_AUTHOR" target="_top">MRUBY_AUTHOR</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/MRUBY_BIRTH_YEAR" target="_top">MRUBY_BIRTH_YEAR</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/MRUBY_COPYRIGHT" target="_top">MRUBY_COPYRIGHT</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/MRUBY_DESCRIPTION" target="_top">MRUBY_DESCRIPTION</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/MRUBY_RELEASE_DATE" target="_top">MRUBY_RELEASE_DATE</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/MRUBY_RELEASE_DAY" target="_top">MRUBY_RELEASE_DAY</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/MRUBY_RELEASE_MAJOR" target="_top">MRUBY_RELEASE_MAJOR</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/MRUBY_RELEASE_MINOR" target="_top">MRUBY_RELEASE_MINOR</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/MRUBY_RELEASE_MONTH" target="_top">MRUBY_RELEASE_MONTH</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/MRUBY_RELEASE_NO" target="_top">MRUBY_RELEASE_NO</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/MRUBY_RELEASE_TEENY" target="_top">MRUBY_RELEASE_TEENY</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/MRUBY_RELEASE_YEAR" target="_top">MRUBY_RELEASE_YEAR</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/MRUBY_RUBY_ENGINE" target="_top">MRUBY_RUBY_ENGINE</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/MRUBY_RUBY_VERSION" target="_top">MRUBY_RUBY_VERSION</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/MRUBY_VERSION" target="_top">MRUBY_VERSION</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/MRUBY_VERSION_H" target="_top">MRUBY_VERSION_H</a></tt></dt>
+<dd></dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/MRB_STRINGIZE;   name=MRB_STRINGIZE --><a name="//mruby_c_api/c/macro/MRB_STRINGIZE"></a>
+<h3><a name="MRB_STRINGIZE">MRB_STRINGIZE</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRB_STRINGIZE;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRB_STRINGIZE" logicalPath="//mruby_c_api/c/cl/MRB_STRINGIZE //mruby_c_api/c/tdef/MRB_STRINGIZE //mruby_c_api/c/tag/MRB_STRINGIZE //mruby_c_api/c/struct/MRB_STRINGIZE //mruby_c_api/c/intf/MRB_STRINGIZE //mruby_c_api/c/econst/MRB_STRINGIZE //mruby_c_api/c/data/MRB_STRINGIZE //mruby_c_api/c/clconst/MRB_STRINGIZE //mruby_c_api/c/instm/MRB_STRINGIZE //mruby_c_api/c/clm/MRB_STRINGIZE //mruby_c_api/c/intfcm/MRB_STRINGIZE //mruby_c_api/c/intfm/MRB_STRINGIZE //mruby_c_api/c/func/MRB_STRINGIZE //mruby_c_api/c/ftmplt/MRB_STRINGIZE //mruby_c_api/c/defn/MRB_STRINGIZE //mruby_c_api/c/macro/MRB_STRINGIZE" target="_top"><span class="preprocessor">MRB_STRINGIZE</span></a><span class="preprocessor">(</span><!-- a logicalPath="//mruby_c_api/c/cl/expr //mruby_c_api/c/tdef/expr //mruby_c_api/c/tag/expr //mruby_c_api/c/struct/expr //mruby_c_api/c/intf/expr //mruby_c_api/c/econst/expr //mruby_c_api/c/data/expr //mruby_c_api/c/clconst/expr //mruby_c_api/c/instm/expr //mruby_c_api/c/clm/expr //mruby_c_api/c/intfcm/expr //mruby_c_api/c/intfm/expr //mruby_c_api/c/func/expr //mruby_c_api/c/ftmplt/expr //mruby_c_api/c/defn/expr //mruby_c_api/c/macro/expr //mruby_c_api/doc/com/intfm/expr //mruby_c_api/doc/anysymbol/expr" machineGenerated="true" --><span class="preprocessor">expr</span><!-- /a --><span class="preprocessor">)</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRB_STRINGIZE0" logicalPath="//mruby_c_api/c/cl/MRB_STRINGIZE0 //mruby_c_api/c/tdef/MRB_STRINGIZE0 //mruby_c_api/c/tag/MRB_STRINGIZE0 //mruby_c_api/c/struct/MRB_STRINGIZE0 //mruby_c_api/c/intf/MRB_STRINGIZE0 //mruby_c_api/c/econst/MRB_STRINGIZE0 //mruby_c_api/c/data/MRB_STRINGIZE0 //mruby_c_api/c/clconst/MRB_STRINGIZE0 //mruby_c_api/c/instm/MRB_STRINGIZE0 //mruby_c_api/c/clm/MRB_STRINGIZE0 //mruby_c_api/c/intfcm/MRB_STRINGIZE0 //mruby_c_api/c/intfm/MRB_STRINGIZE0 //mruby_c_api/c/func/MRB_STRINGIZE0 //mruby_c_api/c/ftmplt/MRB_STRINGIZE0 //mruby_c_api/c/defn/MRB_STRINGIZE0 //mruby_c_api/c/macro/MRB_STRINGIZE0" target="_top"><span class="preprocessor">MRB_STRINGIZE0</span></a><span class="preprocessor">(</span><!-- a logicalPath="//mruby_c_api/c/cl/expr //mruby_c_api/c/tdef/expr //mruby_c_api/c/tag/expr //mruby_c_api/c/struct/expr //mruby_c_api/c/intf/expr //mruby_c_api/c/econst/expr //mruby_c_api/c/data/expr //mruby_c_api/c/clconst/expr //mruby_c_api/c/instm/expr //mruby_c_api/c/clm/expr //mruby_c_api/c/intfcm/expr //mruby_c_api/c/intfm/expr //mruby_c_api/c/func/expr //mruby_c_api/c/ftmplt/expr //mruby_c_api/c/defn/expr //mruby_c_api/c/macro/expr //mruby_c_api/doc/com/intfm/expr //mruby_c_api/doc/anysymbol/expr" machineGenerated="true" --><span class="preprocessor">expr</span><!-- /a --><span class="preprocessor">)</span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRB_STRINGIZE;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/MRB_STRINGIZE0;   name=MRB_STRINGIZE0 --><a name="//mruby_c_api/c/macro/MRB_STRINGIZE0"></a>
+<h3><a name="MRB_STRINGIZE0">MRB_STRINGIZE0</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRB_STRINGIZE0;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRB_STRINGIZE0" logicalPath="//mruby_c_api/c/cl/MRB_STRINGIZE0 //mruby_c_api/c/tdef/MRB_STRINGIZE0 //mruby_c_api/c/tag/MRB_STRINGIZE0 //mruby_c_api/c/struct/MRB_STRINGIZE0 //mruby_c_api/c/intf/MRB_STRINGIZE0 //mruby_c_api/c/econst/MRB_STRINGIZE0 //mruby_c_api/c/data/MRB_STRINGIZE0 //mruby_c_api/c/clconst/MRB_STRINGIZE0 //mruby_c_api/c/instm/MRB_STRINGIZE0 //mruby_c_api/c/clm/MRB_STRINGIZE0 //mruby_c_api/c/intfcm/MRB_STRINGIZE0 //mruby_c_api/c/intfm/MRB_STRINGIZE0 //mruby_c_api/c/func/MRB_STRINGIZE0 //mruby_c_api/c/ftmplt/MRB_STRINGIZE0 //mruby_c_api/c/defn/MRB_STRINGIZE0 //mruby_c_api/c/macro/MRB_STRINGIZE0" target="_top"><span class="preprocessor">MRB_STRINGIZE0</span></a><span class="preprocessor">(</span><!-- a logicalPath="//mruby_c_api/c/cl/expr //mruby_c_api/c/tdef/expr //mruby_c_api/c/tag/expr //mruby_c_api/c/struct/expr //mruby_c_api/c/intf/expr //mruby_c_api/c/econst/expr //mruby_c_api/c/data/expr //mruby_c_api/c/clconst/expr //mruby_c_api/c/instm/expr //mruby_c_api/c/clm/expr //mruby_c_api/c/intfcm/expr //mruby_c_api/c/intfm/expr //mruby_c_api/c/func/expr //mruby_c_api/c/ftmplt/expr //mruby_c_api/c/defn/expr //mruby_c_api/c/macro/expr //mruby_c_api/doc/com/intfm/expr //mruby_c_api/doc/anysymbol/expr" machineGenerated="true" --><span class="preprocessor">expr</span><!-- /a --><span class="preprocessor">)</span> <span class="preprocessor">#</span><!-- a logicalPath="//mruby_c_api/c/cl/expr //mruby_c_api/c/tdef/expr //mruby_c_api/c/tag/expr //mruby_c_api/c/struct/expr //mruby_c_api/c/intf/expr //mruby_c_api/c/econst/expr //mruby_c_api/c/data/expr //mruby_c_api/c/clconst/expr //mruby_c_api/c/instm/expr //mruby_c_api/c/clm/expr //mruby_c_api/c/intfcm/expr //mruby_c_api/c/intfm/expr //mruby_c_api/c/func/expr //mruby_c_api/c/ftmplt/expr //mruby_c_api/c/defn/expr //mruby_c_api/c/macro/expr //mruby_c_api/doc/com/intfm/expr //mruby_c_api/doc/anysymbol/expr" machineGenerated="true" --><span class="preprocessor">expr</span><!-- /a --> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRB_STRINGIZE0;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/MRUBY_AUTHOR;   name=MRUBY_AUTHOR --><a name="//mruby_c_api/c/macro/MRUBY_AUTHOR"></a>
+<h3><a name="MRUBY_AUTHOR">MRUBY_AUTHOR</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRUBY_AUTHOR;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRUBY_AUTHOR" logicalPath="//mruby_c_api/c/cl/MRUBY_AUTHOR //mruby_c_api/c/tdef/MRUBY_AUTHOR //mruby_c_api/c/tag/MRUBY_AUTHOR //mruby_c_api/c/struct/MRUBY_AUTHOR //mruby_c_api/c/intf/MRUBY_AUTHOR //mruby_c_api/c/econst/MRUBY_AUTHOR //mruby_c_api/c/data/MRUBY_AUTHOR //mruby_c_api/c/clconst/MRUBY_AUTHOR //mruby_c_api/c/instm/MRUBY_AUTHOR //mruby_c_api/c/clm/MRUBY_AUTHOR //mruby_c_api/c/intfcm/MRUBY_AUTHOR //mruby_c_api/c/intfm/MRUBY_AUTHOR //mruby_c_api/c/func/MRUBY_AUTHOR //mruby_c_api/c/ftmplt/MRUBY_AUTHOR //mruby_c_api/c/defn/MRUBY_AUTHOR //mruby_c_api/c/macro/MRUBY_AUTHOR" target="_top"><span class="preprocessor">MRUBY_AUTHOR</span></a> <span class="preprocessor">"</span><!-- a logicalPath="//mruby_c_api/c/cl/mruby //mruby_c_api/c/tdef/mruby //mruby_c_api/c/tag/mruby //mruby_c_api/c/struct/mruby //mruby_c_api/c/intf/mruby //mruby_c_api/c/econst/mruby //mruby_c_api/c/data/mruby //mruby_c_api/c/clconst/mruby //mruby_c_api/c/instm/mruby //mruby_c_api/c/clm/mruby //mruby_c_api/c/intfcm/mruby //mruby_c_api/c/intfm/mruby //mruby_c_api/c/func/mruby //mruby_c_api/c/ftmplt/mruby //mruby_c_api/c/defn/mruby //mruby_c_api/c/macro/mruby //mruby_c_api/doc/com/intfm/mruby //mruby_c_api/doc/anysymbol/mruby" machineGenerated="true" --><span class="preprocessor">mruby</span><!-- /a --> <!-- a logicalPath="//mruby_c_api/c/cl/developers //mruby_c_api/c/tdef/developers //mruby_c_api/c/tag/developers //mruby_c_api/c/struct/developers //mruby_c_api/c/intf/developers //mruby_c_api/c/econst/developers //mruby_c_api/c/data/developers //mruby_c_api/c/clconst/developers //mruby_c_api/c/instm/developers //mruby_c_api/c/clm/developers //mruby_c_api/c/intfcm/developers //mruby_c_api/c/intfm/developers //mruby_c_api/c/func/developers //mruby_c_api/c/ftmplt/developers //mruby_c_api/c/defn/developers //mruby_c_api/c/macro/developers //mruby_c_api/doc/com/intfm/developers //mruby_c_api/doc/anysymbol/developers" machineGenerated="true" --><span class="preprocessor">developers</span><!-- /a --><span class="preprocessor">"</span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRUBY_AUTHOR;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/MRUBY_BIRTH_YEAR;   name=MRUBY_BIRTH_YEAR --><a name="//mruby_c_api/c/macro/MRUBY_BIRTH_YEAR"></a>
+<h3><a name="MRUBY_BIRTH_YEAR">MRUBY_BIRTH_YEAR</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRUBY_BIRTH_YEAR;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRUBY_BIRTH_YEAR" logicalPath="//mruby_c_api/c/cl/MRUBY_BIRTH_YEAR //mruby_c_api/c/tdef/MRUBY_BIRTH_YEAR //mruby_c_api/c/tag/MRUBY_BIRTH_YEAR //mruby_c_api/c/struct/MRUBY_BIRTH_YEAR //mruby_c_api/c/intf/MRUBY_BIRTH_YEAR //mruby_c_api/c/econst/MRUBY_BIRTH_YEAR //mruby_c_api/c/data/MRUBY_BIRTH_YEAR //mruby_c_api/c/clconst/MRUBY_BIRTH_YEAR //mruby_c_api/c/instm/MRUBY_BIRTH_YEAR //mruby_c_api/c/clm/MRUBY_BIRTH_YEAR //mruby_c_api/c/intfcm/MRUBY_BIRTH_YEAR //mruby_c_api/c/intfm/MRUBY_BIRTH_YEAR //mruby_c_api/c/func/MRUBY_BIRTH_YEAR //mruby_c_api/c/ftmplt/MRUBY_BIRTH_YEAR //mruby_c_api/c/defn/MRUBY_BIRTH_YEAR //mruby_c_api/c/macro/MRUBY_BIRTH_YEAR" target="_top"><span class="preprocessor">MRUBY_BIRTH_YEAR</span></a> <span class="preprocessor">2010</span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRUBY_BIRTH_YEAR;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/MRUBY_COPYRIGHT;   name=MRUBY_COPYRIGHT --><a name="//mruby_c_api/c/macro/MRUBY_COPYRIGHT"></a>
+<h3><a name="MRUBY_COPYRIGHT">MRUBY_COPYRIGHT</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRUBY_COPYRIGHT;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRUBY_COPYRIGHT" logicalPath="//mruby_c_api/c/cl/MRUBY_COPYRIGHT //mruby_c_api/c/tdef/MRUBY_COPYRIGHT //mruby_c_api/c/tag/MRUBY_COPYRIGHT //mruby_c_api/c/struct/MRUBY_COPYRIGHT //mruby_c_api/c/intf/MRUBY_COPYRIGHT //mruby_c_api/c/econst/MRUBY_COPYRIGHT //mruby_c_api/c/data/MRUBY_COPYRIGHT //mruby_c_api/c/clconst/MRUBY_COPYRIGHT //mruby_c_api/c/instm/MRUBY_COPYRIGHT //mruby_c_api/c/clm/MRUBY_COPYRIGHT //mruby_c_api/c/intfcm/MRUBY_COPYRIGHT //mruby_c_api/c/intfm/MRUBY_COPYRIGHT //mruby_c_api/c/func/MRUBY_COPYRIGHT //mruby_c_api/c/ftmplt/MRUBY_COPYRIGHT //mruby_c_api/c/defn/MRUBY_COPYRIGHT //mruby_c_api/c/macro/MRUBY_COPYRIGHT" target="_top"><span class="preprocessor">MRUBY_COPYRIGHT</span></a> <span class="preprocessor">\</span> 
+    <span class="preprocessor">"</span><!-- a logicalPath="//mruby_c_api/c/cl/mruby //mruby_c_api/c/tdef/mruby //mruby_c_api/c/tag/mruby //mruby_c_api/c/struct/mruby //mruby_c_api/c/intf/mruby //mruby_c_api/c/econst/mruby //mruby_c_api/c/data/mruby //mruby_c_api/c/clconst/mruby //mruby_c_api/c/instm/mruby //mruby_c_api/c/clm/mruby //mruby_c_api/c/intfcm/mruby //mruby_c_api/c/intfm/mruby //mruby_c_api/c/func/mruby //mruby_c_api/c/ftmplt/mruby //mruby_c_api/c/defn/mruby //mruby_c_api/c/macro/mruby //mruby_c_api/doc/com/intfm/mruby //mruby_c_api/doc/anysymbol/mruby" machineGenerated="true" --><span class="preprocessor">mruby</span><!-- /a --> <span class="preprocessor">-</span> <!-- a logicalPath="//mruby_c_api/c/cl/Copyright //mruby_c_api/c/tdef/Copyright //mruby_c_api/c/tag/Copyright //mruby_c_api/c/struct/Copyright //mruby_c_api/c/intf/Copyright //mruby_c_api/c/econst/Copyright //mruby_c_api/c/data/Copyright //mruby_c_api/c/clconst/Copyright //mruby_c_api/c/instm/Copyright //mruby_c_api/c/clm/Copyright //mruby_c_api/c/intfcm/Copyright //mruby_c_api/c/intfm/Copyright //mruby_c_api/c/func/Copyright //mruby_c_api/c/ftmplt/Copyright //mruby_c_api/c/defn/Copyright //mruby_c_api/c/macro/Copyright //mruby_c_api/doc/com/intfm/Copyright //mruby_c_api/doc/anysymbol/Copyright" machineGenerated="true" --><span class="preprocessor">Copyright</span><!-- /a --> <span class="preprocessor">(</span><!-- a logicalPath="//mruby_c_api/c/cl/c //mruby_c_api/c/tdef/c //mruby_c_api/c/tag/c //mruby_c_api/c/struct/c //mruby_c_api/c/intf/c //mruby_c_api/c/econst/c //mruby_c_api/c/data/c //mruby_c_api/c/clconst/c //mruby_c_api/c/instm/c //mruby_c_api/c/clm/c //mruby_c_api/c/intfcm/c //mruby_c_api/c/intfm/c //mruby_c_api/c/func/c //mruby_c_api/c/ftmplt/c //mruby_c_api/c/defn/c //mruby_c_api/c/macro/c //mruby_c_api/doc/com/intfm/c //mruby_c_api/doc/anysymbol/c" machineGenerated="true" --><span class="preprocessor">c</span><!-- /a --><span class="preprocessor">)</span> <span class="preprocessor">"</span> <span class="preprocessor">\</span> 
+    <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRB_STRINGIZE" logicalPath="//mruby_c_api/c/cl/MRB_STRINGIZE //mruby_c_api/c/tdef/MRB_STRINGIZE //mruby_c_api/c/tag/MRB_STRINGIZE //mruby_c_api/c/struct/MRB_STRINGIZE //mruby_c_api/c/intf/MRB_STRINGIZE //mruby_c_api/c/econst/MRB_STRINGIZE //mruby_c_api/c/data/MRB_STRINGIZE //mruby_c_api/c/clconst/MRB_STRINGIZE //mruby_c_api/c/instm/MRB_STRINGIZE //mruby_c_api/c/clm/MRB_STRINGIZE //mruby_c_api/c/intfcm/MRB_STRINGIZE //mruby_c_api/c/intfm/MRB_STRINGIZE //mruby_c_api/c/func/MRB_STRINGIZE //mruby_c_api/c/ftmplt/MRB_STRINGIZE //mruby_c_api/c/defn/MRB_STRINGIZE //mruby_c_api/c/macro/MRB_STRINGIZE" target="_top"><span class="preprocessor">MRB_STRINGIZE</span></a><span class="preprocessor">(</span><a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRUBY_BIRTH_YEAR" logicalPath="//mruby_c_api/c/cl/MRUBY_BIRTH_YEAR //mruby_c_api/c/tdef/MRUBY_BIRTH_YEAR //mruby_c_api/c/tag/MRUBY_BIRTH_YEAR //mruby_c_api/c/struct/MRUBY_BIRTH_YEAR //mruby_c_api/c/intf/MRUBY_BIRTH_YEAR //mruby_c_api/c/econst/MRUBY_BIRTH_YEAR //mruby_c_api/c/data/MRUBY_BIRTH_YEAR //mruby_c_api/c/clconst/MRUBY_BIRTH_YEAR //mruby_c_api/c/instm/MRUBY_BIRTH_YEAR //mruby_c_api/c/clm/MRUBY_BIRTH_YEAR //mruby_c_api/c/intfcm/MRUBY_BIRTH_YEAR //mruby_c_api/c/intfm/MRUBY_BIRTH_YEAR //mruby_c_api/c/func/MRUBY_BIRTH_YEAR //mruby_c_api/c/ftmplt/MRUBY_BIRTH_YEAR //mruby_c_api/c/defn/MRUBY_BIRTH_YEAR //mruby_c_api/c/macro/MRUBY_BIRTH_YEAR" target="_top"><span class="preprocessor">MRUBY_BIRTH_YEAR</span></a><span class="preprocessor">)</span><span class="preprocessor">"</span><span class="preprocessor">-</span><span class="preprocessor">"</span> <span class="preprocessor">\</span> 
+    <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRB_STRINGIZE" logicalPath="//mruby_c_api/c/cl/MRB_STRINGIZE //mruby_c_api/c/tdef/MRB_STRINGIZE //mruby_c_api/c/tag/MRB_STRINGIZE //mruby_c_api/c/struct/MRB_STRINGIZE //mruby_c_api/c/intf/MRB_STRINGIZE //mruby_c_api/c/econst/MRB_STRINGIZE //mruby_c_api/c/data/MRB_STRINGIZE //mruby_c_api/c/clconst/MRB_STRINGIZE //mruby_c_api/c/instm/MRB_STRINGIZE //mruby_c_api/c/clm/MRB_STRINGIZE //mruby_c_api/c/intfcm/MRB_STRINGIZE //mruby_c_api/c/intfm/MRB_STRINGIZE //mruby_c_api/c/func/MRB_STRINGIZE //mruby_c_api/c/ftmplt/MRB_STRINGIZE //mruby_c_api/c/defn/MRB_STRINGIZE //mruby_c_api/c/macro/MRB_STRINGIZE" target="_top"><span class="preprocessor">MRB_STRINGIZE</span></a><span class="preprocessor">(</span><a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRUBY_RELEASE_YEAR" logicalPath="//mruby_c_api/c/cl/MRUBY_RELEASE_YEAR //mruby_c_api/c/tdef/MRUBY_RELEASE_YEAR //mruby_c_api/c/tag/MRUBY_RELEASE_YEAR //mruby_c_api/c/struct/MRUBY_RELEASE_YEAR //mruby_c_api/c/intf/MRUBY_RELEASE_YEAR //mruby_c_api/c/econst/MRUBY_RELEASE_YEAR //mruby_c_api/c/data/MRUBY_RELEASE_YEAR //mruby_c_api/c/clconst/MRUBY_RELEASE_YEAR //mruby_c_api/c/instm/MRUBY_RELEASE_YEAR //mruby_c_api/c/clm/MRUBY_RELEASE_YEAR //mruby_c_api/c/intfcm/MRUBY_RELEASE_YEAR //mruby_c_api/c/intfm/MRUBY_RELEASE_YEAR //mruby_c_api/c/func/MRUBY_RELEASE_YEAR //mruby_c_api/c/ftmplt/MRUBY_RELEASE_YEAR //mruby_c_api/c/defn/MRUBY_RELEASE_YEAR //mruby_c_api/c/macro/MRUBY_RELEASE_YEAR" target="_top"><span class="preprocessor">MRUBY_RELEASE_YEAR</span></a><span class="preprocessor">)</span><span class="preprocessor">"</span> <span class="preprocessor">"</span> <span class="preprocessor">\</span> 
+    <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRUBY_AUTHOR" logicalPath="//mruby_c_api/c/cl/MRUBY_AUTHOR //mruby_c_api/c/tdef/MRUBY_AUTHOR //mruby_c_api/c/tag/MRUBY_AUTHOR //mruby_c_api/c/struct/MRUBY_AUTHOR //mruby_c_api/c/intf/MRUBY_AUTHOR //mruby_c_api/c/econst/MRUBY_AUTHOR //mruby_c_api/c/data/MRUBY_AUTHOR //mruby_c_api/c/clconst/MRUBY_AUTHOR //mruby_c_api/c/instm/MRUBY_AUTHOR //mruby_c_api/c/clm/MRUBY_AUTHOR //mruby_c_api/c/intfcm/MRUBY_AUTHOR //mruby_c_api/c/intfm/MRUBY_AUTHOR //mruby_c_api/c/func/MRUBY_AUTHOR //mruby_c_api/c/ftmplt/MRUBY_AUTHOR //mruby_c_api/c/defn/MRUBY_AUTHOR //mruby_c_api/c/macro/MRUBY_AUTHOR" target="_top"><span class="preprocessor">MRUBY_AUTHOR</span></a> <span class="preprocessor">\</span>  <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRUBY_COPYRIGHT;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/MRUBY_DESCRIPTION;   name=MRUBY_DESCRIPTION --><a name="//mruby_c_api/c/macro/MRUBY_DESCRIPTION"></a>
+<h3><a name="MRUBY_DESCRIPTION">MRUBY_DESCRIPTION</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRUBY_DESCRIPTION;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRUBY_DESCRIPTION" logicalPath="//mruby_c_api/c/cl/MRUBY_DESCRIPTION //mruby_c_api/c/tdef/MRUBY_DESCRIPTION //mruby_c_api/c/tag/MRUBY_DESCRIPTION //mruby_c_api/c/struct/MRUBY_DESCRIPTION //mruby_c_api/c/intf/MRUBY_DESCRIPTION //mruby_c_api/c/econst/MRUBY_DESCRIPTION //mruby_c_api/c/data/MRUBY_DESCRIPTION //mruby_c_api/c/clconst/MRUBY_DESCRIPTION //mruby_c_api/c/instm/MRUBY_DESCRIPTION //mruby_c_api/c/clm/MRUBY_DESCRIPTION //mruby_c_api/c/intfcm/MRUBY_DESCRIPTION //mruby_c_api/c/intfm/MRUBY_DESCRIPTION //mruby_c_api/c/func/MRUBY_DESCRIPTION //mruby_c_api/c/ftmplt/MRUBY_DESCRIPTION //mruby_c_api/c/defn/MRUBY_DESCRIPTION //mruby_c_api/c/macro/MRUBY_DESCRIPTION" target="_top"><span class="preprocessor">MRUBY_DESCRIPTION</span></a> <span class="preprocessor">\</span> 
+    <span class="preprocessor">"</span><!-- a logicalPath="//mruby_c_api/c/cl/mruby //mruby_c_api/c/tdef/mruby //mruby_c_api/c/tag/mruby //mruby_c_api/c/struct/mruby //mruby_c_api/c/intf/mruby //mruby_c_api/c/econst/mruby //mruby_c_api/c/data/mruby //mruby_c_api/c/clconst/mruby //mruby_c_api/c/instm/mruby //mruby_c_api/c/clm/mruby //mruby_c_api/c/intfcm/mruby //mruby_c_api/c/intfm/mruby //mruby_c_api/c/func/mruby //mruby_c_api/c/ftmplt/mruby //mruby_c_api/c/defn/mruby //mruby_c_api/c/macro/mruby //mruby_c_api/doc/com/intfm/mruby //mruby_c_api/doc/anysymbol/mruby" machineGenerated="true" --><span class="preprocessor">mruby</span><!-- /a --> <span class="preprocessor">"</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRUBY_VERSION" logicalPath="//mruby_c_api/c/cl/MRUBY_VERSION //mruby_c_api/c/tdef/MRUBY_VERSION //mruby_c_api/c/tag/MRUBY_VERSION //mruby_c_api/c/struct/MRUBY_VERSION //mruby_c_api/c/intf/MRUBY_VERSION //mruby_c_api/c/econst/MRUBY_VERSION //mruby_c_api/c/data/MRUBY_VERSION //mruby_c_api/c/clconst/MRUBY_VERSION //mruby_c_api/c/instm/MRUBY_VERSION //mruby_c_api/c/clm/MRUBY_VERSION //mruby_c_api/c/intfcm/MRUBY_VERSION //mruby_c_api/c/intfm/MRUBY_VERSION //mruby_c_api/c/func/MRUBY_VERSION //mruby_c_api/c/ftmplt/MRUBY_VERSION //mruby_c_api/c/defn/MRUBY_VERSION //mruby_c_api/c/macro/MRUBY_VERSION" target="_top"><span class="preprocessor">MRUBY_VERSION</span></a> <span class="preprocessor">\</span> 
+    <span class="preprocessor">"</span> <span class="preprocessor">(</span><span class="preprocessor">"</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRUBY_RELEASE_DATE" logicalPath="//mruby_c_api/c/cl/MRUBY_RELEASE_DATE //mruby_c_api/c/tdef/MRUBY_RELEASE_DATE //mruby_c_api/c/tag/MRUBY_RELEASE_DATE //mruby_c_api/c/struct/MRUBY_RELEASE_DATE //mruby_c_api/c/intf/MRUBY_RELEASE_DATE //mruby_c_api/c/econst/MRUBY_RELEASE_DATE //mruby_c_api/c/data/MRUBY_RELEASE_DATE //mruby_c_api/c/clconst/MRUBY_RELEASE_DATE //mruby_c_api/c/instm/MRUBY_RELEASE_DATE //mruby_c_api/c/clm/MRUBY_RELEASE_DATE //mruby_c_api/c/intfcm/MRUBY_RELEASE_DATE //mruby_c_api/c/intfm/MRUBY_RELEASE_DATE //mruby_c_api/c/func/MRUBY_RELEASE_DATE //mruby_c_api/c/ftmplt/MRUBY_RELEASE_DATE //mruby_c_api/c/defn/MRUBY_RELEASE_DATE //mruby_c_api/c/macro/MRUBY_RELEASE_DATE" target="_top"><span class="preprocessor">MRUBY_RELEASE_DATE</span></a> <span class="preprocessor">"</span><span class="preprocessor">)</span> <span class="preprocessor">"</span> <span class="preprocessor">\</span>  <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRUBY_DESCRIPTION;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/MRUBY_RELEASE_DATE;   name=MRUBY_RELEASE_DATE --><a name="//mruby_c_api/c/macro/MRUBY_RELEASE_DATE"></a>
+<h3><a name="MRUBY_RELEASE_DATE">MRUBY_RELEASE_DATE</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRUBY_RELEASE_DATE;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRUBY_RELEASE_DATE" logicalPath="//mruby_c_api/c/cl/MRUBY_RELEASE_DATE //mruby_c_api/c/tdef/MRUBY_RELEASE_DATE //mruby_c_api/c/tag/MRUBY_RELEASE_DATE //mruby_c_api/c/struct/MRUBY_RELEASE_DATE //mruby_c_api/c/intf/MRUBY_RELEASE_DATE //mruby_c_api/c/econst/MRUBY_RELEASE_DATE //mruby_c_api/c/data/MRUBY_RELEASE_DATE //mruby_c_api/c/clconst/MRUBY_RELEASE_DATE //mruby_c_api/c/instm/MRUBY_RELEASE_DATE //mruby_c_api/c/clm/MRUBY_RELEASE_DATE //mruby_c_api/c/intfcm/MRUBY_RELEASE_DATE //mruby_c_api/c/intfm/MRUBY_RELEASE_DATE //mruby_c_api/c/func/MRUBY_RELEASE_DATE //mruby_c_api/c/ftmplt/MRUBY_RELEASE_DATE //mruby_c_api/c/defn/MRUBY_RELEASE_DATE //mruby_c_api/c/macro/MRUBY_RELEASE_DATE" target="_top"><span class="preprocessor">MRUBY_RELEASE_DATE</span></a> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRB_STRINGIZE" logicalPath="//mruby_c_api/c/cl/MRB_STRINGIZE //mruby_c_api/c/tdef/MRB_STRINGIZE //mruby_c_api/c/tag/MRB_STRINGIZE //mruby_c_api/c/struct/MRB_STRINGIZE //mruby_c_api/c/intf/MRB_STRINGIZE //mruby_c_api/c/econst/MRB_STRINGIZE //mruby_c_api/c/data/MRB_STRINGIZE //mruby_c_api/c/clconst/MRB_STRINGIZE //mruby_c_api/c/instm/MRB_STRINGIZE //mruby_c_api/c/clm/MRB_STRINGIZE //mruby_c_api/c/intfcm/MRB_STRINGIZE //mruby_c_api/c/intfm/MRB_STRINGIZE //mruby_c_api/c/func/MRB_STRINGIZE //mruby_c_api/c/ftmplt/MRB_STRINGIZE //mruby_c_api/c/defn/MRB_STRINGIZE //mruby_c_api/c/macro/MRB_STRINGIZE" target="_top"><span class="preprocessor">MRB_STRINGIZE</span></a><span class="preprocessor">(</span><a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRUBY_RELEASE_YEAR" logicalPath="//mruby_c_api/c/cl/MRUBY_RELEASE_YEAR //mruby_c_api/c/tdef/MRUBY_RELEASE_YEAR //mruby_c_api/c/tag/MRUBY_RELEASE_YEAR //mruby_c_api/c/struct/MRUBY_RELEASE_YEAR //mruby_c_api/c/intf/MRUBY_RELEASE_YEAR //mruby_c_api/c/econst/MRUBY_RELEASE_YEAR //mruby_c_api/c/data/MRUBY_RELEASE_YEAR //mruby_c_api/c/clconst/MRUBY_RELEASE_YEAR //mruby_c_api/c/instm/MRUBY_RELEASE_YEAR //mruby_c_api/c/clm/MRUBY_RELEASE_YEAR //mruby_c_api/c/intfcm/MRUBY_RELEASE_YEAR //mruby_c_api/c/intfm/MRUBY_RELEASE_YEAR //mruby_c_api/c/func/MRUBY_RELEASE_YEAR //mruby_c_api/c/ftmplt/MRUBY_RELEASE_YEAR //mruby_c_api/c/defn/MRUBY_RELEASE_YEAR //mruby_c_api/c/macro/MRUBY_RELEASE_YEAR" target="_top"><span class="preprocessor">MRUBY_RELEASE_YEAR</span></a><span class="preprocessor">)</span> <span class="preprocessor">"</span><span class="preprocessor">-</span><span class="preprocessor">"</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRB_STRINGIZE" logicalPath="//mruby_c_api/c/cl/MRB_STRINGIZE //mruby_c_api/c/tdef/MRB_STRINGIZE //mruby_c_api/c/tag/MRB_STRINGIZE //mruby_c_api/c/struct/MRB_STRINGIZE //mruby_c_api/c/intf/MRB_STRINGIZE //mruby_c_api/c/econst/MRB_STRINGIZE //mruby_c_api/c/data/MRB_STRINGIZE //mruby_c_api/c/clconst/MRB_STRINGIZE //mruby_c_api/c/instm/MRB_STRINGIZE //mruby_c_api/c/clm/MRB_STRINGIZE //mruby_c_api/c/intfcm/MRB_STRINGIZE //mruby_c_api/c/intfm/MRB_STRINGIZE //mruby_c_api/c/func/MRB_STRINGIZE //mruby_c_api/c/ftmplt/MRB_STRINGIZE //mruby_c_api/c/defn/MRB_STRINGIZE //mruby_c_api/c/macro/MRB_STRINGIZE" target="_top"><span class="preprocessor">MRB_STRINGIZE</span></a><span class="preprocessor">(</span><a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRUBY_RELEASE_MONTH" logicalPath="//mruby_c_api/c/cl/MRUBY_RELEASE_MONTH //mruby_c_api/c/tdef/MRUBY_RELEASE_MONTH //mruby_c_api/c/tag/MRUBY_RELEASE_MONTH //mruby_c_api/c/struct/MRUBY_RELEASE_MONTH //mruby_c_api/c/intf/MRUBY_RELEASE_MONTH //mruby_c_api/c/econst/MRUBY_RELEASE_MONTH //mruby_c_api/c/data/MRUBY_RELEASE_MONTH //mruby_c_api/c/clconst/MRUBY_RELEASE_MONTH //mruby_c_api/c/instm/MRUBY_RELEASE_MONTH //mruby_c_api/c/clm/MRUBY_RELEASE_MONTH //mruby_c_api/c/intfcm/MRUBY_RELEASE_MONTH //mruby_c_api/c/intfm/MRUBY_RELEASE_MONTH //mruby_c_api/c/func/MRUBY_RELEASE_MONTH //mruby_c_api/c/ftmplt/MRUBY_RELEASE_MONTH //mruby_c_api/c/defn/MRUBY_RELEASE_MONTH //mruby_c_api/c/macro/MRUBY_RELEASE_MONTH" target="_top"><span class="preprocessor">MRUBY_RELEASE_MONTH</span></a><span class="preprocessor">)</span> <span class="preprocessor">"</span><span class="preprocessor">-</span><span class="preprocessor">"</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRB_STRINGIZE" logicalPath="//mruby_c_api/c/cl/MRB_STRINGIZE //mruby_c_api/c/tdef/MRB_STRINGIZE //mruby_c_api/c/tag/MRB_STRINGIZE //mruby_c_api/c/struct/MRB_STRINGIZE //mruby_c_api/c/intf/MRB_STRINGIZE //mruby_c_api/c/econst/MRB_STRINGIZE //mruby_c_api/c/data/MRB_STRINGIZE //mruby_c_api/c/clconst/MRB_STRINGIZE //mruby_c_api/c/instm/MRB_STRINGIZE //mruby_c_api/c/clm/MRB_STRINGIZE //mruby_c_api/c/intfcm/MRB_STRINGIZE //mruby_c_api/c/intfm/MRB_STRINGIZE //mruby_c_api/c/func/MRB_STRINGIZE //mruby_c_api/c/ftmplt/MRB_STRINGIZE //mruby_c_api/c/defn/MRB_STRINGIZE //mruby_c_api/c/macro/MRB_STRINGIZE" target="_top"><span class="preprocessor">MRB_STRINGIZE</span></a><span class="preprocessor">(</span><a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRUBY_RELEASE_DAY" logicalPath="//mruby_c_api/c/cl/MRUBY_RELEASE_DAY //mruby_c_api/c/tdef/MRUBY_RELEASE_DAY //mruby_c_api/c/tag/MRUBY_RELEASE_DAY //mruby_c_api/c/struct/MRUBY_RELEASE_DAY //mruby_c_api/c/intf/MRUBY_RELEASE_DAY //mruby_c_api/c/econst/MRUBY_RELEASE_DAY //mruby_c_api/c/data/MRUBY_RELEASE_DAY //mruby_c_api/c/clconst/MRUBY_RELEASE_DAY //mruby_c_api/c/instm/MRUBY_RELEASE_DAY //mruby_c_api/c/clm/MRUBY_RELEASE_DAY //mruby_c_api/c/intfcm/MRUBY_RELEASE_DAY //mruby_c_api/c/intfm/MRUBY_RELEASE_DAY //mruby_c_api/c/func/MRUBY_RELEASE_DAY //mruby_c_api/c/ftmplt/MRUBY_RELEASE_DAY //mruby_c_api/c/defn/MRUBY_RELEASE_DAY //mruby_c_api/c/macro/MRUBY_RELEASE_DAY" target="_top"><span class="preprocessor">MRUBY_RELEASE_DAY</span></a><span class="preprocessor">)</span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRUBY_RELEASE_DATE;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/MRUBY_RELEASE_DAY;   name=MRUBY_RELEASE_DAY --><a name="//mruby_c_api/c/macro/MRUBY_RELEASE_DAY"></a>
+<h3><a name="MRUBY_RELEASE_DAY">MRUBY_RELEASE_DAY</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRUBY_RELEASE_DAY;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRUBY_RELEASE_DAY" logicalPath="//mruby_c_api/c/cl/MRUBY_RELEASE_DAY //mruby_c_api/c/tdef/MRUBY_RELEASE_DAY //mruby_c_api/c/tag/MRUBY_RELEASE_DAY //mruby_c_api/c/struct/MRUBY_RELEASE_DAY //mruby_c_api/c/intf/MRUBY_RELEASE_DAY //mruby_c_api/c/econst/MRUBY_RELEASE_DAY //mruby_c_api/c/data/MRUBY_RELEASE_DAY //mruby_c_api/c/clconst/MRUBY_RELEASE_DAY //mruby_c_api/c/instm/MRUBY_RELEASE_DAY //mruby_c_api/c/clm/MRUBY_RELEASE_DAY //mruby_c_api/c/intfcm/MRUBY_RELEASE_DAY //mruby_c_api/c/intfm/MRUBY_RELEASE_DAY //mruby_c_api/c/func/MRUBY_RELEASE_DAY //mruby_c_api/c/ftmplt/MRUBY_RELEASE_DAY //mruby_c_api/c/defn/MRUBY_RELEASE_DAY //mruby_c_api/c/macro/MRUBY_RELEASE_DAY" target="_top"><span class="preprocessor">MRUBY_RELEASE_DAY</span></a> <span class="preprocessor">19</span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRUBY_RELEASE_DAY;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/MRUBY_RELEASE_MAJOR;   name=MRUBY_RELEASE_MAJOR --><a name="//mruby_c_api/c/macro/MRUBY_RELEASE_MAJOR"></a>
+<h3><a name="MRUBY_RELEASE_MAJOR">MRUBY_RELEASE_MAJOR</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRUBY_RELEASE_MAJOR;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRUBY_RELEASE_MAJOR" logicalPath="//mruby_c_api/c/cl/MRUBY_RELEASE_MAJOR //mruby_c_api/c/tdef/MRUBY_RELEASE_MAJOR //mruby_c_api/c/tag/MRUBY_RELEASE_MAJOR //mruby_c_api/c/struct/MRUBY_RELEASE_MAJOR //mruby_c_api/c/intf/MRUBY_RELEASE_MAJOR //mruby_c_api/c/econst/MRUBY_RELEASE_MAJOR //mruby_c_api/c/data/MRUBY_RELEASE_MAJOR //mruby_c_api/c/clconst/MRUBY_RELEASE_MAJOR //mruby_c_api/c/instm/MRUBY_RELEASE_MAJOR //mruby_c_api/c/clm/MRUBY_RELEASE_MAJOR //mruby_c_api/c/intfcm/MRUBY_RELEASE_MAJOR //mruby_c_api/c/intfm/MRUBY_RELEASE_MAJOR //mruby_c_api/c/func/MRUBY_RELEASE_MAJOR //mruby_c_api/c/ftmplt/MRUBY_RELEASE_MAJOR //mruby_c_api/c/defn/MRUBY_RELEASE_MAJOR //mruby_c_api/c/macro/MRUBY_RELEASE_MAJOR" target="_top"><span class="preprocessor">MRUBY_RELEASE_MAJOR</span></a> <span class="preprocessor">1</span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRUBY_RELEASE_MAJOR;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/MRUBY_RELEASE_MINOR;   name=MRUBY_RELEASE_MINOR --><a name="//mruby_c_api/c/macro/MRUBY_RELEASE_MINOR"></a>
+<h3><a name="MRUBY_RELEASE_MINOR">MRUBY_RELEASE_MINOR</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRUBY_RELEASE_MINOR;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRUBY_RELEASE_MINOR" logicalPath="//mruby_c_api/c/cl/MRUBY_RELEASE_MINOR //mruby_c_api/c/tdef/MRUBY_RELEASE_MINOR //mruby_c_api/c/tag/MRUBY_RELEASE_MINOR //mruby_c_api/c/struct/MRUBY_RELEASE_MINOR //mruby_c_api/c/intf/MRUBY_RELEASE_MINOR //mruby_c_api/c/econst/MRUBY_RELEASE_MINOR //mruby_c_api/c/data/MRUBY_RELEASE_MINOR //mruby_c_api/c/clconst/MRUBY_RELEASE_MINOR //mruby_c_api/c/instm/MRUBY_RELEASE_MINOR //mruby_c_api/c/clm/MRUBY_RELEASE_MINOR //mruby_c_api/c/intfcm/MRUBY_RELEASE_MINOR //mruby_c_api/c/intfm/MRUBY_RELEASE_MINOR //mruby_c_api/c/func/MRUBY_RELEASE_MINOR //mruby_c_api/c/ftmplt/MRUBY_RELEASE_MINOR //mruby_c_api/c/defn/MRUBY_RELEASE_MINOR //mruby_c_api/c/macro/MRUBY_RELEASE_MINOR" target="_top"><span class="preprocessor">MRUBY_RELEASE_MINOR</span></a> <span class="preprocessor">1</span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRUBY_RELEASE_MINOR;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/MRUBY_RELEASE_MONTH;   name=MRUBY_RELEASE_MONTH --><a name="//mruby_c_api/c/macro/MRUBY_RELEASE_MONTH"></a>
+<h3><a name="MRUBY_RELEASE_MONTH">MRUBY_RELEASE_MONTH</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRUBY_RELEASE_MONTH;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRUBY_RELEASE_MONTH" logicalPath="//mruby_c_api/c/cl/MRUBY_RELEASE_MONTH //mruby_c_api/c/tdef/MRUBY_RELEASE_MONTH //mruby_c_api/c/tag/MRUBY_RELEASE_MONTH //mruby_c_api/c/struct/MRUBY_RELEASE_MONTH //mruby_c_api/c/intf/MRUBY_RELEASE_MONTH //mruby_c_api/c/econst/MRUBY_RELEASE_MONTH //mruby_c_api/c/data/MRUBY_RELEASE_MONTH //mruby_c_api/c/clconst/MRUBY_RELEASE_MONTH //mruby_c_api/c/instm/MRUBY_RELEASE_MONTH //mruby_c_api/c/clm/MRUBY_RELEASE_MONTH //mruby_c_api/c/intfcm/MRUBY_RELEASE_MONTH //mruby_c_api/c/intfm/MRUBY_RELEASE_MONTH //mruby_c_api/c/func/MRUBY_RELEASE_MONTH //mruby_c_api/c/ftmplt/MRUBY_RELEASE_MONTH //mruby_c_api/c/defn/MRUBY_RELEASE_MONTH //mruby_c_api/c/macro/MRUBY_RELEASE_MONTH" target="_top"><span class="preprocessor">MRUBY_RELEASE_MONTH</span></a> <span class="preprocessor">11</span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRUBY_RELEASE_MONTH;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/MRUBY_RELEASE_NO;   name=MRUBY_RELEASE_NO --><a name="//mruby_c_api/c/macro/MRUBY_RELEASE_NO"></a>
+<h3><a name="MRUBY_RELEASE_NO">MRUBY_RELEASE_NO</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRUBY_RELEASE_NO;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRUBY_RELEASE_NO" logicalPath="//mruby_c_api/c/cl/MRUBY_RELEASE_NO //mruby_c_api/c/tdef/MRUBY_RELEASE_NO //mruby_c_api/c/tag/MRUBY_RELEASE_NO //mruby_c_api/c/struct/MRUBY_RELEASE_NO //mruby_c_api/c/intf/MRUBY_RELEASE_NO //mruby_c_api/c/econst/MRUBY_RELEASE_NO //mruby_c_api/c/data/MRUBY_RELEASE_NO //mruby_c_api/c/clconst/MRUBY_RELEASE_NO //mruby_c_api/c/instm/MRUBY_RELEASE_NO //mruby_c_api/c/clm/MRUBY_RELEASE_NO //mruby_c_api/c/intfcm/MRUBY_RELEASE_NO //mruby_c_api/c/intfm/MRUBY_RELEASE_NO //mruby_c_api/c/func/MRUBY_RELEASE_NO //mruby_c_api/c/ftmplt/MRUBY_RELEASE_NO //mruby_c_api/c/defn/MRUBY_RELEASE_NO //mruby_c_api/c/macro/MRUBY_RELEASE_NO" target="_top"><span class="preprocessor">MRUBY_RELEASE_NO</span></a> <span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRUBY_RELEASE_NO;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/MRUBY_RELEASE_TEENY;   name=MRUBY_RELEASE_TEENY --><a name="//mruby_c_api/c/macro/MRUBY_RELEASE_TEENY"></a>
+<h3><a name="MRUBY_RELEASE_TEENY">MRUBY_RELEASE_TEENY</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRUBY_RELEASE_TEENY;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRUBY_RELEASE_TEENY" logicalPath="//mruby_c_api/c/cl/MRUBY_RELEASE_TEENY //mruby_c_api/c/tdef/MRUBY_RELEASE_TEENY //mruby_c_api/c/tag/MRUBY_RELEASE_TEENY //mruby_c_api/c/struct/MRUBY_RELEASE_TEENY //mruby_c_api/c/intf/MRUBY_RELEASE_TEENY //mruby_c_api/c/econst/MRUBY_RELEASE_TEENY //mruby_c_api/c/data/MRUBY_RELEASE_TEENY //mruby_c_api/c/clconst/MRUBY_RELEASE_TEENY //mruby_c_api/c/instm/MRUBY_RELEASE_TEENY //mruby_c_api/c/clm/MRUBY_RELEASE_TEENY //mruby_c_api/c/intfcm/MRUBY_RELEASE_TEENY //mruby_c_api/c/intfm/MRUBY_RELEASE_TEENY //mruby_c_api/c/func/MRUBY_RELEASE_TEENY //mruby_c_api/c/ftmplt/MRUBY_RELEASE_TEENY //mruby_c_api/c/defn/MRUBY_RELEASE_TEENY //mruby_c_api/c/macro/MRUBY_RELEASE_TEENY" target="_top"><span class="preprocessor">MRUBY_RELEASE_TEENY</span></a> <span class="preprocessor">1</span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRUBY_RELEASE_TEENY;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/MRUBY_RELEASE_YEAR;   name=MRUBY_RELEASE_YEAR --><a name="//mruby_c_api/c/macro/MRUBY_RELEASE_YEAR"></a>
+<h3><a name="MRUBY_RELEASE_YEAR">MRUBY_RELEASE_YEAR</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRUBY_RELEASE_YEAR;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRUBY_RELEASE_YEAR" logicalPath="//mruby_c_api/c/cl/MRUBY_RELEASE_YEAR //mruby_c_api/c/tdef/MRUBY_RELEASE_YEAR //mruby_c_api/c/tag/MRUBY_RELEASE_YEAR //mruby_c_api/c/struct/MRUBY_RELEASE_YEAR //mruby_c_api/c/intf/MRUBY_RELEASE_YEAR //mruby_c_api/c/econst/MRUBY_RELEASE_YEAR //mruby_c_api/c/data/MRUBY_RELEASE_YEAR //mruby_c_api/c/clconst/MRUBY_RELEASE_YEAR //mruby_c_api/c/instm/MRUBY_RELEASE_YEAR //mruby_c_api/c/clm/MRUBY_RELEASE_YEAR //mruby_c_api/c/intfcm/MRUBY_RELEASE_YEAR //mruby_c_api/c/intfm/MRUBY_RELEASE_YEAR //mruby_c_api/c/func/MRUBY_RELEASE_YEAR //mruby_c_api/c/ftmplt/MRUBY_RELEASE_YEAR //mruby_c_api/c/defn/MRUBY_RELEASE_YEAR //mruby_c_api/c/macro/MRUBY_RELEASE_YEAR" target="_top"><span class="preprocessor">MRUBY_RELEASE_YEAR</span></a> <span class="preprocessor">2014</span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRUBY_RELEASE_YEAR;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/MRUBY_RUBY_ENGINE;   name=MRUBY_RUBY_ENGINE --><a name="//mruby_c_api/c/macro/MRUBY_RUBY_ENGINE"></a>
+<h3><a name="MRUBY_RUBY_ENGINE">MRUBY_RUBY_ENGINE</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRUBY_RUBY_ENGINE;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRUBY_RUBY_ENGINE" logicalPath="//mruby_c_api/c/cl/MRUBY_RUBY_ENGINE //mruby_c_api/c/tdef/MRUBY_RUBY_ENGINE //mruby_c_api/c/tag/MRUBY_RUBY_ENGINE //mruby_c_api/c/struct/MRUBY_RUBY_ENGINE //mruby_c_api/c/intf/MRUBY_RUBY_ENGINE //mruby_c_api/c/econst/MRUBY_RUBY_ENGINE //mruby_c_api/c/data/MRUBY_RUBY_ENGINE //mruby_c_api/c/clconst/MRUBY_RUBY_ENGINE //mruby_c_api/c/instm/MRUBY_RUBY_ENGINE //mruby_c_api/c/clm/MRUBY_RUBY_ENGINE //mruby_c_api/c/intfcm/MRUBY_RUBY_ENGINE //mruby_c_api/c/intfm/MRUBY_RUBY_ENGINE //mruby_c_api/c/func/MRUBY_RUBY_ENGINE //mruby_c_api/c/ftmplt/MRUBY_RUBY_ENGINE //mruby_c_api/c/defn/MRUBY_RUBY_ENGINE //mruby_c_api/c/macro/MRUBY_RUBY_ENGINE" target="_top"><span class="preprocessor">MRUBY_RUBY_ENGINE</span></a> <span class="preprocessor">"</span><!-- a logicalPath="//mruby_c_api/c/cl/mruby //mruby_c_api/c/tdef/mruby //mruby_c_api/c/tag/mruby //mruby_c_api/c/struct/mruby //mruby_c_api/c/intf/mruby //mruby_c_api/c/econst/mruby //mruby_c_api/c/data/mruby //mruby_c_api/c/clconst/mruby //mruby_c_api/c/instm/mruby //mruby_c_api/c/clm/mruby //mruby_c_api/c/intfcm/mruby //mruby_c_api/c/intfm/mruby //mruby_c_api/c/func/mruby //mruby_c_api/c/ftmplt/mruby //mruby_c_api/c/defn/mruby //mruby_c_api/c/macro/mruby //mruby_c_api/doc/com/intfm/mruby //mruby_c_api/doc/anysymbol/mruby" machineGenerated="true" --><span class="preprocessor">mruby</span><!-- /a --><span class="preprocessor">"</span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRUBY_RUBY_ENGINE;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/MRUBY_RUBY_VERSION;   name=MRUBY_RUBY_VERSION --><a name="//mruby_c_api/c/macro/MRUBY_RUBY_VERSION"></a>
+<h3><a name="MRUBY_RUBY_VERSION">MRUBY_RUBY_VERSION</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRUBY_RUBY_VERSION;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRUBY_RUBY_VERSION" logicalPath="//mruby_c_api/c/cl/MRUBY_RUBY_VERSION //mruby_c_api/c/tdef/MRUBY_RUBY_VERSION //mruby_c_api/c/tag/MRUBY_RUBY_VERSION //mruby_c_api/c/struct/MRUBY_RUBY_VERSION //mruby_c_api/c/intf/MRUBY_RUBY_VERSION //mruby_c_api/c/econst/MRUBY_RUBY_VERSION //mruby_c_api/c/data/MRUBY_RUBY_VERSION //mruby_c_api/c/clconst/MRUBY_RUBY_VERSION //mruby_c_api/c/instm/MRUBY_RUBY_VERSION //mruby_c_api/c/clm/MRUBY_RUBY_VERSION //mruby_c_api/c/intfcm/MRUBY_RUBY_VERSION //mruby_c_api/c/intfm/MRUBY_RUBY_VERSION //mruby_c_api/c/func/MRUBY_RUBY_VERSION //mruby_c_api/c/ftmplt/MRUBY_RUBY_VERSION //mruby_c_api/c/defn/MRUBY_RUBY_VERSION //mruby_c_api/c/macro/MRUBY_RUBY_VERSION" target="_top"><span class="preprocessor">MRUBY_RUBY_VERSION</span></a> <span class="preprocessor">"</span><span class="preprocessor">1</span><span class="preprocessor">.</span><span class="preprocessor">9</span><span class="preprocessor">"</span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRUBY_RUBY_VERSION;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/MRUBY_VERSION;   name=MRUBY_VERSION --><a name="//mruby_c_api/c/macro/MRUBY_VERSION"></a>
+<h3><a name="MRUBY_VERSION">MRUBY_VERSION</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRUBY_VERSION;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRUBY_VERSION" logicalPath="//mruby_c_api/c/cl/MRUBY_VERSION //mruby_c_api/c/tdef/MRUBY_VERSION //mruby_c_api/c/tag/MRUBY_VERSION //mruby_c_api/c/struct/MRUBY_VERSION //mruby_c_api/c/intf/MRUBY_VERSION //mruby_c_api/c/econst/MRUBY_VERSION //mruby_c_api/c/data/MRUBY_VERSION //mruby_c_api/c/clconst/MRUBY_VERSION //mruby_c_api/c/instm/MRUBY_VERSION //mruby_c_api/c/clm/MRUBY_VERSION //mruby_c_api/c/intfcm/MRUBY_VERSION //mruby_c_api/c/intfm/MRUBY_VERSION //mruby_c_api/c/func/MRUBY_VERSION //mruby_c_api/c/ftmplt/MRUBY_VERSION //mruby_c_api/c/defn/MRUBY_VERSION //mruby_c_api/c/macro/MRUBY_VERSION" target="_top"><span class="preprocessor">MRUBY_VERSION</span></a> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRB_STRINGIZE" logicalPath="//mruby_c_api/c/cl/MRB_STRINGIZE //mruby_c_api/c/tdef/MRB_STRINGIZE //mruby_c_api/c/tag/MRB_STRINGIZE //mruby_c_api/c/struct/MRB_STRINGIZE //mruby_c_api/c/intf/MRB_STRINGIZE //mruby_c_api/c/econst/MRB_STRINGIZE //mruby_c_api/c/data/MRB_STRINGIZE //mruby_c_api/c/clconst/MRB_STRINGIZE //mruby_c_api/c/instm/MRB_STRINGIZE //mruby_c_api/c/clm/MRB_STRINGIZE //mruby_c_api/c/intfcm/MRB_STRINGIZE //mruby_c_api/c/intfm/MRB_STRINGIZE //mruby_c_api/c/func/MRB_STRINGIZE //mruby_c_api/c/ftmplt/MRB_STRINGIZE //mruby_c_api/c/defn/MRB_STRINGIZE //mruby_c_api/c/macro/MRB_STRINGIZE" target="_top"><span class="preprocessor">MRB_STRINGIZE</span></a><span class="preprocessor">(</span><a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRUBY_RELEASE_MAJOR" logicalPath="//mruby_c_api/c/cl/MRUBY_RELEASE_MAJOR //mruby_c_api/c/tdef/MRUBY_RELEASE_MAJOR //mruby_c_api/c/tag/MRUBY_RELEASE_MAJOR //mruby_c_api/c/struct/MRUBY_RELEASE_MAJOR //mruby_c_api/c/intf/MRUBY_RELEASE_MAJOR //mruby_c_api/c/econst/MRUBY_RELEASE_MAJOR //mruby_c_api/c/data/MRUBY_RELEASE_MAJOR //mruby_c_api/c/clconst/MRUBY_RELEASE_MAJOR //mruby_c_api/c/instm/MRUBY_RELEASE_MAJOR //mruby_c_api/c/clm/MRUBY_RELEASE_MAJOR //mruby_c_api/c/intfcm/MRUBY_RELEASE_MAJOR //mruby_c_api/c/intfm/MRUBY_RELEASE_MAJOR //mruby_c_api/c/func/MRUBY_RELEASE_MAJOR //mruby_c_api/c/ftmplt/MRUBY_RELEASE_MAJOR //mruby_c_api/c/defn/MRUBY_RELEASE_MAJOR //mruby_c_api/c/macro/MRUBY_RELEASE_MAJOR" target="_top"><span class="preprocessor">MRUBY_RELEASE_MAJOR</span></a><span class="preprocessor">)</span> <span class="preprocessor">"</span><span class="preprocessor">.</span><span class="preprocessor">"</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRB_STRINGIZE" logicalPath="//mruby_c_api/c/cl/MRB_STRINGIZE //mruby_c_api/c/tdef/MRB_STRINGIZE //mruby_c_api/c/tag/MRB_STRINGIZE //mruby_c_api/c/struct/MRB_STRINGIZE //mruby_c_api/c/intf/MRB_STRINGIZE //mruby_c_api/c/econst/MRB_STRINGIZE //mruby_c_api/c/data/MRB_STRINGIZE //mruby_c_api/c/clconst/MRB_STRINGIZE //mruby_c_api/c/instm/MRB_STRINGIZE //mruby_c_api/c/clm/MRB_STRINGIZE //mruby_c_api/c/intfcm/MRB_STRINGIZE //mruby_c_api/c/intfm/MRB_STRINGIZE //mruby_c_api/c/func/MRB_STRINGIZE //mruby_c_api/c/ftmplt/MRB_STRINGIZE //mruby_c_api/c/defn/MRB_STRINGIZE //mruby_c_api/c/macro/MRB_STRINGIZE" target="_top"><span class="preprocessor">MRB_STRINGIZE</span></a><span class="preprocessor">(</span><a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRUBY_RELEASE_MINOR" logicalPath="//mruby_c_api/c/cl/MRUBY_RELEASE_MINOR //mruby_c_api/c/tdef/MRUBY_RELEASE_MINOR //mruby_c_api/c/tag/MRUBY_RELEASE_MINOR //mruby_c_api/c/struct/MRUBY_RELEASE_MINOR //mruby_c_api/c/intf/MRUBY_RELEASE_MINOR //mruby_c_api/c/econst/MRUBY_RELEASE_MINOR //mruby_c_api/c/data/MRUBY_RELEASE_MINOR //mruby_c_api/c/clconst/MRUBY_RELEASE_MINOR //mruby_c_api/c/instm/MRUBY_RELEASE_MINOR //mruby_c_api/c/clm/MRUBY_RELEASE_MINOR //mruby_c_api/c/intfcm/MRUBY_RELEASE_MINOR //mruby_c_api/c/intfm/MRUBY_RELEASE_MINOR //mruby_c_api/c/func/MRUBY_RELEASE_MINOR //mruby_c_api/c/ftmplt/MRUBY_RELEASE_MINOR //mruby_c_api/c/defn/MRUBY_RELEASE_MINOR //mruby_c_api/c/macro/MRUBY_RELEASE_MINOR" target="_top"><span class="preprocessor">MRUBY_RELEASE_MINOR</span></a><span class="preprocessor">)</span> <span class="preprocessor">"</span><span class="preprocessor">.</span><span class="preprocessor">"</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRB_STRINGIZE" logicalPath="//mruby_c_api/c/cl/MRB_STRINGIZE //mruby_c_api/c/tdef/MRB_STRINGIZE //mruby_c_api/c/tag/MRB_STRINGIZE //mruby_c_api/c/struct/MRB_STRINGIZE //mruby_c_api/c/intf/MRB_STRINGIZE //mruby_c_api/c/econst/MRB_STRINGIZE //mruby_c_api/c/data/MRB_STRINGIZE //mruby_c_api/c/clconst/MRB_STRINGIZE //mruby_c_api/c/instm/MRB_STRINGIZE //mruby_c_api/c/clm/MRB_STRINGIZE //mruby_c_api/c/intfcm/MRB_STRINGIZE //mruby_c_api/c/intfm/MRB_STRINGIZE //mruby_c_api/c/func/MRB_STRINGIZE //mruby_c_api/c/ftmplt/MRB_STRINGIZE //mruby_c_api/c/defn/MRB_STRINGIZE //mruby_c_api/c/macro/MRB_STRINGIZE" target="_top"><span class="preprocessor">MRB_STRINGIZE</span></a><span class="preprocessor">(</span><a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRUBY_RELEASE_TEENY" logicalPath="//mruby_c_api/c/cl/MRUBY_RELEASE_TEENY //mruby_c_api/c/tdef/MRUBY_RELEASE_TEENY //mruby_c_api/c/tag/MRUBY_RELEASE_TEENY //mruby_c_api/c/struct/MRUBY_RELEASE_TEENY //mruby_c_api/c/intf/MRUBY_RELEASE_TEENY //mruby_c_api/c/econst/MRUBY_RELEASE_TEENY //mruby_c_api/c/data/MRUBY_RELEASE_TEENY //mruby_c_api/c/clconst/MRUBY_RELEASE_TEENY //mruby_c_api/c/instm/MRUBY_RELEASE_TEENY //mruby_c_api/c/clm/MRUBY_RELEASE_TEENY //mruby_c_api/c/intfcm/MRUBY_RELEASE_TEENY //mruby_c_api/c/intfm/MRUBY_RELEASE_TEENY //mruby_c_api/c/func/MRUBY_RELEASE_TEENY //mruby_c_api/c/ftmplt/MRUBY_RELEASE_TEENY //mruby_c_api/c/defn/MRUBY_RELEASE_TEENY //mruby_c_api/c/macro/MRUBY_RELEASE_TEENY" target="_top"><span class="preprocessor">MRUBY_RELEASE_TEENY</span></a><span class="preprocessor">)</span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRUBY_VERSION;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/MRUBY_VERSION_H;   name=MRUBY_VERSION_H --><a name="//mruby_c_api/c/macro/MRUBY_VERSION_H"></a>
+<h3><a name="MRUBY_VERSION_H">MRUBY_VERSION_H</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRUBY_VERSION_H;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRUBY_VERSION_H" logicalPath="//mruby_c_api/c/cl/MRUBY_VERSION_H //mruby_c_api/c/tdef/MRUBY_VERSION_H //mruby_c_api/c/tag/MRUBY_VERSION_H //mruby_c_api/c/struct/MRUBY_VERSION_H //mruby_c_api/c/intf/MRUBY_VERSION_H //mruby_c_api/c/econst/MRUBY_VERSION_H //mruby_c_api/c/data/MRUBY_VERSION_H //mruby_c_api/c/clconst/MRUBY_VERSION_H //mruby_c_api/c/instm/MRUBY_VERSION_H //mruby_c_api/c/clm/MRUBY_VERSION_H //mruby_c_api/c/intfcm/MRUBY_VERSION_H //mruby_c_api/c/intfm/MRUBY_VERSION_H //mruby_c_api/c/func/MRUBY_VERSION_H //mruby_c_api/c/ftmplt/MRUBY_VERSION_H //mruby_c_api/c/defn/MRUBY_VERSION_H //mruby_c_api/c/macro/MRUBY_VERSION_H" target="_top"><span class="preprocessor">MRUBY_VERSION_H</span></a> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRUBY_VERSION_H;name=end --></pre>
+</div>
+<p class="gapBeforeFooter">&nbsp;</p>
+<hr class="afterFooter">
+<div class="hd_copyright_and_timestamp">
+<p class="hd_copyright">&copy; MRuby developers </p>
+<p class="hd_timestamp">Last Updated: September 18, 2015
+</p>
+</div>
+</td>
+</tr></table>
+</body>
+</html>

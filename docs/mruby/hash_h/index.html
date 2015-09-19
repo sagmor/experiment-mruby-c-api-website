@@ -1,0 +1,543 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>hash.h</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<meta name="xcode-display" content="render">
+<style type="text/css"><!--body {border: 0px; margin: 0px;}div {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}td {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}span.hd_tocAccessSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroupSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroup { display: block; font-weight: bold; font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; margin-left: 0px; padding-left: 40px; }span.hd_tocGroup + span.hd_tocAccess { padding-top: 5px; }td.toc_contents_text {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; }li.tocSubEntry {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}p {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}h2.h2tight { margin-top: 0px; padding-top: 0px; }h1 { margin-top: 13px; padding-top: 0px; }h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}h5 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10.1pt; font-weight: bold;}pre {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666; font-size: 10pt;}pre a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}pre a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}body  {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt; padding-left: 0px; padding-top: 0px; margin-left: 0px; margin-top: 0px; border: none; }#hd_outermost_table { margin-left: 0px; border-spacing: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; }#hd_outermost_table > tbody > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tbody > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-top: 3px; }.afterName { display: none; }.list_indent { margin-left: 40px; }.declaration_indent { margin-left: 40px; margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px; min-height: 12px; vertical-align: middle; }.declaration_indent pre { margin-top: 20px; padding-top: 0px; margin-bottom: 20px; padding-bottom: 0px; }.gapBeforeFooter { display: none; }hr { height: 0px; min-height: 0px; border-top: none; border-left: none; border-right: none; border-bottom: 1px solid #909090;}hr.afterHeader { display: none }.param_group_indent { margin-left: 25px; }.param_indent { margin-left: 40px; margin-top: 0px; padding-top: 0px; }.param_indent dl { margin-top: 4px; padding-top: 0px; }dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.param_indent dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.group_indent { margin-left: 40px; }.group_desc_indent { margin-left: 20px; }.warning_indent { margin-left: 40px; }.important_indent { margin-left: 40px; }.note_indent { margin-left: 40px; }h3 {       color: #3C4C6C;}.tight {       margin-top: 2px; margin-bottom: 0px;       padding-top: 0px; padding-bottom: 0px;}h3 a {       color: #3C4C6C;	font-size: 16px;	font-style: normal;	font-variant: normal;	font-weight: bold;	height: 0px;	line-height: normal;}.hd_tocAccess { display: block; margin-left: 40px; font-style: italic; font-size: 10px; font-weight: normal; color: #303030; }.tocSubheading { margin-bottom: 4px; }--></style>
+<style><!--
+body {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+.toc_contents_text {
+    padding-left: 1em;
+    text-indent: -1em;
+}
+
+ul.tocSubEntryList li.tocSubEntry {
+    list-style: none;
+}
+
+#colorbox {
+		display: none;
+}
+.spec_sheet_line {
+		margin-bottom: 1px;
+}
+.collapsible {
+		display: none;
+}
+.toc_leadspace {
+		width: 10; min-width: 10;
+}
+.disclosure_triangle_td {
+		width: 14; min-width: 14;
+		font-size: 10px;
+		vertical-align: middle;
+}
+.specbox td {
+		font-size: 13px;
+}
+.specbox td a {
+		font-size: 13px;
+}
+.specbox td code {
+		font-size: 13px;
+}
+.specbox td tt {
+		font-size: 13px;
+}
+.specbox td pre {
+		font-size: 13px;
+}
+.specbox a {
+		font-size: 12px;
+}
+.disclosure_triangle_td a {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:link {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:active {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:visited:hover {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:hover {
+		text-decoration: none;
+}
+.hd_toc_box {
+		padding-top: 10px;
+		padding-right: 15px;
+}.tocSeparator {
+		margin-top: 15px;
+		padding-bottom: 0px;
+		margin-bottom: 0px;
+}
+.tocSubEntryList {
+		margin-left: 0px;
+		padding-left: 40px;
+		padding-top: 0px;
+		margin-top: 2px;
+		padding-bottom: 0px;
+		margin-bottom: 8px;
+}
+.hd_toc_heading_table {
+		margin-top: 2px;
+		margin-bottom: 2px;
+}
+.hd_toc_entry_table {
+		margin-top: 2px;
+		margin-bottom: 2px;
+}
+.tocSubEntry {
+		margin-left: 0px;
+		padding-left: 0px;
+		margin-top: 0px;
+		margin-bottom: 1px;
+}
+.tocSubEntry a {
+		font-size: 10pt;
+}
+.tocSubheading {
+		padding-left: 14px;
+		margin-left: 0px;
+		margin-top: 5px;
+		padding-top: 0px;
+		font-size: 16px;
+		color: #808080;
+}
+
+#hd_outermost_table { margin-left: 0px; border-spacing: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }
+#hd_outermost_table > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }
+#hd_outermost_table > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; }
+#hd_outermost_table > tbody > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }
+#hd_outermost_table > tbody > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-top: 3px; }
+
+#tocMenu {
+		border-right: 1px solid #c0c0c0;
+		background-color: #f4f4ff;
+		top:0px;
+		left:0px;
+		width:230px;
+		height:100%;
+}
+#bodyContents {
+		width: auto;
+		padding-left: 15px;
+}
+--></style>
+<style id="disable_before_iOS_5"><!--
+#tocMenu {
+		position: fixed;
+		height: 100%;
+		overflow: auto;
+}
+#bodyContents {
+		width: auto;
+		left: 235px;
+		right: 0;
+		padding-left: 15px;
+		position: fixed;
+		height: 100%;
+		overflow-y: scroll;
+}
+--></style>
+<script language="JavaScript" type="text/javascript"><!--
+    if (navigator.platform && (navigator.platform.match(/iPad/) || navigator.platform.match(/iPhone/) || navigator.platform.match(/iPod/))) {
+        if (navigator.userAgent.match(/OS 1(_\d)+/) ||
+            navigator.userAgent.match(/OS 2(_\d)+/) ||
+            navigator.userAgent.match(/OS 3(_\d)+/) ||
+            navigator.userAgent.match(/OS 4(_\d)+/)) {
+                /* Earlier iOS versions require different scrolling gestures with position: fixed. */
+                var del_style_elt = document.getElementById("disable_before_iOS_5");
+                if (del_style_elt) del_style_elt.parentNode.removeChild(del_style_elt);
+        }
+    }
+// --></script><script language="JavaScript" type="text/javascript"><!--
+function getNewHTTPObject()
+{
+        var xmlhttp;
+
+        /** Special IE only code ... */
+        /*@cc_on
+          @if (@_jscript_version >= 5)
+              try
+              {
+                  xmlhttp = new ActiveXObject('Msxml2.XMLHTTP');
+              }
+              catch (e)
+              {
+                  try
+                  {
+                      xmlhttp = new ActiveXObject('Microsoft.XMLHTTP');
+                  }
+                  catch (E)
+                  {
+                      xmlhttp = false;
+                  }
+             }
+          @else
+             xmlhttp = false;
+        @end @*/
+
+        /** Every other browser on the planet */
+        if (!xmlhttp && typeof XMLHttpRequest != 'undefined')
+        {
+            try
+            {
+                xmlhttp = new XMLHttpRequest();
+            }
+            catch (e)
+            {
+                xmlhttp = false;
+            }
+        }
+
+        return xmlhttp;
+}
+
+function hidetoc() {
+	var toc = document.getElementById('tocMenu');
+	var src = toc.getAttribute('src');
+	var xhr = getNewHTTPObject();
+	xhr.open('GET', src, true);
+	xhr.onreadystatechange = function() {
+		if(xhr.readyState == 4) {
+			var toc = document.getElementById('tocMenu');
+			toc.innerHTML = xhr.responseText;
+		}
+	}
+	xhr.send(null);
+	var origURL = parent.document.URL;
+	var contentURL = origURL.substring(origURL.indexOf('?')+1, origURL.length);
+	if (contentURL.length == origURL.length) {
+		jumpPos = origURL.substring(origURL.indexOf('#')+1, origURL.length);
+	}
+	if (contentURL == "hidetoc") {
+		var body = document.getElementById('bodyContents');
+		if (toc && body) {
+			toc.style.display = 'none';
+			body.style.marginLeft = '0px';
+		}
+	}
+}
+
+function disclosure_triangle(elt) {
+   var linkelt = elt;
+   while (elt && elt.tagName != 'TABLE') { elt = elt.parentNode;}
+   if (!elt) { return; }
+   while (elt && elt.tagName != 'DIV') { elt = elt.nextSibling;}
+   if (!elt) { return; }
+   if (parseInt(linkelt.getAttribute('state'))) {
+      // It's open.  Close it
+      linkelt.innerHTML = '&#x25B7;';
+      linkelt.setAttribute('state', 0);
+      linkelt.setAttribute('class', 'closed_disclosure_triangle');
+      elt.style.display = 'none';
+   } else {
+      // It's closed.  Open it
+      linkelt.innerHTML = '&#x25BC;';
+      linkelt.setAttribute('state', 1);
+      linkelt.setAttribute('class', 'open_disclosure_triangle');
+      elt.style.display = 'block';
+   }
+}
+--></script><style type="text/css"><!--body {border: 0px; margin: 0px;}div {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}td {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}span.hd_tocAccessSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroupSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroup { display: block; font-weight: bold; font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; margin-left: 0px; padding-left: 40px; }span.hd_tocGroup + span.hd_tocAccess { padding-top: 5px; }td.toc_contents_text {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; }li.tocSubEntry {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}p {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}h2.h2tight { margin-top: 0px; padding-top: 0px; }h1 { margin-top: 13px; padding-top: 0px; }h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}h5 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10.1pt; font-weight: bold;}pre {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666; font-size: 10pt;}pre a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}pre a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}body  {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt; padding-left: 0px; padding-top: 0px; margin-left: 0px; margin-top: 0px; border: none; }#hd_outermost_table { margin-left: 0px; border-spacing: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; }#hd_outermost_table > tbody > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tbody > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-top: 3px; }.afterName { display: none; }.list_indent { margin-left: 40px; }.declaration_indent { margin-left: 40px; margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px; min-height: 12px; vertical-align: middle; }.declaration_indent pre { margin-top: 20px; padding-top: 0px; margin-bottom: 20px; padding-bottom: 0px; }.gapBeforeFooter { display: none; }hr { height: 0px; min-height: 0px; border-top: none; border-left: none; border-right: none; border-bottom: 1px solid #909090;}hr.afterHeader { display: none }.param_group_indent { margin-left: 25px; }.param_indent { margin-left: 40px; margin-top: 0px; padding-top: 0px; }.param_indent dl { margin-top: 4px; padding-top: 0px; }dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.param_indent dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.group_indent { margin-left: 40px; }.group_desc_indent { margin-left: 20px; }.warning_indent { margin-left: 40px; }.important_indent { margin-left: 40px; }.note_indent { margin-left: 40px; }h3 {       color: #3C4C6C;}.tight {       margin-top: 2px; margin-bottom: 0px;       padding-top: 0px; padding-bottom: 0px;}h3 a {       color: #3C4C6C;	font-size: 16px;	font-style: normal;	font-variant: normal;	font-weight: bold;	height: 0px;	line-height: normal;}.hd_tocAccess { display: block; margin-left: 40px; font-style: italic; font-size: 10px; font-weight: normal; color: #303030; }.tocSubheading { margin-bottom: 4px; }--></style>
+</head>
+<body bgcolor="#ffffff" onload="hidetoc();">
+<!-- headerDoc=Header;  uid=//mruby_c_api/doc/header/hash.h;   name=hash.h -->
+<a name="//mruby_c_api/doc/header/hash.h"></a>
+<table id="hd_outermost_table" height="100%" width="100%"><tr>
+<td valign="top" id="tocMenu" src="toc.html"></td>
+<td id="bodyContents" valign="top">
+<a name="top"></a>
+<h1><a name="hash.h">hash.h</a></h1>
+<h2>Introduction</h2>
+<p><!-- headerDoc=abstract;uid=//mruby_c_api/doc/header/hash.h;name=start --><!-- begin abstract -->Use the links in the table of contents to the left to access the documentation.<br><!-- end abstract --><!-- headerDoc=abstract;uid=//mruby_c_api/doc/header/hash.h;name=end --></p>
+<hr class="afterClassOrHeaderInfo">
+<br><a name="HeaderDoc_functions"></a>
+<h2 class="h2tight">Functions</h2>
+<dl>
+<dt><tt><a href="index.html#//mruby_c_api/c/func/mrb_check_hash_type" target="_top">mrb_check_hash_type</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/func/mrb_gc_free_hash" target="_top">mrb_gc_free_hash</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/func/mrb_gc_mark_hash" target="_top">mrb_gc_mark_hash</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/func/mrb_gc_mark_hash_size" target="_top">mrb_gc_mark_hash_size</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/func/mrb_hash_clear" target="_top">mrb_hash_clear</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/func/mrb_hash_delete_key" target="_top">mrb_hash_delete_key</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/func/mrb_hash_empty_p" target="_top">mrb_hash_empty_p</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/func/mrb_hash_fetch" target="_top">mrb_hash_fetch</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/func/mrb_hash_get" target="_top">mrb_hash_get</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/func/mrb_hash_keys" target="_top">mrb_hash_keys</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/func/mrb_hash_new" target="_top">mrb_hash_new</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/func/mrb_hash_new_capa" target="_top">mrb_hash_new_capa</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/func/mrb_hash_set" target="_top">mrb_hash_set</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/func/mrb_hash_tbl" target="_top">mrb_hash_tbl</a></tt></dt>
+<dd></dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//mruby_c_api/c/func/mrb_check_hash_type;   name=mrb_check_hash_type --><a name="//mruby_c_api/c/func/mrb_check_hash_type"></a>
+<h3><a name="mrb_check_hash_type">mrb_check_hash_type</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/func/mrb_check_hash_type;name=start --><a machinegenerated="true" href="../../mrbconf_h/index.html#//mruby_c_api/c/macro/MRB_API" logicalPath="//mruby_c_api/c/cl/MRB_API //mruby_c_api/c/tdef/MRB_API //mruby_c_api/c/tag/MRB_API //mruby_c_api/c/struct/MRB_API //mruby_c_api/c/intf/MRB_API //mruby_c_api/doc/anysymbol/MRB_API" target="_top"><span class="type">MRB_API</span></a> <a machinegenerated="true" href="../boxing_word_h/index.html#//mruby_c_api/c/tdef/mrb_value" logicalPath="//mruby_c_api/c/cl/mrb_value //mruby_c_api/c/tdef/mrb_value" target="_top"><span class="type">mrb_value</span></a> <a machinegenerated="true" href="index.html#//mruby_c_api/c/func/mrb_check_hash_type" logicalPath="//mruby_c_api/c/instm/mrb_check_hash_type //mruby_c_api/c/clm/mrb_check_hash_type //mruby_c_api/c/intfcm/mrb_check_hash_type //mruby_c_api/c/intfm/mrb_check_hash_type //mruby_c_api/c/func/mrb_check_hash_type" target="_top"><span class="function">mrb_check_hash_type</span></a>(
+    <a machinegenerated="true" href="../../mruby_h/index.html#//mruby_c_api/c/tdef/mrb_state" logicalPath="//mruby_c_api/c/cl/mrb_state //mruby_c_api/c/tdef/mrb_state" target="_top"><span class="type">mrb_state</span></a> <span class="type">*</span><span class="param">mrb</span>,
+    <a machinegenerated="true" href="../boxing_word_h/index.html#//mruby_c_api/c/tdef/mrb_value" logicalPath="//mruby_c_api/c/cl/mrb_value //mruby_c_api/c/tdef/mrb_value" target="_top"><span class="type">mrb_value</span></a> <span class="param">hash</span>);  <!-- headerDoc=declaration;uid=//mruby_c_api/c/func/mrb_check_hash_type;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//mruby_c_api/c/func/mrb_gc_free_hash;   name=mrb_gc_free_hash --><a name="//mruby_c_api/c/func/mrb_gc_free_hash"></a>
+<h3><a name="mrb_gc_free_hash">mrb_gc_free_hash</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/func/mrb_gc_free_hash;name=start --><!-- a logicalPath="//mruby_c_api/c/cl/void //mruby_c_api/c/tdef/void //mruby_c_api/c/tag/void //mruby_c_api/c/struct/void //mruby_c_api/c/intf/void //mruby_c_api/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="index.html#//mruby_c_api/c/func/mrb_gc_free_hash" logicalPath="//mruby_c_api/c/instm/mrb_gc_free_hash //mruby_c_api/c/clm/mrb_gc_free_hash //mruby_c_api/c/intfcm/mrb_gc_free_hash //mruby_c_api/c/intfm/mrb_gc_free_hash //mruby_c_api/c/func/mrb_gc_free_hash" target="_top"><span class="function">mrb_gc_free_hash</span></a>(
+    <a machinegenerated="true" href="../../mruby_h/index.html#//mruby_c_api/c/tdef/mrb_state" logicalPath="//mruby_c_api/c/cl/mrb_state //mruby_c_api/c/tdef/mrb_state" target="_top"><span class="type">mrb_state</span></a> <span class="type">*</span>,
+    <span class="keyword">struct</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/tag/RHash" logicalPath="//mruby_c_api/c/cl/RHash //mruby_c_api/c/tdef/RHash //mruby_c_api/c/tag/RHash" target="_top"><span class="type">RHash</span></a> <span class="type">*</span>);  <!-- headerDoc=declaration;uid=//mruby_c_api/c/func/mrb_gc_free_hash;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//mruby_c_api/c/func/mrb_gc_mark_hash;   name=mrb_gc_mark_hash --><a name="//mruby_c_api/c/func/mrb_gc_mark_hash"></a>
+<h3><a name="mrb_gc_mark_hash">mrb_gc_mark_hash</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/func/mrb_gc_mark_hash;name=start --><span class="comment">/* GC functions */</span>
+<!-- a logicalPath="//mruby_c_api/c/cl/void //mruby_c_api/c/tdef/void //mruby_c_api/c/tag/void //mruby_c_api/c/struct/void //mruby_c_api/c/intf/void //mruby_c_api/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="index.html#//mruby_c_api/c/func/mrb_gc_mark_hash" logicalPath="//mruby_c_api/c/instm/mrb_gc_mark_hash //mruby_c_api/c/clm/mrb_gc_mark_hash //mruby_c_api/c/intfcm/mrb_gc_mark_hash //mruby_c_api/c/intfm/mrb_gc_mark_hash //mruby_c_api/c/func/mrb_gc_mark_hash" target="_top"><span class="function">mrb_gc_mark_hash</span></a>(
+    <a machinegenerated="true" href="../../mruby_h/index.html#//mruby_c_api/c/tdef/mrb_state" logicalPath="//mruby_c_api/c/cl/mrb_state //mruby_c_api/c/tdef/mrb_state" target="_top"><span class="type">mrb_state</span></a> <span class="type">*</span>,
+    <span class="keyword">struct</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/tag/RHash" logicalPath="//mruby_c_api/c/cl/RHash //mruby_c_api/c/tdef/RHash //mruby_c_api/c/tag/RHash" target="_top"><span class="type">RHash</span></a> <span class="type">*</span>);  <!-- headerDoc=declaration;uid=//mruby_c_api/c/func/mrb_gc_mark_hash;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//mruby_c_api/c/func/mrb_gc_mark_hash_size;   name=mrb_gc_mark_hash_size --><a name="//mruby_c_api/c/func/mrb_gc_mark_hash_size"></a>
+<h3><a name="mrb_gc_mark_hash_size">mrb_gc_mark_hash_size</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/func/mrb_gc_mark_hash_size;name=start --><!-- a logicalPath="//mruby_c_api/c/cl/size_t //mruby_c_api/c/tdef/size_t //mruby_c_api/c/tag/size_t //mruby_c_api/c/struct/size_t //mruby_c_api/c/intf/size_t //mruby_c_api/doc/anysymbol/size_t" machineGenerated="true" --><span class="type">size_t</span><!-- /a --> <a machinegenerated="true" href="index.html#//mruby_c_api/c/func/mrb_gc_mark_hash_size" logicalPath="//mruby_c_api/c/instm/mrb_gc_mark_hash_size //mruby_c_api/c/clm/mrb_gc_mark_hash_size //mruby_c_api/c/intfcm/mrb_gc_mark_hash_size //mruby_c_api/c/intfm/mrb_gc_mark_hash_size //mruby_c_api/c/func/mrb_gc_mark_hash_size" target="_top"><span class="function">mrb_gc_mark_hash_size</span></a>(
+    <a machinegenerated="true" href="../../mruby_h/index.html#//mruby_c_api/c/tdef/mrb_state" logicalPath="//mruby_c_api/c/cl/mrb_state //mruby_c_api/c/tdef/mrb_state" target="_top"><span class="type">mrb_state</span></a> <span class="type">*</span>,
+    <span class="keyword">struct</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/tag/RHash" logicalPath="//mruby_c_api/c/cl/RHash //mruby_c_api/c/tdef/RHash //mruby_c_api/c/tag/RHash" target="_top"><span class="type">RHash</span></a> <span class="type">*</span>);  <!-- headerDoc=declaration;uid=//mruby_c_api/c/func/mrb_gc_mark_hash_size;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//mruby_c_api/c/func/mrb_hash_clear;   name=mrb_hash_clear --><a name="//mruby_c_api/c/func/mrb_hash_clear"></a>
+<h3><a name="mrb_hash_clear">mrb_hash_clear</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/func/mrb_hash_clear;name=start --><a machinegenerated="true" href="../../mrbconf_h/index.html#//mruby_c_api/c/macro/MRB_API" logicalPath="//mruby_c_api/c/cl/MRB_API //mruby_c_api/c/tdef/MRB_API //mruby_c_api/c/tag/MRB_API //mruby_c_api/c/struct/MRB_API //mruby_c_api/c/intf/MRB_API //mruby_c_api/doc/anysymbol/MRB_API" target="_top"><span class="type">MRB_API</span></a> <a machinegenerated="true" href="../boxing_word_h/index.html#//mruby_c_api/c/tdef/mrb_value" logicalPath="//mruby_c_api/c/cl/mrb_value //mruby_c_api/c/tdef/mrb_value" target="_top"><span class="type">mrb_value</span></a> <a machinegenerated="true" href="index.html#//mruby_c_api/c/func/mrb_hash_clear" logicalPath="//mruby_c_api/c/instm/mrb_hash_clear //mruby_c_api/c/clm/mrb_hash_clear //mruby_c_api/c/intfcm/mrb_hash_clear //mruby_c_api/c/intfm/mrb_hash_clear //mruby_c_api/c/func/mrb_hash_clear" target="_top"><span class="function">mrb_hash_clear</span></a>(
+    <a machinegenerated="true" href="../../mruby_h/index.html#//mruby_c_api/c/tdef/mrb_state" logicalPath="//mruby_c_api/c/cl/mrb_state //mruby_c_api/c/tdef/mrb_state" target="_top"><span class="type">mrb_state</span></a> <span class="type">*</span><span class="param">mrb</span>,
+    <a machinegenerated="true" href="../boxing_word_h/index.html#//mruby_c_api/c/tdef/mrb_value" logicalPath="//mruby_c_api/c/cl/mrb_value //mruby_c_api/c/tdef/mrb_value" target="_top"><span class="type">mrb_value</span></a> <span class="param">hash</span>);  <!-- headerDoc=declaration;uid=//mruby_c_api/c/func/mrb_hash_clear;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//mruby_c_api/c/func/mrb_hash_delete_key;   name=mrb_hash_delete_key --><a name="//mruby_c_api/c/func/mrb_hash_delete_key"></a>
+<h3><a name="mrb_hash_delete_key">mrb_hash_delete_key</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/func/mrb_hash_delete_key;name=start --><a machinegenerated="true" href="../../mrbconf_h/index.html#//mruby_c_api/c/macro/MRB_API" logicalPath="//mruby_c_api/c/cl/MRB_API //mruby_c_api/c/tdef/MRB_API //mruby_c_api/c/tag/MRB_API //mruby_c_api/c/struct/MRB_API //mruby_c_api/c/intf/MRB_API //mruby_c_api/doc/anysymbol/MRB_API" target="_top"><span class="type">MRB_API</span></a> <a machinegenerated="true" href="../boxing_word_h/index.html#//mruby_c_api/c/tdef/mrb_value" logicalPath="//mruby_c_api/c/cl/mrb_value //mruby_c_api/c/tdef/mrb_value" target="_top"><span class="type">mrb_value</span></a> <a machinegenerated="true" href="index.html#//mruby_c_api/c/func/mrb_hash_delete_key" logicalPath="//mruby_c_api/c/instm/mrb_hash_delete_key //mruby_c_api/c/clm/mrb_hash_delete_key //mruby_c_api/c/intfcm/mrb_hash_delete_key //mruby_c_api/c/intfm/mrb_hash_delete_key //mruby_c_api/c/func/mrb_hash_delete_key" target="_top"><span class="function">mrb_hash_delete_key</span></a>(
+    <a machinegenerated="true" href="../../mruby_h/index.html#//mruby_c_api/c/tdef/mrb_state" logicalPath="//mruby_c_api/c/cl/mrb_state //mruby_c_api/c/tdef/mrb_state" target="_top"><span class="type">mrb_state</span></a> <span class="type">*</span><span class="param">mrb</span>,
+    <a machinegenerated="true" href="../boxing_word_h/index.html#//mruby_c_api/c/tdef/mrb_value" logicalPath="//mruby_c_api/c/cl/mrb_value //mruby_c_api/c/tdef/mrb_value" target="_top"><span class="type">mrb_value</span></a> <span class="param">hash</span>,
+    <a machinegenerated="true" href="../boxing_word_h/index.html#//mruby_c_api/c/tdef/mrb_value" logicalPath="//mruby_c_api/c/cl/mrb_value //mruby_c_api/c/tdef/mrb_value" target="_top"><span class="type">mrb_value</span></a> <span class="param">key</span>);  <!-- headerDoc=declaration;uid=//mruby_c_api/c/func/mrb_hash_delete_key;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//mruby_c_api/c/func/mrb_hash_empty_p;   name=mrb_hash_empty_p --><a name="//mruby_c_api/c/func/mrb_hash_empty_p"></a>
+<h3><a name="mrb_hash_empty_p">mrb_hash_empty_p</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/func/mrb_hash_empty_p;name=start --><a machinegenerated="true" href="../../mrbconf_h/index.html#//mruby_c_api/c/macro/MRB_API" logicalPath="//mruby_c_api/c/cl/MRB_API //mruby_c_api/c/tdef/MRB_API //mruby_c_api/c/tag/MRB_API //mruby_c_api/c/struct/MRB_API //mruby_c_api/c/intf/MRB_API //mruby_c_api/doc/anysymbol/MRB_API" target="_top"><span class="type">MRB_API</span></a> <a machinegenerated="true" href="../boxing_word_h/index.html#//mruby_c_api/c/tdef/mrb_value" logicalPath="//mruby_c_api/c/cl/mrb_value //mruby_c_api/c/tdef/mrb_value" target="_top"><span class="type">mrb_value</span></a> <a machinegenerated="true" href="index.html#//mruby_c_api/c/func/mrb_hash_empty_p" logicalPath="//mruby_c_api/c/instm/mrb_hash_empty_p //mruby_c_api/c/clm/mrb_hash_empty_p //mruby_c_api/c/intfcm/mrb_hash_empty_p //mruby_c_api/c/intfm/mrb_hash_empty_p //mruby_c_api/c/func/mrb_hash_empty_p" target="_top"><span class="function">mrb_hash_empty_p</span></a>(
+    <a machinegenerated="true" href="../../mruby_h/index.html#//mruby_c_api/c/tdef/mrb_state" logicalPath="//mruby_c_api/c/cl/mrb_state //mruby_c_api/c/tdef/mrb_state" target="_top"><span class="type">mrb_state</span></a> <span class="type">*</span><span class="param">mrb</span>,
+    <a machinegenerated="true" href="../boxing_word_h/index.html#//mruby_c_api/c/tdef/mrb_value" logicalPath="//mruby_c_api/c/cl/mrb_value //mruby_c_api/c/tdef/mrb_value" target="_top"><span class="type">mrb_value</span></a> <span class="param">self</span>);  <!-- headerDoc=declaration;uid=//mruby_c_api/c/func/mrb_hash_empty_p;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//mruby_c_api/c/func/mrb_hash_fetch;   name=mrb_hash_fetch --><a name="//mruby_c_api/c/func/mrb_hash_fetch"></a>
+<h3><a name="mrb_hash_fetch">mrb_hash_fetch</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/func/mrb_hash_fetch;name=start --><a machinegenerated="true" href="../../mrbconf_h/index.html#//mruby_c_api/c/macro/MRB_API" logicalPath="//mruby_c_api/c/cl/MRB_API //mruby_c_api/c/tdef/MRB_API //mruby_c_api/c/tag/MRB_API //mruby_c_api/c/struct/MRB_API //mruby_c_api/c/intf/MRB_API //mruby_c_api/doc/anysymbol/MRB_API" target="_top"><span class="type">MRB_API</span></a> <a machinegenerated="true" href="../boxing_word_h/index.html#//mruby_c_api/c/tdef/mrb_value" logicalPath="//mruby_c_api/c/cl/mrb_value //mruby_c_api/c/tdef/mrb_value" target="_top"><span class="type">mrb_value</span></a> <a machinegenerated="true" href="index.html#//mruby_c_api/c/func/mrb_hash_fetch" logicalPath="//mruby_c_api/c/instm/mrb_hash_fetch //mruby_c_api/c/clm/mrb_hash_fetch //mruby_c_api/c/intfcm/mrb_hash_fetch //mruby_c_api/c/intfm/mrb_hash_fetch //mruby_c_api/c/func/mrb_hash_fetch" target="_top"><span class="function">mrb_hash_fetch</span></a>(
+    <a machinegenerated="true" href="../../mruby_h/index.html#//mruby_c_api/c/tdef/mrb_state" logicalPath="//mruby_c_api/c/cl/mrb_state //mruby_c_api/c/tdef/mrb_state" target="_top"><span class="type">mrb_state</span></a> <span class="type">*</span><span class="param">mrb</span>,
+    <a machinegenerated="true" href="../boxing_word_h/index.html#//mruby_c_api/c/tdef/mrb_value" logicalPath="//mruby_c_api/c/cl/mrb_value //mruby_c_api/c/tdef/mrb_value" target="_top"><span class="type">mrb_value</span></a> <span class="param">hash</span>,
+    <a machinegenerated="true" href="../boxing_word_h/index.html#//mruby_c_api/c/tdef/mrb_value" logicalPath="//mruby_c_api/c/cl/mrb_value //mruby_c_api/c/tdef/mrb_value" target="_top"><span class="type">mrb_value</span></a> <span class="param">key</span>,
+    <a machinegenerated="true" href="../boxing_word_h/index.html#//mruby_c_api/c/tdef/mrb_value" logicalPath="//mruby_c_api/c/cl/mrb_value //mruby_c_api/c/tdef/mrb_value" target="_top"><span class="type">mrb_value</span></a> <span class="param">def</span>);  <!-- headerDoc=declaration;uid=//mruby_c_api/c/func/mrb_hash_fetch;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//mruby_c_api/c/func/mrb_hash_get;   name=mrb_hash_get --><a name="//mruby_c_api/c/func/mrb_hash_get"></a>
+<h3><a name="mrb_hash_get">mrb_hash_get</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/func/mrb_hash_get;name=start --><a machinegenerated="true" href="../../mrbconf_h/index.html#//mruby_c_api/c/macro/MRB_API" logicalPath="//mruby_c_api/c/cl/MRB_API //mruby_c_api/c/tdef/MRB_API //mruby_c_api/c/tag/MRB_API //mruby_c_api/c/struct/MRB_API //mruby_c_api/c/intf/MRB_API //mruby_c_api/doc/anysymbol/MRB_API" target="_top"><span class="type">MRB_API</span></a> <a machinegenerated="true" href="../boxing_word_h/index.html#//mruby_c_api/c/tdef/mrb_value" logicalPath="//mruby_c_api/c/cl/mrb_value //mruby_c_api/c/tdef/mrb_value" target="_top"><span class="type">mrb_value</span></a> <a machinegenerated="true" href="index.html#//mruby_c_api/c/func/mrb_hash_get" logicalPath="//mruby_c_api/c/instm/mrb_hash_get //mruby_c_api/c/clm/mrb_hash_get //mruby_c_api/c/intfcm/mrb_hash_get //mruby_c_api/c/intfm/mrb_hash_get //mruby_c_api/c/func/mrb_hash_get" target="_top"><span class="function">mrb_hash_get</span></a>(
+    <a machinegenerated="true" href="../../mruby_h/index.html#//mruby_c_api/c/tdef/mrb_state" logicalPath="//mruby_c_api/c/cl/mrb_state //mruby_c_api/c/tdef/mrb_state" target="_top"><span class="type">mrb_state</span></a> <span class="type">*</span><span class="param">mrb</span>,
+    <a machinegenerated="true" href="../boxing_word_h/index.html#//mruby_c_api/c/tdef/mrb_value" logicalPath="//mruby_c_api/c/cl/mrb_value //mruby_c_api/c/tdef/mrb_value" target="_top"><span class="type">mrb_value</span></a> <span class="param">hash</span>,
+    <a machinegenerated="true" href="../boxing_word_h/index.html#//mruby_c_api/c/tdef/mrb_value" logicalPath="//mruby_c_api/c/cl/mrb_value //mruby_c_api/c/tdef/mrb_value" target="_top"><span class="type">mrb_value</span></a> <span class="param">key</span>);  <!-- headerDoc=declaration;uid=//mruby_c_api/c/func/mrb_hash_get;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//mruby_c_api/c/func/mrb_hash_keys;   name=mrb_hash_keys --><a name="//mruby_c_api/c/func/mrb_hash_keys"></a>
+<h3><a name="mrb_hash_keys">mrb_hash_keys</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/func/mrb_hash_keys;name=start --><a machinegenerated="true" href="../../mrbconf_h/index.html#//mruby_c_api/c/macro/MRB_API" logicalPath="//mruby_c_api/c/cl/MRB_API //mruby_c_api/c/tdef/MRB_API //mruby_c_api/c/tag/MRB_API //mruby_c_api/c/struct/MRB_API //mruby_c_api/c/intf/MRB_API //mruby_c_api/doc/anysymbol/MRB_API" target="_top"><span class="type">MRB_API</span></a> <a machinegenerated="true" href="../boxing_word_h/index.html#//mruby_c_api/c/tdef/mrb_value" logicalPath="//mruby_c_api/c/cl/mrb_value //mruby_c_api/c/tdef/mrb_value" target="_top"><span class="type">mrb_value</span></a> <a machinegenerated="true" href="index.html#//mruby_c_api/c/func/mrb_hash_keys" logicalPath="//mruby_c_api/c/instm/mrb_hash_keys //mruby_c_api/c/clm/mrb_hash_keys //mruby_c_api/c/intfcm/mrb_hash_keys //mruby_c_api/c/intfm/mrb_hash_keys //mruby_c_api/c/func/mrb_hash_keys" target="_top"><span class="function">mrb_hash_keys</span></a>(
+    <a machinegenerated="true" href="../../mruby_h/index.html#//mruby_c_api/c/tdef/mrb_state" logicalPath="//mruby_c_api/c/cl/mrb_state //mruby_c_api/c/tdef/mrb_state" target="_top"><span class="type">mrb_state</span></a> <span class="type">*</span><span class="param">mrb</span>,
+    <a machinegenerated="true" href="../boxing_word_h/index.html#//mruby_c_api/c/tdef/mrb_value" logicalPath="//mruby_c_api/c/cl/mrb_value //mruby_c_api/c/tdef/mrb_value" target="_top"><span class="type">mrb_value</span></a> <span class="param">hash</span>);  <!-- headerDoc=declaration;uid=//mruby_c_api/c/func/mrb_hash_keys;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//mruby_c_api/c/func/mrb_hash_new;   name=mrb_hash_new --><a name="//mruby_c_api/c/func/mrb_hash_new"></a>
+<h3><a name="mrb_hash_new">mrb_hash_new</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/func/mrb_hash_new;name=start --><a machinegenerated="true" href="../../mrbconf_h/index.html#//mruby_c_api/c/macro/MRB_API" logicalPath="//mruby_c_api/c/cl/MRB_API //mruby_c_api/c/tdef/MRB_API //mruby_c_api/c/tag/MRB_API //mruby_c_api/c/struct/MRB_API //mruby_c_api/c/intf/MRB_API //mruby_c_api/doc/anysymbol/MRB_API" target="_top"><span class="type">MRB_API</span></a> <a machinegenerated="true" href="../boxing_word_h/index.html#//mruby_c_api/c/tdef/mrb_value" logicalPath="//mruby_c_api/c/cl/mrb_value //mruby_c_api/c/tdef/mrb_value" target="_top"><span class="type">mrb_value</span></a> <a machinegenerated="true" href="index.html#//mruby_c_api/c/func/mrb_hash_new" logicalPath="//mruby_c_api/c/instm/mrb_hash_new //mruby_c_api/c/clm/mrb_hash_new //mruby_c_api/c/intfcm/mrb_hash_new //mruby_c_api/c/intfm/mrb_hash_new //mruby_c_api/c/func/mrb_hash_new" target="_top"><span class="function">mrb_hash_new</span></a>(
+    <a machinegenerated="true" href="../../mruby_h/index.html#//mruby_c_api/c/tdef/mrb_state" logicalPath="//mruby_c_api/c/cl/mrb_state //mruby_c_api/c/tdef/mrb_state" target="_top"><span class="type">mrb_state</span></a> <span class="type">*</span><span class="param">mrb</span>);  <!-- headerDoc=declaration;uid=//mruby_c_api/c/func/mrb_hash_new;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//mruby_c_api/c/func/mrb_hash_new_capa;   name=mrb_hash_new_capa --><a name="//mruby_c_api/c/func/mrb_hash_new_capa"></a>
+<h3><a name="mrb_hash_new_capa">mrb_hash_new_capa</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/func/mrb_hash_new_capa;name=start --><a machinegenerated="true" href="../../mrbconf_h/index.html#//mruby_c_api/c/macro/MRB_API" logicalPath="//mruby_c_api/c/cl/MRB_API //mruby_c_api/c/tdef/MRB_API //mruby_c_api/c/tag/MRB_API //mruby_c_api/c/struct/MRB_API //mruby_c_api/c/intf/MRB_API //mruby_c_api/doc/anysymbol/MRB_API" target="_top"><span class="type">MRB_API</span></a> <a machinegenerated="true" href="../boxing_word_h/index.html#//mruby_c_api/c/tdef/mrb_value" logicalPath="//mruby_c_api/c/cl/mrb_value //mruby_c_api/c/tdef/mrb_value" target="_top"><span class="type">mrb_value</span></a> <a machinegenerated="true" href="index.html#//mruby_c_api/c/func/mrb_hash_new_capa" logicalPath="//mruby_c_api/c/instm/mrb_hash_new_capa //mruby_c_api/c/clm/mrb_hash_new_capa //mruby_c_api/c/intfcm/mrb_hash_new_capa //mruby_c_api/c/intfm/mrb_hash_new_capa //mruby_c_api/c/func/mrb_hash_new_capa" target="_top"><span class="function">mrb_hash_new_capa</span></a>(
+    <a machinegenerated="true" href="../../mruby_h/index.html#//mruby_c_api/c/tdef/mrb_state" logicalPath="//mruby_c_api/c/cl/mrb_state //mruby_c_api/c/tdef/mrb_state" target="_top"><span class="type">mrb_state</span></a> <span class="type">*</span>,
+    <span class="param">int</span>);  <!-- headerDoc=declaration;uid=//mruby_c_api/c/func/mrb_hash_new_capa;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//mruby_c_api/c/func/mrb_hash_set;   name=mrb_hash_set --><a name="//mruby_c_api/c/func/mrb_hash_set"></a>
+<h3><a name="mrb_hash_set">mrb_hash_set</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/func/mrb_hash_set;name=start --><a machinegenerated="true" href="../../mrbconf_h/index.html#//mruby_c_api/c/macro/MRB_API" logicalPath="//mruby_c_api/c/cl/MRB_API //mruby_c_api/c/tdef/MRB_API //mruby_c_api/c/tag/MRB_API //mruby_c_api/c/struct/MRB_API //mruby_c_api/c/intf/MRB_API //mruby_c_api/doc/anysymbol/MRB_API" target="_top"><span class="type">MRB_API</span></a> <!-- a logicalPath="//mruby_c_api/c/cl/void //mruby_c_api/c/tdef/void //mruby_c_api/c/tag/void //mruby_c_api/c/struct/void //mruby_c_api/c/intf/void //mruby_c_api/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="index.html#//mruby_c_api/c/func/mrb_hash_set" logicalPath="//mruby_c_api/c/instm/mrb_hash_set //mruby_c_api/c/clm/mrb_hash_set //mruby_c_api/c/intfcm/mrb_hash_set //mruby_c_api/c/intfm/mrb_hash_set //mruby_c_api/c/func/mrb_hash_set" target="_top"><span class="function">mrb_hash_set</span></a>(
+    <a machinegenerated="true" href="../../mruby_h/index.html#//mruby_c_api/c/tdef/mrb_state" logicalPath="//mruby_c_api/c/cl/mrb_state //mruby_c_api/c/tdef/mrb_state" target="_top"><span class="type">mrb_state</span></a> <span class="type">*</span><span class="param">mrb</span>,
+    <a machinegenerated="true" href="../boxing_word_h/index.html#//mruby_c_api/c/tdef/mrb_value" logicalPath="//mruby_c_api/c/cl/mrb_value //mruby_c_api/c/tdef/mrb_value" target="_top"><span class="type">mrb_value</span></a> <span class="param">hash</span>,
+    <a machinegenerated="true" href="../boxing_word_h/index.html#//mruby_c_api/c/tdef/mrb_value" logicalPath="//mruby_c_api/c/cl/mrb_value //mruby_c_api/c/tdef/mrb_value" target="_top"><span class="type">mrb_value</span></a> <span class="param">key</span>,
+    <a machinegenerated="true" href="../boxing_word_h/index.html#//mruby_c_api/c/tdef/mrb_value" logicalPath="//mruby_c_api/c/cl/mrb_value //mruby_c_api/c/tdef/mrb_value" target="_top"><span class="type">mrb_value</span></a> <span class="param">val</span>);  <!-- headerDoc=declaration;uid=//mruby_c_api/c/func/mrb_hash_set;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//mruby_c_api/c/func/mrb_hash_tbl;   name=mrb_hash_tbl --><a name="//mruby_c_api/c/func/mrb_hash_tbl"></a>
+<h3><a name="mrb_hash_tbl">mrb_hash_tbl</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/func/mrb_hash_tbl;name=start --><a machinegenerated="true" href="../../mrbconf_h/index.html#//mruby_c_api/c/macro/MRB_API" logicalPath="//mruby_c_api/c/cl/MRB_API //mruby_c_api/c/tdef/MRB_API //mruby_c_api/c/tag/MRB_API //mruby_c_api/c/struct/MRB_API //mruby_c_api/c/intf/MRB_API //mruby_c_api/doc/anysymbol/MRB_API" target="_top"><span class="type">MRB_API</span></a> <span class="keyword">struct</span> <!-- a logicalPath="//mruby_c_api/c/cl/kh_ht //mruby_c_api/c/tdef/kh_ht //mruby_c_api/c/tag/kh_ht //mruby_c_api/c/struct/kh_ht //mruby_c_api/c/intf/kh_ht //mruby_c_api/doc/anysymbol/kh_ht" machineGenerated="true" --><span class="type">kh_ht</span><!-- /a --> <span class="type">*</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/func/mrb_hash_tbl" logicalPath="//mruby_c_api/c/instm/mrb_hash_tbl //mruby_c_api/c/clm/mrb_hash_tbl //mruby_c_api/c/intfcm/mrb_hash_tbl //mruby_c_api/c/intfm/mrb_hash_tbl //mruby_c_api/c/func/mrb_hash_tbl" target="_top"><span class="function">mrb_hash_tbl</span></a>(
+    <a machinegenerated="true" href="../../mruby_h/index.html#//mruby_c_api/c/tdef/mrb_state" logicalPath="//mruby_c_api/c/cl/mrb_state //mruby_c_api/c/tdef/mrb_state" target="_top"><span class="type">mrb_state</span></a> <span class="type">*</span><span class="param">mrb</span>,
+    <a machinegenerated="true" href="../boxing_word_h/index.html#//mruby_c_api/c/tdef/mrb_value" logicalPath="//mruby_c_api/c/cl/mrb_value //mruby_c_api/c/tdef/mrb_value" target="_top"><span class="type">mrb_value</span></a> <span class="param">hash</span>);  <!-- headerDoc=declaration;uid=//mruby_c_api/c/func/mrb_hash_tbl;name=end --></pre>
+</div>
+<hr class="betweenSections">
+<a name="HeaderDoc_structs"></a>
+<h2 class="h2tight">Structs&nbsp;and&nbsp;Unions</h2>
+<dl>
+<dt><tt><a href="index.html#//mruby_c_api/c/tag/RHash" target="_top">RHash</a></tt></dt>
+<dd></dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=tag;  uid=//mruby_c_api/c/tag/RHash;   name=RHash --><a name="//mruby_c_api/c/tag/RHash"></a>
+<h3><a name="RHash">RHash</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/tag/RHash;name=start --> <span class="keyword">struct</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/tag/RHash" logicalPath="//mruby_c_api/c/cl/RHash //mruby_c_api/c/tdef/RHash //mruby_c_api/c/tag/RHash" target="_top"><span class="type">RHash</span></a> { 
+    <!-- a logicalPath="//mruby_c_api/c/econst/MRB_OBJECT_HEADER //mruby_c_api/c/data/MRB_OBJECT_HEADER //mruby_c_api/c/clconst/MRB_OBJECT_HEADER " machineGenerated="true" --><span class="var">MRB_OBJECT_HEADER</span><!-- /a -->; 
+    <span class="keyword">struct</span> <!-- a logicalPath="//mruby_c_api/c/cl/iv_tbl //mruby_c_api/c/tdef/iv_tbl //mruby_c_api/c/tag/iv_tbl //mruby_c_api/c/struct/iv_tbl //mruby_c_api/c/intf/iv_tbl //mruby_c_api/doc/anysymbol/iv_tbl" machineGenerated="true" --><span class="type">iv_tbl</span><!-- /a --> <span class="type">*</span><!-- a logicalPath="//mruby_c_api/c/econst/iv //mruby_c_api/c/data/iv //mruby_c_api/c/clconst/iv " machineGenerated="true" --><span class="var">iv</span><!-- /a -->; 
+    <span class="keyword">struct</span> <!-- a logicalPath="//mruby_c_api/c/cl/kh_ht //mruby_c_api/c/tdef/kh_ht //mruby_c_api/c/tag/kh_ht //mruby_c_api/c/struct/kh_ht //mruby_c_api/c/intf/kh_ht //mruby_c_api/doc/anysymbol/kh_ht" machineGenerated="true" --><span class="type">kh_ht</span><!-- /a --> <span class="type">*</span><!-- a logicalPath="//mruby_c_api/c/econst/ht //mruby_c_api/c/data/ht //mruby_c_api/c/clconst/ht " machineGenerated="true" --><span class="var">ht</span><!-- /a -->; 
+};  <!-- headerDoc=declaration;uid=//mruby_c_api/c/tag/RHash;name=end --></pre>
+</div>
+<hr class="betweenSections">
+<a name="HeaderDoc_pdefines"></a>
+<h2 class="h2tight">Macro Definitions</h2>
+<dl>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/MRB_HASH_PROC_DEFAULT" target="_top">MRB_HASH_PROC_DEFAULT</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/mrb_hash_ptr" target="_top">mrb_hash_ptr</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/mrb_hash_value" target="_top">mrb_hash_value</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/MRB_RHASH_PROCDEFAULT_P" target="_top">MRB_RHASH_PROCDEFAULT_P</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/MRUBY_HASH_H" target="_top">MRUBY_HASH_H</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/RHASH" target="_top">RHASH</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/RHASH_IFNONE" target="_top">RHASH_IFNONE</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/RHASH_PROCDEFAULT" target="_top">RHASH_PROCDEFAULT</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/RHASH_TBL" target="_top">RHASH_TBL</a></tt></dt>
+<dd></dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/MRB_HASH_PROC_DEFAULT;   name=MRB_HASH_PROC_DEFAULT --><a name="//mruby_c_api/c/macro/MRB_HASH_PROC_DEFAULT"></a>
+<h3><a name="MRB_HASH_PROC_DEFAULT">MRB_HASH_PROC_DEFAULT</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRB_HASH_PROC_DEFAULT;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRB_HASH_PROC_DEFAULT" logicalPath="//mruby_c_api/c/cl/MRB_HASH_PROC_DEFAULT //mruby_c_api/c/tdef/MRB_HASH_PROC_DEFAULT //mruby_c_api/c/tag/MRB_HASH_PROC_DEFAULT //mruby_c_api/c/struct/MRB_HASH_PROC_DEFAULT //mruby_c_api/c/intf/MRB_HASH_PROC_DEFAULT //mruby_c_api/c/econst/MRB_HASH_PROC_DEFAULT //mruby_c_api/c/data/MRB_HASH_PROC_DEFAULT //mruby_c_api/c/clconst/MRB_HASH_PROC_DEFAULT //mruby_c_api/c/instm/MRB_HASH_PROC_DEFAULT //mruby_c_api/c/clm/MRB_HASH_PROC_DEFAULT //mruby_c_api/c/intfcm/MRB_HASH_PROC_DEFAULT //mruby_c_api/c/intfm/MRB_HASH_PROC_DEFAULT //mruby_c_api/c/func/MRB_HASH_PROC_DEFAULT //mruby_c_api/c/ftmplt/MRB_HASH_PROC_DEFAULT //mruby_c_api/c/defn/MRB_HASH_PROC_DEFAULT //mruby_c_api/c/macro/MRB_HASH_PROC_DEFAULT" target="_top"><span class="preprocessor">MRB_HASH_PROC_DEFAULT</span></a> <span class="preprocessor">256</span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRB_HASH_PROC_DEFAULT;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/mrb_hash_ptr;   name=mrb_hash_ptr --><a name="//mruby_c_api/c/macro/mrb_hash_ptr"></a>
+<h3><a name="mrb_hash_ptr">mrb_hash_ptr</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/mrb_hash_ptr;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/mrb_hash_ptr" logicalPath="//mruby_c_api/c/cl/mrb_hash_ptr //mruby_c_api/c/tdef/mrb_hash_ptr //mruby_c_api/c/tag/mrb_hash_ptr //mruby_c_api/c/struct/mrb_hash_ptr //mruby_c_api/c/intf/mrb_hash_ptr //mruby_c_api/c/econst/mrb_hash_ptr //mruby_c_api/c/data/mrb_hash_ptr //mruby_c_api/c/clconst/mrb_hash_ptr //mruby_c_api/c/instm/mrb_hash_ptr //mruby_c_api/c/clm/mrb_hash_ptr //mruby_c_api/c/intfcm/mrb_hash_ptr //mruby_c_api/c/intfm/mrb_hash_ptr //mruby_c_api/c/func/mrb_hash_ptr //mruby_c_api/c/ftmplt/mrb_hash_ptr //mruby_c_api/c/defn/mrb_hash_ptr //mruby_c_api/c/macro/mrb_hash_ptr" target="_top"><span class="preprocessor">mrb_hash_ptr</span></a><span class="preprocessor">(</span><!-- a logicalPath="//mruby_c_api/c/cl/v //mruby_c_api/c/tdef/v //mruby_c_api/c/tag/v //mruby_c_api/c/struct/v //mruby_c_api/c/intf/v //mruby_c_api/c/econst/v //mruby_c_api/c/data/v //mruby_c_api/c/clconst/v //mruby_c_api/c/instm/v //mruby_c_api/c/clm/v //mruby_c_api/c/intfcm/v //mruby_c_api/c/intfm/v //mruby_c_api/c/func/v //mruby_c_api/c/ftmplt/v //mruby_c_api/c/defn/v //mruby_c_api/c/macro/v //mruby_c_api/doc/com/intfm/v //mruby_c_api/doc/anysymbol/v" machineGenerated="true" --><span class="preprocessor">v</span><!-- /a --><span class="preprocessor">)</span> <span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/mrb_hash_ptr;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/mrb_hash_value;   name=mrb_hash_value --><a name="//mruby_c_api/c/macro/mrb_hash_value"></a>
+<h3><a name="mrb_hash_value">mrb_hash_value</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/mrb_hash_value;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/mrb_hash_value" logicalPath="//mruby_c_api/c/cl/mrb_hash_value //mruby_c_api/c/tdef/mrb_hash_value //mruby_c_api/c/tag/mrb_hash_value //mruby_c_api/c/struct/mrb_hash_value //mruby_c_api/c/intf/mrb_hash_value //mruby_c_api/c/econst/mrb_hash_value //mruby_c_api/c/data/mrb_hash_value //mruby_c_api/c/clconst/mrb_hash_value //mruby_c_api/c/instm/mrb_hash_value //mruby_c_api/c/clm/mrb_hash_value //mruby_c_api/c/intfcm/mrb_hash_value //mruby_c_api/c/intfm/mrb_hash_value //mruby_c_api/c/func/mrb_hash_value //mruby_c_api/c/ftmplt/mrb_hash_value //mruby_c_api/c/defn/mrb_hash_value //mruby_c_api/c/macro/mrb_hash_value" target="_top"><span class="preprocessor">mrb_hash_value</span></a><span class="preprocessor">(</span><!-- a logicalPath="//mruby_c_api/c/cl/p //mruby_c_api/c/tdef/p //mruby_c_api/c/tag/p //mruby_c_api/c/struct/p //mruby_c_api/c/intf/p //mruby_c_api/c/econst/p //mruby_c_api/c/data/p //mruby_c_api/c/clconst/p //mruby_c_api/c/instm/p //mruby_c_api/c/clm/p //mruby_c_api/c/intfcm/p //mruby_c_api/c/intfm/p //mruby_c_api/c/func/p //mruby_c_api/c/ftmplt/p //mruby_c_api/c/defn/p //mruby_c_api/c/macro/p //mruby_c_api/doc/com/intfm/p //mruby_c_api/doc/anysymbol/p" machineGenerated="true" --><span class="preprocessor">p</span><!-- /a --><span class="preprocessor">)</span> <!-- a logicalPath="//mruby_c_api/c/cl/mrb_obj_value //mruby_c_api/c/tdef/mrb_obj_value //mruby_c_api/c/tag/mrb_obj_value //mruby_c_api/c/struct/mrb_obj_value //mruby_c_api/c/intf/mrb_obj_value //mruby_c_api/c/econst/mrb_obj_value //mruby_c_api/c/data/mrb_obj_value //mruby_c_api/c/clconst/mrb_obj_value //mruby_c_api/c/instm/mrb_obj_value //mruby_c_api/c/clm/mrb_obj_value //mruby_c_api/c/intfcm/mrb_obj_value //mruby_c_api/c/intfm/mrb_obj_value //mruby_c_api/c/func/mrb_obj_value //mruby_c_api/c/ftmplt/mrb_obj_value //mruby_c_api/c/defn/mrb_obj_value //mruby_c_api/c/macro/mrb_obj_value //mruby_c_api/doc/com/intfm/mrb_obj_value //mruby_c_api/doc/anysymbol/mrb_obj_value" machineGenerated="true" --><span class="preprocessor">mrb_obj_value</span><!-- /a --><span class="preprocessor">(</span><span class="preprocessor">(</span><!-- a logicalPath="//mruby_c_api/c/cl/void //mruby_c_api/c/tdef/void //mruby_c_api/c/tag/void //mruby_c_api/c/struct/void //mruby_c_api/c/intf/void //mruby_c_api/c/econst/void //mruby_c_api/c/data/void //mruby_c_api/c/clconst/void //mruby_c_api/c/instm/void //mruby_c_api/c/clm/void //mruby_c_api/c/intfcm/void //mruby_c_api/c/intfm/void //mruby_c_api/c/func/void //mruby_c_api/c/ftmplt/void //mruby_c_api/c/defn/void //mruby_c_api/c/macro/void //mruby_c_api/doc/com/intfm/void //mruby_c_api/doc/anysymbol/void" machineGenerated="true" --><span class="preprocessor">void</span><!-- /a --><span class="preprocessor">*</span><span class="preprocessor">)</span><span class="preprocessor">(</span><!-- a logicalPath="//mruby_c_api/c/cl/p //mruby_c_api/c/tdef/p //mruby_c_api/c/tag/p //mruby_c_api/c/struct/p //mruby_c_api/c/intf/p //mruby_c_api/c/econst/p //mruby_c_api/c/data/p //mruby_c_api/c/clconst/p //mruby_c_api/c/instm/p //mruby_c_api/c/clm/p //mruby_c_api/c/intfcm/p //mruby_c_api/c/intfm/p //mruby_c_api/c/func/p //mruby_c_api/c/ftmplt/p //mruby_c_api/c/defn/p //mruby_c_api/c/macro/p //mruby_c_api/doc/com/intfm/p //mruby_c_api/doc/anysymbol/p" machineGenerated="true" --><span class="preprocessor">p</span><!-- /a --><span class="preprocessor">)</span><span class="preprocessor">)</span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/mrb_hash_value;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/MRB_RHASH_PROCDEFAULT_P;   name=MRB_RHASH_PROCDEFAULT_P --><a name="//mruby_c_api/c/macro/MRB_RHASH_PROCDEFAULT_P"></a>
+<h3><a name="MRB_RHASH_PROCDEFAULT_P">MRB_RHASH_PROCDEFAULT_P</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRB_RHASH_PROCDEFAULT_P;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRB_RHASH_PROCDEFAULT_P" logicalPath="//mruby_c_api/c/cl/MRB_RHASH_PROCDEFAULT_P //mruby_c_api/c/tdef/MRB_RHASH_PROCDEFAULT_P //mruby_c_api/c/tag/MRB_RHASH_PROCDEFAULT_P //mruby_c_api/c/struct/MRB_RHASH_PROCDEFAULT_P //mruby_c_api/c/intf/MRB_RHASH_PROCDEFAULT_P //mruby_c_api/c/econst/MRB_RHASH_PROCDEFAULT_P //mruby_c_api/c/data/MRB_RHASH_PROCDEFAULT_P //mruby_c_api/c/clconst/MRB_RHASH_PROCDEFAULT_P //mruby_c_api/c/instm/MRB_RHASH_PROCDEFAULT_P //mruby_c_api/c/clm/MRB_RHASH_PROCDEFAULT_P //mruby_c_api/c/intfcm/MRB_RHASH_PROCDEFAULT_P //mruby_c_api/c/intfm/MRB_RHASH_PROCDEFAULT_P //mruby_c_api/c/func/MRB_RHASH_PROCDEFAULT_P //mruby_c_api/c/ftmplt/MRB_RHASH_PROCDEFAULT_P //mruby_c_api/c/defn/MRB_RHASH_PROCDEFAULT_P //mruby_c_api/c/macro/MRB_RHASH_PROCDEFAULT_P" target="_top"><span class="preprocessor">MRB_RHASH_PROCDEFAULT_P</span></a><span class="preprocessor">(</span><!-- a logicalPath="//mruby_c_api/c/cl/h //mruby_c_api/c/tdef/h //mruby_c_api/c/tag/h //mruby_c_api/c/struct/h //mruby_c_api/c/intf/h //mruby_c_api/c/econst/h //mruby_c_api/c/data/h //mruby_c_api/c/clconst/h //mruby_c_api/c/instm/h //mruby_c_api/c/clm/h //mruby_c_api/c/intfcm/h //mruby_c_api/c/intfm/h //mruby_c_api/c/func/h //mruby_c_api/c/ftmplt/h //mruby_c_api/c/defn/h //mruby_c_api/c/macro/h //mruby_c_api/doc/com/intfm/h //mruby_c_api/doc/anysymbol/h" machineGenerated="true" --><span class="preprocessor">h</span><!-- /a --><span class="preprocessor">)</span> <span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRB_RHASH_PROCDEFAULT_P;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/MRUBY_HASH_H;   name=MRUBY_HASH_H --><a name="//mruby_c_api/c/macro/MRUBY_HASH_H"></a>
+<h3><a name="MRUBY_HASH_H">MRUBY_HASH_H</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRUBY_HASH_H;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRUBY_HASH_H" logicalPath="//mruby_c_api/c/cl/MRUBY_HASH_H //mruby_c_api/c/tdef/MRUBY_HASH_H //mruby_c_api/c/tag/MRUBY_HASH_H //mruby_c_api/c/struct/MRUBY_HASH_H //mruby_c_api/c/intf/MRUBY_HASH_H //mruby_c_api/c/econst/MRUBY_HASH_H //mruby_c_api/c/data/MRUBY_HASH_H //mruby_c_api/c/clconst/MRUBY_HASH_H //mruby_c_api/c/instm/MRUBY_HASH_H //mruby_c_api/c/clm/MRUBY_HASH_H //mruby_c_api/c/intfcm/MRUBY_HASH_H //mruby_c_api/c/intfm/MRUBY_HASH_H //mruby_c_api/c/func/MRUBY_HASH_H //mruby_c_api/c/ftmplt/MRUBY_HASH_H //mruby_c_api/c/defn/MRUBY_HASH_H //mruby_c_api/c/macro/MRUBY_HASH_H" target="_top"><span class="preprocessor">MRUBY_HASH_H</span></a> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRUBY_HASH_H;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/RHASH;   name=RHASH --><a name="//mruby_c_api/c/macro/RHASH"></a>
+<h3><a name="RHASH">RHASH</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/RHASH;name=start --><span class="comment">/* RHASH_TBL allocates st_table if not available. */</span>
+<span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/RHASH" logicalPath="//mruby_c_api/c/cl/RHASH //mruby_c_api/c/tdef/RHASH //mruby_c_api/c/tag/RHASH //mruby_c_api/c/struct/RHASH //mruby_c_api/c/intf/RHASH //mruby_c_api/c/econst/RHASH //mruby_c_api/c/data/RHASH //mruby_c_api/c/clconst/RHASH //mruby_c_api/c/instm/RHASH //mruby_c_api/c/clm/RHASH //mruby_c_api/c/intfcm/RHASH //mruby_c_api/c/intfm/RHASH //mruby_c_api/c/func/RHASH //mruby_c_api/c/ftmplt/RHASH //mruby_c_api/c/defn/RHASH //mruby_c_api/c/macro/RHASH" target="_top"><span class="preprocessor">RHASH</span></a><span class="preprocessor">(</span><!-- a logicalPath="//mruby_c_api/c/cl/obj //mruby_c_api/c/tdef/obj //mruby_c_api/c/tag/obj //mruby_c_api/c/struct/obj //mruby_c_api/c/intf/obj //mruby_c_api/c/econst/obj //mruby_c_api/c/data/obj //mruby_c_api/c/clconst/obj //mruby_c_api/c/instm/obj //mruby_c_api/c/clm/obj //mruby_c_api/c/intfcm/obj //mruby_c_api/c/intfm/obj //mruby_c_api/c/func/obj //mruby_c_api/c/ftmplt/obj //mruby_c_api/c/defn/obj //mruby_c_api/c/macro/obj //mruby_c_api/doc/com/intfm/obj //mruby_c_api/doc/anysymbol/obj" machineGenerated="true" --><span class="preprocessor">obj</span><!-- /a --><span class="preprocessor">)</span> <span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/RHASH;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/RHASH_IFNONE;   name=RHASH_IFNONE --><a name="//mruby_c_api/c/macro/RHASH_IFNONE"></a>
+<h3><a name="RHASH_IFNONE">RHASH_IFNONE</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/RHASH_IFNONE;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/RHASH_IFNONE" logicalPath="//mruby_c_api/c/cl/RHASH_IFNONE //mruby_c_api/c/tdef/RHASH_IFNONE //mruby_c_api/c/tag/RHASH_IFNONE //mruby_c_api/c/struct/RHASH_IFNONE //mruby_c_api/c/intf/RHASH_IFNONE //mruby_c_api/c/econst/RHASH_IFNONE //mruby_c_api/c/data/RHASH_IFNONE //mruby_c_api/c/clconst/RHASH_IFNONE //mruby_c_api/c/instm/RHASH_IFNONE //mruby_c_api/c/clm/RHASH_IFNONE //mruby_c_api/c/intfcm/RHASH_IFNONE //mruby_c_api/c/intfm/RHASH_IFNONE //mruby_c_api/c/func/RHASH_IFNONE //mruby_c_api/c/ftmplt/RHASH_IFNONE //mruby_c_api/c/defn/RHASH_IFNONE //mruby_c_api/c/macro/RHASH_IFNONE" target="_top"><span class="preprocessor">RHASH_IFNONE</span></a><span class="preprocessor">(</span><!-- a logicalPath="//mruby_c_api/c/cl/h //mruby_c_api/c/tdef/h //mruby_c_api/c/tag/h //mruby_c_api/c/struct/h //mruby_c_api/c/intf/h //mruby_c_api/c/econst/h //mruby_c_api/c/data/h //mruby_c_api/c/clconst/h //mruby_c_api/c/instm/h //mruby_c_api/c/clm/h //mruby_c_api/c/intfcm/h //mruby_c_api/c/intfm/h //mruby_c_api/c/func/h //mruby_c_api/c/ftmplt/h //mruby_c_api/c/defn/h //mruby_c_api/c/macro/h //mruby_c_api/doc/com/intfm/h //mruby_c_api/doc/anysymbol/h" machineGenerated="true" --><span class="preprocessor">h</span><!-- /a --><span class="preprocessor">)</span> <a machinegenerated="true" href="../variable_h/index.html#//mruby_c_api/c/func/mrb_iv_get" logicalPath="//mruby_c_api/c/cl/mrb_iv_get //mruby_c_api/c/tdef/mrb_iv_get //mruby_c_api/c/tag/mrb_iv_get //mruby_c_api/c/struct/mrb_iv_get //mruby_c_api/c/intf/mrb_iv_get //mruby_c_api/c/econst/mrb_iv_get //mruby_c_api/c/data/mrb_iv_get //mruby_c_api/c/clconst/mrb_iv_get //mruby_c_api/c/instm/mrb_iv_get //mruby_c_api/c/clm/mrb_iv_get //mruby_c_api/c/intfcm/mrb_iv_get //mruby_c_api/c/intfm/mrb_iv_get //mruby_c_api/c/func/mrb_iv_get" target="_top"><span class="preprocessor">mrb_iv_get</span></a><span class="preprocessor">(</span><!-- a logicalPath="//mruby_c_api/c/cl/mrb //mruby_c_api/c/tdef/mrb //mruby_c_api/c/tag/mrb //mruby_c_api/c/struct/mrb //mruby_c_api/c/intf/mrb //mruby_c_api/c/econst/mrb //mruby_c_api/c/data/mrb //mruby_c_api/c/clconst/mrb //mruby_c_api/c/instm/mrb //mruby_c_api/c/clm/mrb //mruby_c_api/c/intfcm/mrb //mruby_c_api/c/intfm/mrb //mruby_c_api/c/func/mrb //mruby_c_api/c/ftmplt/mrb //mruby_c_api/c/defn/mrb //mruby_c_api/c/macro/mrb //mruby_c_api/doc/com/intfm/mrb //mruby_c_api/doc/anysymbol/mrb" machineGenerated="true" --><span class="preprocessor">mrb</span><!-- /a --><span class="preprocessor">,</span> <span class="preprocessor">(</span><!-- a logicalPath="//mruby_c_api/c/cl/h //mruby_c_api/c/tdef/h //mruby_c_api/c/tag/h //mruby_c_api/c/struct/h //mruby_c_api/c/intf/h //mruby_c_api/c/econst/h //mruby_c_api/c/data/h //mruby_c_api/c/clconst/h //mruby_c_api/c/instm/h //mruby_c_api/c/clm/h //mruby_c_api/c/intfcm/h //mruby_c_api/c/intfm/h //mruby_c_api/c/func/h //mruby_c_api/c/ftmplt/h //mruby_c_api/c/defn/h //mruby_c_api/c/macro/h //mruby_c_api/doc/com/intfm/h //mruby_c_api/doc/anysymbol/h" machineGenerated="true" --><span class="preprocessor">h</span><!-- /a --><span class="preprocessor">)</span><span class="preprocessor">,</span> <a machinegenerated="true" href="../../mruby_h/index.html#//mruby_c_api/c/macro/mrb_intern_lit" logicalPath="//mruby_c_api/c/cl/mrb_intern_lit //mruby_c_api/c/tdef/mrb_intern_lit //mruby_c_api/c/tag/mrb_intern_lit //mruby_c_api/c/struct/mrb_intern_lit //mruby_c_api/c/intf/mrb_intern_lit //mruby_c_api/c/econst/mrb_intern_lit //mruby_c_api/c/data/mrb_intern_lit //mruby_c_api/c/clconst/mrb_intern_lit //mruby_c_api/c/instm/mrb_intern_lit //mruby_c_api/c/clm/mrb_intern_lit //mruby_c_api/c/intfcm/mrb_intern_lit //mruby_c_api/c/intfm/mrb_intern_lit //mruby_c_api/c/func/mrb_intern_lit //mruby_c_api/c/ftmplt/mrb_intern_lit //mruby_c_api/c/defn/mrb_intern_lit //mruby_c_api/c/macro/mrb_intern_lit" target="_top"><span class="preprocessor">mrb_intern_lit</span></a><span class="preprocessor">(</span><!-- a logicalPath="//mruby_c_api/c/cl/mrb //mruby_c_api/c/tdef/mrb //mruby_c_api/c/tag/mrb //mruby_c_api/c/struct/mrb //mruby_c_api/c/intf/mrb //mruby_c_api/c/econst/mrb //mruby_c_api/c/data/mrb //mruby_c_api/c/clconst/mrb //mruby_c_api/c/instm/mrb //mruby_c_api/c/clm/mrb //mruby_c_api/c/intfcm/mrb //mruby_c_api/c/intfm/mrb //mruby_c_api/c/func/mrb //mruby_c_api/c/ftmplt/mrb //mruby_c_api/c/defn/mrb //mruby_c_api/c/macro/mrb //mruby_c_api/doc/com/intfm/mrb //mruby_c_api/doc/anysymbol/mrb" machineGenerated="true" --><span class="preprocessor">mrb</span><!-- /a --><span class="preprocessor">,</span> <span class="preprocessor">"</span><!-- a logicalPath="//mruby_c_api/c/cl/ifnone //mruby_c_api/c/tdef/ifnone //mruby_c_api/c/tag/ifnone //mruby_c_api/c/struct/ifnone //mruby_c_api/c/intf/ifnone //mruby_c_api/c/econst/ifnone //mruby_c_api/c/data/ifnone //mruby_c_api/c/clconst/ifnone //mruby_c_api/c/instm/ifnone //mruby_c_api/c/clm/ifnone //mruby_c_api/c/intfcm/ifnone //mruby_c_api/c/intfm/ifnone //mruby_c_api/c/func/ifnone //mruby_c_api/c/ftmplt/ifnone //mruby_c_api/c/defn/ifnone //mruby_c_api/c/macro/ifnone //mruby_c_api/doc/com/intfm/ifnone //mruby_c_api/doc/anysymbol/ifnone" machineGenerated="true" --><span class="preprocessor">ifnone</span><!-- /a --><span class="preprocessor">"</span><span class="preprocessor">)</span><span class="preprocessor">)</span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/RHASH_IFNONE;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/RHASH_PROCDEFAULT;   name=RHASH_PROCDEFAULT --><a name="//mruby_c_api/c/macro/RHASH_PROCDEFAULT"></a>
+<h3><a name="RHASH_PROCDEFAULT">RHASH_PROCDEFAULT</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/RHASH_PROCDEFAULT;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/RHASH_PROCDEFAULT" logicalPath="//mruby_c_api/c/cl/RHASH_PROCDEFAULT //mruby_c_api/c/tdef/RHASH_PROCDEFAULT //mruby_c_api/c/tag/RHASH_PROCDEFAULT //mruby_c_api/c/struct/RHASH_PROCDEFAULT //mruby_c_api/c/intf/RHASH_PROCDEFAULT //mruby_c_api/c/econst/RHASH_PROCDEFAULT //mruby_c_api/c/data/RHASH_PROCDEFAULT //mruby_c_api/c/clconst/RHASH_PROCDEFAULT //mruby_c_api/c/instm/RHASH_PROCDEFAULT //mruby_c_api/c/clm/RHASH_PROCDEFAULT //mruby_c_api/c/intfcm/RHASH_PROCDEFAULT //mruby_c_api/c/intfm/RHASH_PROCDEFAULT //mruby_c_api/c/func/RHASH_PROCDEFAULT //mruby_c_api/c/ftmplt/RHASH_PROCDEFAULT //mruby_c_api/c/defn/RHASH_PROCDEFAULT //mruby_c_api/c/macro/RHASH_PROCDEFAULT" target="_top"><span class="preprocessor">RHASH_PROCDEFAULT</span></a><span class="preprocessor">(</span><!-- a logicalPath="//mruby_c_api/c/cl/h //mruby_c_api/c/tdef/h //mruby_c_api/c/tag/h //mruby_c_api/c/struct/h //mruby_c_api/c/intf/h //mruby_c_api/c/econst/h //mruby_c_api/c/data/h //mruby_c_api/c/clconst/h //mruby_c_api/c/instm/h //mruby_c_api/c/clm/h //mruby_c_api/c/intfcm/h //mruby_c_api/c/intfm/h //mruby_c_api/c/func/h //mruby_c_api/c/ftmplt/h //mruby_c_api/c/defn/h //mruby_c_api/c/macro/h //mruby_c_api/doc/com/intfm/h //mruby_c_api/doc/anysymbol/h" machineGenerated="true" --><span class="preprocessor">h</span><!-- /a --><span class="preprocessor">)</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/RHASH_IFNONE" logicalPath="//mruby_c_api/c/cl/RHASH_IFNONE //mruby_c_api/c/tdef/RHASH_IFNONE //mruby_c_api/c/tag/RHASH_IFNONE //mruby_c_api/c/struct/RHASH_IFNONE //mruby_c_api/c/intf/RHASH_IFNONE //mruby_c_api/c/econst/RHASH_IFNONE //mruby_c_api/c/data/RHASH_IFNONE //mruby_c_api/c/clconst/RHASH_IFNONE //mruby_c_api/c/instm/RHASH_IFNONE //mruby_c_api/c/clm/RHASH_IFNONE //mruby_c_api/c/intfcm/RHASH_IFNONE //mruby_c_api/c/intfm/RHASH_IFNONE //mruby_c_api/c/func/RHASH_IFNONE //mruby_c_api/c/ftmplt/RHASH_IFNONE //mruby_c_api/c/defn/RHASH_IFNONE //mruby_c_api/c/macro/RHASH_IFNONE" target="_top"><span class="preprocessor">RHASH_IFNONE</span></a><span class="preprocessor">(</span><!-- a logicalPath="//mruby_c_api/c/cl/h //mruby_c_api/c/tdef/h //mruby_c_api/c/tag/h //mruby_c_api/c/struct/h //mruby_c_api/c/intf/h //mruby_c_api/c/econst/h //mruby_c_api/c/data/h //mruby_c_api/c/clconst/h //mruby_c_api/c/instm/h //mruby_c_api/c/clm/h //mruby_c_api/c/intfcm/h //mruby_c_api/c/intfm/h //mruby_c_api/c/func/h //mruby_c_api/c/ftmplt/h //mruby_c_api/c/defn/h //mruby_c_api/c/macro/h //mruby_c_api/doc/com/intfm/h //mruby_c_api/doc/anysymbol/h" machineGenerated="true" --><span class="preprocessor">h</span><!-- /a --><span class="preprocessor">)</span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/RHASH_PROCDEFAULT;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/RHASH_TBL;   name=RHASH_TBL --><a name="//mruby_c_api/c/macro/RHASH_TBL"></a>
+<h3><a name="RHASH_TBL">RHASH_TBL</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/RHASH_TBL;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/RHASH_TBL" logicalPath="//mruby_c_api/c/cl/RHASH_TBL //mruby_c_api/c/tdef/RHASH_TBL //mruby_c_api/c/tag/RHASH_TBL //mruby_c_api/c/struct/RHASH_TBL //mruby_c_api/c/intf/RHASH_TBL //mruby_c_api/c/econst/RHASH_TBL //mruby_c_api/c/data/RHASH_TBL //mruby_c_api/c/clconst/RHASH_TBL //mruby_c_api/c/instm/RHASH_TBL //mruby_c_api/c/clm/RHASH_TBL //mruby_c_api/c/intfcm/RHASH_TBL //mruby_c_api/c/intfm/RHASH_TBL //mruby_c_api/c/func/RHASH_TBL //mruby_c_api/c/ftmplt/RHASH_TBL //mruby_c_api/c/defn/RHASH_TBL //mruby_c_api/c/macro/RHASH_TBL" target="_top"><span class="preprocessor">RHASH_TBL</span></a><span class="preprocessor">(</span><!-- a logicalPath="//mruby_c_api/c/cl/h //mruby_c_api/c/tdef/h //mruby_c_api/c/tag/h //mruby_c_api/c/struct/h //mruby_c_api/c/intf/h //mruby_c_api/c/econst/h //mruby_c_api/c/data/h //mruby_c_api/c/clconst/h //mruby_c_api/c/instm/h //mruby_c_api/c/clm/h //mruby_c_api/c/intfcm/h //mruby_c_api/c/intfm/h //mruby_c_api/c/func/h //mruby_c_api/c/ftmplt/h //mruby_c_api/c/defn/h //mruby_c_api/c/macro/h //mruby_c_api/doc/com/intfm/h //mruby_c_api/doc/anysymbol/h" machineGenerated="true" --><span class="preprocessor">h</span><!-- /a --><span class="preprocessor">)</span> <span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/RHASH_TBL;name=end --></pre>
+</div>
+<p class="gapBeforeFooter">&nbsp;</p>
+<hr class="afterFooter">
+<div class="hd_copyright_and_timestamp">
+<p class="hd_copyright">&copy; MRuby developers </p>
+<p class="hd_timestamp">Last Updated: September 18, 2015
+</p>
+</div>
+</td>
+</tr></table>
+</body>
+</html>

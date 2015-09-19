@@ -1,0 +1,537 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>object.h</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<meta name="xcode-display" content="render">
+<style type="text/css"><!--body {border: 0px; margin: 0px;}div {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}td {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}span.hd_tocAccessSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroupSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroup { display: block; font-weight: bold; font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; margin-left: 0px; padding-left: 40px; }span.hd_tocGroup + span.hd_tocAccess { padding-top: 5px; }td.toc_contents_text {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; }li.tocSubEntry {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}p {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}h2.h2tight { margin-top: 0px; padding-top: 0px; }h1 { margin-top: 13px; padding-top: 0px; }h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}h5 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10.1pt; font-weight: bold;}pre {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666; font-size: 10pt;}pre a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}pre a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}body  {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt; padding-left: 0px; padding-top: 0px; margin-left: 0px; margin-top: 0px; border: none; }#hd_outermost_table { margin-left: 0px; border-spacing: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; }#hd_outermost_table > tbody > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tbody > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-top: 3px; }.afterName { display: none; }.list_indent { margin-left: 40px; }.declaration_indent { margin-left: 40px; margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px; min-height: 12px; vertical-align: middle; }.declaration_indent pre { margin-top: 20px; padding-top: 0px; margin-bottom: 20px; padding-bottom: 0px; }.gapBeforeFooter { display: none; }hr { height: 0px; min-height: 0px; border-top: none; border-left: none; border-right: none; border-bottom: 1px solid #909090;}hr.afterHeader { display: none }.param_group_indent { margin-left: 25px; }.param_indent { margin-left: 40px; margin-top: 0px; padding-top: 0px; }.param_indent dl { margin-top: 4px; padding-top: 0px; }dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.param_indent dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.group_indent { margin-left: 40px; }.group_desc_indent { margin-left: 20px; }.warning_indent { margin-left: 40px; }.important_indent { margin-left: 40px; }.note_indent { margin-left: 40px; }h3 {       color: #3C4C6C;}.tight {       margin-top: 2px; margin-bottom: 0px;       padding-top: 0px; padding-bottom: 0px;}h3 a {       color: #3C4C6C;	font-size: 16px;	font-style: normal;	font-variant: normal;	font-weight: bold;	height: 0px;	line-height: normal;}.hd_tocAccess { display: block; margin-left: 40px; font-style: italic; font-size: 10px; font-weight: normal; color: #303030; }.tocSubheading { margin-bottom: 4px; }--></style>
+<style><!--
+body {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+.toc_contents_text {
+    padding-left: 1em;
+    text-indent: -1em;
+}
+
+ul.tocSubEntryList li.tocSubEntry {
+    list-style: none;
+}
+
+#colorbox {
+		display: none;
+}
+.spec_sheet_line {
+		margin-bottom: 1px;
+}
+.collapsible {
+		display: none;
+}
+.toc_leadspace {
+		width: 10; min-width: 10;
+}
+.disclosure_triangle_td {
+		width: 14; min-width: 14;
+		font-size: 10px;
+		vertical-align: middle;
+}
+.specbox td {
+		font-size: 13px;
+}
+.specbox td a {
+		font-size: 13px;
+}
+.specbox td code {
+		font-size: 13px;
+}
+.specbox td tt {
+		font-size: 13px;
+}
+.specbox td pre {
+		font-size: 13px;
+}
+.specbox a {
+		font-size: 12px;
+}
+.disclosure_triangle_td a {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:link {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:active {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:visited:hover {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:hover {
+		text-decoration: none;
+}
+.hd_toc_box {
+		padding-top: 10px;
+		padding-right: 15px;
+}.tocSeparator {
+		margin-top: 15px;
+		padding-bottom: 0px;
+		margin-bottom: 0px;
+}
+.tocSubEntryList {
+		margin-left: 0px;
+		padding-left: 40px;
+		padding-top: 0px;
+		margin-top: 2px;
+		padding-bottom: 0px;
+		margin-bottom: 8px;
+}
+.hd_toc_heading_table {
+		margin-top: 2px;
+		margin-bottom: 2px;
+}
+.hd_toc_entry_table {
+		margin-top: 2px;
+		margin-bottom: 2px;
+}
+.tocSubEntry {
+		margin-left: 0px;
+		padding-left: 0px;
+		margin-top: 0px;
+		margin-bottom: 1px;
+}
+.tocSubEntry a {
+		font-size: 10pt;
+}
+.tocSubheading {
+		padding-left: 14px;
+		margin-left: 0px;
+		margin-top: 5px;
+		padding-top: 0px;
+		font-size: 16px;
+		color: #808080;
+}
+
+#hd_outermost_table { margin-left: 0px; border-spacing: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }
+#hd_outermost_table > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }
+#hd_outermost_table > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; }
+#hd_outermost_table > tbody > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }
+#hd_outermost_table > tbody > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-top: 3px; }
+
+#tocMenu {
+		border-right: 1px solid #c0c0c0;
+		background-color: #f4f4ff;
+		top:0px;
+		left:0px;
+		width:230px;
+		height:100%;
+}
+#bodyContents {
+		width: auto;
+		padding-left: 15px;
+}
+--></style>
+<style id="disable_before_iOS_5"><!--
+#tocMenu {
+		position: fixed;
+		height: 100%;
+		overflow: auto;
+}
+#bodyContents {
+		width: auto;
+		left: 235px;
+		right: 0;
+		padding-left: 15px;
+		position: fixed;
+		height: 100%;
+		overflow-y: scroll;
+}
+--></style>
+<script language="JavaScript" type="text/javascript"><!--
+    if (navigator.platform && (navigator.platform.match(/iPad/) || navigator.platform.match(/iPhone/) || navigator.platform.match(/iPod/))) {
+        if (navigator.userAgent.match(/OS 1(_\d)+/) ||
+            navigator.userAgent.match(/OS 2(_\d)+/) ||
+            navigator.userAgent.match(/OS 3(_\d)+/) ||
+            navigator.userAgent.match(/OS 4(_\d)+/)) {
+                /* Earlier iOS versions require different scrolling gestures with position: fixed. */
+                var del_style_elt = document.getElementById("disable_before_iOS_5");
+                if (del_style_elt) del_style_elt.parentNode.removeChild(del_style_elt);
+        }
+    }
+// --></script><script language="JavaScript" type="text/javascript"><!--
+function getNewHTTPObject()
+{
+        var xmlhttp;
+
+        /** Special IE only code ... */
+        /*@cc_on
+          @if (@_jscript_version >= 5)
+              try
+              {
+                  xmlhttp = new ActiveXObject('Msxml2.XMLHTTP');
+              }
+              catch (e)
+              {
+                  try
+                  {
+                      xmlhttp = new ActiveXObject('Microsoft.XMLHTTP');
+                  }
+                  catch (E)
+                  {
+                      xmlhttp = false;
+                  }
+             }
+          @else
+             xmlhttp = false;
+        @end @*/
+
+        /** Every other browser on the planet */
+        if (!xmlhttp && typeof XMLHttpRequest != 'undefined')
+        {
+            try
+            {
+                xmlhttp = new XMLHttpRequest();
+            }
+            catch (e)
+            {
+                xmlhttp = false;
+            }
+        }
+
+        return xmlhttp;
+}
+
+function hidetoc() {
+	var toc = document.getElementById('tocMenu');
+	var src = toc.getAttribute('src');
+	var xhr = getNewHTTPObject();
+	xhr.open('GET', src, true);
+	xhr.onreadystatechange = function() {
+		if(xhr.readyState == 4) {
+			var toc = document.getElementById('tocMenu');
+			toc.innerHTML = xhr.responseText;
+		}
+	}
+	xhr.send(null);
+	var origURL = parent.document.URL;
+	var contentURL = origURL.substring(origURL.indexOf('?')+1, origURL.length);
+	if (contentURL.length == origURL.length) {
+		jumpPos = origURL.substring(origURL.indexOf('#')+1, origURL.length);
+	}
+	if (contentURL == "hidetoc") {
+		var body = document.getElementById('bodyContents');
+		if (toc && body) {
+			toc.style.display = 'none';
+			body.style.marginLeft = '0px';
+		}
+	}
+}
+
+function disclosure_triangle(elt) {
+   var linkelt = elt;
+   while (elt && elt.tagName != 'TABLE') { elt = elt.parentNode;}
+   if (!elt) { return; }
+   while (elt && elt.tagName != 'DIV') { elt = elt.nextSibling;}
+   if (!elt) { return; }
+   if (parseInt(linkelt.getAttribute('state'))) {
+      // It's open.  Close it
+      linkelt.innerHTML = '&#x25B7;';
+      linkelt.setAttribute('state', 0);
+      linkelt.setAttribute('class', 'closed_disclosure_triangle');
+      elt.style.display = 'none';
+   } else {
+      // It's closed.  Open it
+      linkelt.innerHTML = '&#x25BC;';
+      linkelt.setAttribute('state', 1);
+      linkelt.setAttribute('class', 'open_disclosure_triangle');
+      elt.style.display = 'block';
+   }
+}
+--></script><style type="text/css"><!--body {border: 0px; margin: 0px;}div {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}td {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}span.hd_tocAccessSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroupSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroup { display: block; font-weight: bold; font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; margin-left: 0px; padding-left: 40px; }span.hd_tocGroup + span.hd_tocAccess { padding-top: 5px; }td.toc_contents_text {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; }li.tocSubEntry {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}p {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}h2.h2tight { margin-top: 0px; padding-top: 0px; }h1 { margin-top: 13px; padding-top: 0px; }h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}h5 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10.1pt; font-weight: bold;}pre {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666; font-size: 10pt;}pre a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}pre a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}body  {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt; padding-left: 0px; padding-top: 0px; margin-left: 0px; margin-top: 0px; border: none; }#hd_outermost_table { margin-left: 0px; border-spacing: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; }#hd_outermost_table > tbody > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tbody > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-top: 3px; }.afterName { display: none; }.list_indent { margin-left: 40px; }.declaration_indent { margin-left: 40px; margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px; min-height: 12px; vertical-align: middle; }.declaration_indent pre { margin-top: 20px; padding-top: 0px; margin-bottom: 20px; padding-bottom: 0px; }.gapBeforeFooter { display: none; }hr { height: 0px; min-height: 0px; border-top: none; border-left: none; border-right: none; border-bottom: 1px solid #909090;}hr.afterHeader { display: none }.param_group_indent { margin-left: 25px; }.param_indent { margin-left: 40px; margin-top: 0px; padding-top: 0px; }.param_indent dl { margin-top: 4px; padding-top: 0px; }dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.param_indent dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.group_indent { margin-left: 40px; }.group_desc_indent { margin-left: 20px; }.warning_indent { margin-left: 40px; }.important_indent { margin-left: 40px; }.note_indent { margin-left: 40px; }h3 {       color: #3C4C6C;}.tight {       margin-top: 2px; margin-bottom: 0px;       padding-top: 0px; padding-bottom: 0px;}h3 a {       color: #3C4C6C;	font-size: 16px;	font-style: normal;	font-variant: normal;	font-weight: bold;	height: 0px;	line-height: normal;}.hd_tocAccess { display: block; margin-left: 40px; font-style: italic; font-size: 10px; font-weight: normal; color: #303030; }.tocSubheading { margin-bottom: 4px; }--></style>
+</head>
+<body bgcolor="#ffffff" onload="hidetoc();">
+<!-- headerDoc=Header;  uid=//mruby_c_api/doc/header/object.h;   name=object.h -->
+<a name="//mruby_c_api/doc/header/object.h"></a>
+<table id="hd_outermost_table" height="100%" width="100%"><tr>
+<td valign="top" id="tocMenu" src="toc.html"></td>
+<td id="bodyContents" valign="top">
+<a name="top"></a>
+<h1><a name="object.h">object.h</a></h1>
+<h2>Introduction</h2>
+<p><!-- headerDoc=abstract;uid=//mruby_c_api/doc/header/object.h;name=start --><!-- begin abstract -->Use the links in the table of contents to the left to access the documentation.<br><!-- end abstract --><!-- headerDoc=abstract;uid=//mruby_c_api/doc/header/object.h;name=end --></p>
+<hr class="afterClassOrHeaderInfo">
+<br><a name="HeaderDoc_structs"></a>
+<h2 class="h2tight">Structs&nbsp;and&nbsp;Unions</h2>
+<dl>
+<dt><tt><a href="index.html#//mruby_c_api/c/tag/RBasic" target="_top">RBasic</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/tag/RFiber" target="_top">RFiber</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/tag/RObject" target="_top">RObject</a></tt></dt>
+<dd></dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=tag;  uid=//mruby_c_api/c/tag/RBasic;   name=RBasic --><a name="//mruby_c_api/c/tag/RBasic"></a>
+<h3><a name="RBasic">RBasic</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/tag/RBasic;name=start --><span class="keyword">struct</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/tag/RBasic" logicalPath="//mruby_c_api/c/cl/RBasic //mruby_c_api/c/tdef/RBasic //mruby_c_api/c/tag/RBasic" target="_top"><span class="type">RBasic</span></a> { 
+    <!-- a logicalPath="//mruby_c_api/c/econst/MRB_OBJECT_HEADER //mruby_c_api/c/data/MRB_OBJECT_HEADER //mruby_c_api/c/clconst/MRB_OBJECT_HEADER " machineGenerated="true" --><span class="var">MRB_OBJECT_HEADER</span><!-- /a -->; 
+};  <!-- headerDoc=declaration;uid=//mruby_c_api/c/tag/RBasic;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=tag;  uid=//mruby_c_api/c/tag/RFiber;   name=RFiber --><a name="//mruby_c_api/c/tag/RFiber"></a>
+<h3><a name="RFiber">RFiber</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/tag/RFiber;name=start --><span class="keyword">struct</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/tag/RFiber" logicalPath="//mruby_c_api/c/cl/RFiber //mruby_c_api/c/tdef/RFiber //mruby_c_api/c/tag/RFiber" target="_top"><span class="type">RFiber</span></a> { 
+    <!-- a logicalPath="//mruby_c_api/c/econst/MRB_OBJECT_HEADER //mruby_c_api/c/data/MRB_OBJECT_HEADER //mruby_c_api/c/clconst/MRB_OBJECT_HEADER " machineGenerated="true" --><span class="var">MRB_OBJECT_HEADER</span><!-- /a -->; 
+    <span class="keyword">struct</span> <a machinegenerated="true" href="../../mruby_h/index.html#//mruby_c_api/c/tag/mrb_context" logicalPath="//mruby_c_api/c/cl/mrb_context //mruby_c_api/c/tdef/mrb_context //mruby_c_api/c/tag/mrb_context" target="_top"><span class="type">mrb_context</span></a> <span class="type">*</span><!-- a logicalPath="//mruby_c_api/c/econst/cxt //mruby_c_api/c/data/cxt //mruby_c_api/c/clconst/cxt " machineGenerated="true" --><span class="var">cxt</span><!-- /a -->; 
+};  <!-- headerDoc=declaration;uid=//mruby_c_api/c/tag/RFiber;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=tag;  uid=//mruby_c_api/c/tag/RObject;   name=RObject --><a name="//mruby_c_api/c/tag/RObject"></a>
+<h3><a name="RObject">RObject</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/tag/RObject;name=start --><span class="keyword">struct</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/tag/RObject" logicalPath="//mruby_c_api/c/cl/RObject //mruby_c_api/c/tdef/RObject //mruby_c_api/c/tag/RObject" target="_top"><span class="type">RObject</span></a> { 
+    <!-- a logicalPath="//mruby_c_api/c/econst/MRB_OBJECT_HEADER //mruby_c_api/c/data/MRB_OBJECT_HEADER //mruby_c_api/c/clconst/MRB_OBJECT_HEADER " machineGenerated="true" --><span class="var">MRB_OBJECT_HEADER</span><!-- /a -->; 
+    <span class="keyword">struct</span> <!-- a logicalPath="//mruby_c_api/c/cl/iv_tbl //mruby_c_api/c/tdef/iv_tbl //mruby_c_api/c/tag/iv_tbl //mruby_c_api/c/struct/iv_tbl //mruby_c_api/c/intf/iv_tbl //mruby_c_api/doc/anysymbol/iv_tbl" machineGenerated="true" --><span class="type">iv_tbl</span><!-- /a --> <span class="type">*</span><!-- a logicalPath="//mruby_c_api/c/econst/iv //mruby_c_api/c/data/iv //mruby_c_api/c/clconst/iv " machineGenerated="true" --><span class="var">iv</span><!-- /a -->; 
+};  <!-- headerDoc=declaration;uid=//mruby_c_api/c/tag/RObject;name=end --></pre>
+</div>
+<hr class="betweenSections">
+<a name="HeaderDoc_pdefines"></a>
+<h2 class="h2tight">Macro Definitions</h2>
+<dl>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/flip_white_part" target="_top">flip_white_part</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/is_black" target="_top">is_black</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/is_dead" target="_top">is_dead</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/is_gray" target="_top">is_gray</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/is_white" target="_top">is_white</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/mrb_basic_ptr" target="_top">mrb_basic_ptr</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/MRB_FLAG_TEST" target="_top">MRB_FLAG_TEST</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/MRB_GC_BLACK" target="_top">MRB_GC_BLACK</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/MRB_GC_COLOR_MASK" target="_top">MRB_GC_COLOR_MASK</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/MRB_GC_GRAY" target="_top">MRB_GC_GRAY</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/MRB_GC_WHITE_A" target="_top">MRB_GC_WHITE_A</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/MRB_GC_WHITE_B" target="_top">MRB_GC_WHITE_B</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/MRB_GC_WHITES" target="_top">MRB_GC_WHITES</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/mrb_immediate_p" target="_top">mrb_immediate_p</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/mrb_obj_ptr" target="_top">mrb_obj_ptr</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/MRB_OBJECT_HEADER" target="_top">MRB_OBJECT_HEADER</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/mrb_special_const_p" target="_top">mrb_special_const_p</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/MRUBY_OBJECT_H" target="_top">MRUBY_OBJECT_H</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/other_white_part" target="_top">other_white_part</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/paint_black" target="_top">paint_black</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/paint_gray" target="_top">paint_gray</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/paint_partial_white" target="_top">paint_partial_white</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//mruby_c_api/c/macro/paint_white" target="_top">paint_white</a></tt></dt>
+<dd></dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/flip_white_part;   name=flip_white_part --><a name="//mruby_c_api/c/macro/flip_white_part"></a>
+<h3><a name="flip_white_part">flip_white_part</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/flip_white_part;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/flip_white_part" logicalPath="//mruby_c_api/c/cl/flip_white_part //mruby_c_api/c/tdef/flip_white_part //mruby_c_api/c/tag/flip_white_part //mruby_c_api/c/struct/flip_white_part //mruby_c_api/c/intf/flip_white_part //mruby_c_api/c/econst/flip_white_part //mruby_c_api/c/data/flip_white_part //mruby_c_api/c/clconst/flip_white_part //mruby_c_api/c/instm/flip_white_part //mruby_c_api/c/clm/flip_white_part //mruby_c_api/c/intfcm/flip_white_part //mruby_c_api/c/intfm/flip_white_part //mruby_c_api/c/func/flip_white_part //mruby_c_api/c/ftmplt/flip_white_part //mruby_c_api/c/defn/flip_white_part //mruby_c_api/c/macro/flip_white_part" target="_top"><span class="preprocessor">flip_white_part</span></a><span class="preprocessor">(</span><!-- a logicalPath="//mruby_c_api/c/cl/s //mruby_c_api/c/tdef/s //mruby_c_api/c/tag/s //mruby_c_api/c/struct/s //mruby_c_api/c/intf/s //mruby_c_api/c/econst/s //mruby_c_api/c/data/s //mruby_c_api/c/clconst/s //mruby_c_api/c/instm/s //mruby_c_api/c/clm/s //mruby_c_api/c/intfcm/s //mruby_c_api/c/intfm/s //mruby_c_api/c/func/s //mruby_c_api/c/ftmplt/s //mruby_c_api/c/defn/s //mruby_c_api/c/macro/s //mruby_c_api/doc/com/intfm/s //mruby_c_api/doc/anysymbol/s" machineGenerated="true" --><span class="preprocessor">s</span><!-- /a --><span class="preprocessor">)</span> <span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/flip_white_part;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/is_black;   name=is_black --><a name="//mruby_c_api/c/macro/is_black"></a>
+<h3><a name="is_black">is_black</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/is_black;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/is_black" logicalPath="//mruby_c_api/c/cl/is_black //mruby_c_api/c/tdef/is_black //mruby_c_api/c/tag/is_black //mruby_c_api/c/struct/is_black //mruby_c_api/c/intf/is_black //mruby_c_api/c/econst/is_black //mruby_c_api/c/data/is_black //mruby_c_api/c/clconst/is_black //mruby_c_api/c/instm/is_black //mruby_c_api/c/clm/is_black //mruby_c_api/c/intfcm/is_black //mruby_c_api/c/intfm/is_black //mruby_c_api/c/func/is_black //mruby_c_api/c/ftmplt/is_black //mruby_c_api/c/defn/is_black //mruby_c_api/c/macro/is_black" target="_top"><span class="preprocessor">is_black</span></a><span class="preprocessor">(</span><!-- a logicalPath="//mruby_c_api/c/cl/o //mruby_c_api/c/tdef/o //mruby_c_api/c/tag/o //mruby_c_api/c/struct/o //mruby_c_api/c/intf/o //mruby_c_api/c/econst/o //mruby_c_api/c/data/o //mruby_c_api/c/clconst/o //mruby_c_api/c/instm/o //mruby_c_api/c/clm/o //mruby_c_api/c/intfcm/o //mruby_c_api/c/intfm/o //mruby_c_api/c/func/o //mruby_c_api/c/ftmplt/o //mruby_c_api/c/defn/o //mruby_c_api/c/macro/o //mruby_c_api/doc/com/intfm/o //mruby_c_api/doc/anysymbol/o" machineGenerated="true" --><span class="preprocessor">o</span><!-- /a --><span class="preprocessor">)</span> <span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/is_black;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/is_dead;   name=is_dead --><a name="//mruby_c_api/c/macro/is_dead"></a>
+<h3><a name="is_dead">is_dead</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/is_dead;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/is_dead" logicalPath="//mruby_c_api/c/cl/is_dead //mruby_c_api/c/tdef/is_dead //mruby_c_api/c/tag/is_dead //mruby_c_api/c/struct/is_dead //mruby_c_api/c/intf/is_dead //mruby_c_api/c/econst/is_dead //mruby_c_api/c/data/is_dead //mruby_c_api/c/clconst/is_dead //mruby_c_api/c/instm/is_dead //mruby_c_api/c/clm/is_dead //mruby_c_api/c/intfcm/is_dead //mruby_c_api/c/intfm/is_dead //mruby_c_api/c/func/is_dead //mruby_c_api/c/ftmplt/is_dead //mruby_c_api/c/defn/is_dead //mruby_c_api/c/macro/is_dead" target="_top"><span class="preprocessor">is_dead</span></a><span class="preprocessor">(</span><!-- a logicalPath="//mruby_c_api/c/cl/s //mruby_c_api/c/tdef/s //mruby_c_api/c/tag/s //mruby_c_api/c/struct/s //mruby_c_api/c/intf/s //mruby_c_api/c/econst/s //mruby_c_api/c/data/s //mruby_c_api/c/clconst/s //mruby_c_api/c/instm/s //mruby_c_api/c/clm/s //mruby_c_api/c/intfcm/s //mruby_c_api/c/intfm/s //mruby_c_api/c/func/s //mruby_c_api/c/ftmplt/s //mruby_c_api/c/defn/s //mruby_c_api/c/macro/s //mruby_c_api/doc/com/intfm/s //mruby_c_api/doc/anysymbol/s" machineGenerated="true" --><span class="preprocessor">s</span><!-- /a --><span class="preprocessor">,</span> <!-- a logicalPath="//mruby_c_api/c/cl/o //mruby_c_api/c/tdef/o //mruby_c_api/c/tag/o //mruby_c_api/c/struct/o //mruby_c_api/c/intf/o //mruby_c_api/c/econst/o //mruby_c_api/c/data/o //mruby_c_api/c/clconst/o //mruby_c_api/c/instm/o //mruby_c_api/c/clm/o //mruby_c_api/c/intfcm/o //mruby_c_api/c/intfm/o //mruby_c_api/c/func/o //mruby_c_api/c/ftmplt/o //mruby_c_api/c/defn/o //mruby_c_api/c/macro/o //mruby_c_api/doc/com/intfm/o //mruby_c_api/doc/anysymbol/o" machineGenerated="true" --><span class="preprocessor">o</span><!-- /a --><span class="preprocessor">)</span> <span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/is_dead;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/is_gray;   name=is_gray --><a name="//mruby_c_api/c/macro/is_gray"></a>
+<h3><a name="is_gray">is_gray</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/is_gray;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/is_gray" logicalPath="//mruby_c_api/c/cl/is_gray //mruby_c_api/c/tdef/is_gray //mruby_c_api/c/tag/is_gray //mruby_c_api/c/struct/is_gray //mruby_c_api/c/intf/is_gray //mruby_c_api/c/econst/is_gray //mruby_c_api/c/data/is_gray //mruby_c_api/c/clconst/is_gray //mruby_c_api/c/instm/is_gray //mruby_c_api/c/clm/is_gray //mruby_c_api/c/intfcm/is_gray //mruby_c_api/c/intfm/is_gray //mruby_c_api/c/func/is_gray //mruby_c_api/c/ftmplt/is_gray //mruby_c_api/c/defn/is_gray //mruby_c_api/c/macro/is_gray" target="_top"><span class="preprocessor">is_gray</span></a><span class="preprocessor">(</span><!-- a logicalPath="//mruby_c_api/c/cl/o //mruby_c_api/c/tdef/o //mruby_c_api/c/tag/o //mruby_c_api/c/struct/o //mruby_c_api/c/intf/o //mruby_c_api/c/econst/o //mruby_c_api/c/data/o //mruby_c_api/c/clconst/o //mruby_c_api/c/instm/o //mruby_c_api/c/clm/o //mruby_c_api/c/intfcm/o //mruby_c_api/c/intfm/o //mruby_c_api/c/func/o //mruby_c_api/c/ftmplt/o //mruby_c_api/c/defn/o //mruby_c_api/c/macro/o //mruby_c_api/doc/com/intfm/o //mruby_c_api/doc/anysymbol/o" machineGenerated="true" --><span class="preprocessor">o</span><!-- /a --><span class="preprocessor">)</span> <span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/is_gray;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/is_white;   name=is_white --><a name="//mruby_c_api/c/macro/is_white"></a>
+<h3><a name="is_white">is_white</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/is_white;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/is_white" logicalPath="//mruby_c_api/c/cl/is_white //mruby_c_api/c/tdef/is_white //mruby_c_api/c/tag/is_white //mruby_c_api/c/struct/is_white //mruby_c_api/c/intf/is_white //mruby_c_api/c/econst/is_white //mruby_c_api/c/data/is_white //mruby_c_api/c/clconst/is_white //mruby_c_api/c/instm/is_white //mruby_c_api/c/clm/is_white //mruby_c_api/c/intfcm/is_white //mruby_c_api/c/intfm/is_white //mruby_c_api/c/func/is_white //mruby_c_api/c/ftmplt/is_white //mruby_c_api/c/defn/is_white //mruby_c_api/c/macro/is_white" target="_top"><span class="preprocessor">is_white</span></a><span class="preprocessor">(</span><!-- a logicalPath="//mruby_c_api/c/cl/o //mruby_c_api/c/tdef/o //mruby_c_api/c/tag/o //mruby_c_api/c/struct/o //mruby_c_api/c/intf/o //mruby_c_api/c/econst/o //mruby_c_api/c/data/o //mruby_c_api/c/clconst/o //mruby_c_api/c/instm/o //mruby_c_api/c/clm/o //mruby_c_api/c/intfcm/o //mruby_c_api/c/intfm/o //mruby_c_api/c/func/o //mruby_c_api/c/ftmplt/o //mruby_c_api/c/defn/o //mruby_c_api/c/macro/o //mruby_c_api/doc/com/intfm/o //mruby_c_api/doc/anysymbol/o" machineGenerated="true" --><span class="preprocessor">o</span><!-- /a --><span class="preprocessor">)</span> <span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/is_white;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/mrb_basic_ptr;   name=mrb_basic_ptr --><a name="//mruby_c_api/c/macro/mrb_basic_ptr"></a>
+<h3><a name="mrb_basic_ptr">mrb_basic_ptr</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/mrb_basic_ptr;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/mrb_basic_ptr" logicalPath="//mruby_c_api/c/cl/mrb_basic_ptr //mruby_c_api/c/tdef/mrb_basic_ptr //mruby_c_api/c/tag/mrb_basic_ptr //mruby_c_api/c/struct/mrb_basic_ptr //mruby_c_api/c/intf/mrb_basic_ptr //mruby_c_api/c/econst/mrb_basic_ptr //mruby_c_api/c/data/mrb_basic_ptr //mruby_c_api/c/clconst/mrb_basic_ptr //mruby_c_api/c/instm/mrb_basic_ptr //mruby_c_api/c/clm/mrb_basic_ptr //mruby_c_api/c/intfcm/mrb_basic_ptr //mruby_c_api/c/intfm/mrb_basic_ptr //mruby_c_api/c/func/mrb_basic_ptr //mruby_c_api/c/ftmplt/mrb_basic_ptr //mruby_c_api/c/defn/mrb_basic_ptr //mruby_c_api/c/macro/mrb_basic_ptr" target="_top"><span class="preprocessor">mrb_basic_ptr</span></a><span class="preprocessor">(</span><!-- a logicalPath="//mruby_c_api/c/cl/v //mruby_c_api/c/tdef/v //mruby_c_api/c/tag/v //mruby_c_api/c/struct/v //mruby_c_api/c/intf/v //mruby_c_api/c/econst/v //mruby_c_api/c/data/v //mruby_c_api/c/clconst/v //mruby_c_api/c/instm/v //mruby_c_api/c/clm/v //mruby_c_api/c/intfcm/v //mruby_c_api/c/intfm/v //mruby_c_api/c/func/v //mruby_c_api/c/ftmplt/v //mruby_c_api/c/defn/v //mruby_c_api/c/macro/v //mruby_c_api/doc/com/intfm/v //mruby_c_api/doc/anysymbol/v" machineGenerated="true" --><span class="preprocessor">v</span><!-- /a --><span class="preprocessor">)</span> <span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/mrb_basic_ptr;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/MRB_FLAG_TEST;   name=MRB_FLAG_TEST --><a name="//mruby_c_api/c/macro/MRB_FLAG_TEST"></a>
+<h3><a name="MRB_FLAG_TEST">MRB_FLAG_TEST</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRB_FLAG_TEST;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRB_FLAG_TEST" logicalPath="//mruby_c_api/c/cl/MRB_FLAG_TEST //mruby_c_api/c/tdef/MRB_FLAG_TEST //mruby_c_api/c/tag/MRB_FLAG_TEST //mruby_c_api/c/struct/MRB_FLAG_TEST //mruby_c_api/c/intf/MRB_FLAG_TEST //mruby_c_api/c/econst/MRB_FLAG_TEST //mruby_c_api/c/data/MRB_FLAG_TEST //mruby_c_api/c/clconst/MRB_FLAG_TEST //mruby_c_api/c/instm/MRB_FLAG_TEST //mruby_c_api/c/clm/MRB_FLAG_TEST //mruby_c_api/c/intfcm/MRB_FLAG_TEST //mruby_c_api/c/intfm/MRB_FLAG_TEST //mruby_c_api/c/func/MRB_FLAG_TEST //mruby_c_api/c/ftmplt/MRB_FLAG_TEST //mruby_c_api/c/defn/MRB_FLAG_TEST //mruby_c_api/c/macro/MRB_FLAG_TEST" target="_top"><span class="preprocessor">MRB_FLAG_TEST</span></a><span class="preprocessor">(</span><!-- a logicalPath="//mruby_c_api/c/cl/obj //mruby_c_api/c/tdef/obj //mruby_c_api/c/tag/obj //mruby_c_api/c/struct/obj //mruby_c_api/c/intf/obj //mruby_c_api/c/econst/obj //mruby_c_api/c/data/obj //mruby_c_api/c/clconst/obj //mruby_c_api/c/instm/obj //mruby_c_api/c/clm/obj //mruby_c_api/c/intfcm/obj //mruby_c_api/c/intfm/obj //mruby_c_api/c/func/obj //mruby_c_api/c/ftmplt/obj //mruby_c_api/c/defn/obj //mruby_c_api/c/macro/obj //mruby_c_api/doc/com/intfm/obj //mruby_c_api/doc/anysymbol/obj" machineGenerated="true" --><span class="preprocessor">obj</span><!-- /a --><span class="preprocessor">,</span> <!-- a logicalPath="//mruby_c_api/c/cl/flag //mruby_c_api/c/tdef/flag //mruby_c_api/c/tag/flag //mruby_c_api/c/struct/flag //mruby_c_api/c/intf/flag //mruby_c_api/c/econst/flag //mruby_c_api/c/data/flag //mruby_c_api/c/clconst/flag //mruby_c_api/c/instm/flag //mruby_c_api/c/clm/flag //mruby_c_api/c/intfcm/flag //mruby_c_api/c/intfm/flag //mruby_c_api/c/func/flag //mruby_c_api/c/ftmplt/flag //mruby_c_api/c/defn/flag //mruby_c_api/c/macro/flag //mruby_c_api/doc/com/intfm/flag //mruby_c_api/doc/anysymbol/flag" machineGenerated="true" --><span class="preprocessor">flag</span><!-- /a --><span class="preprocessor">)</span> <span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRB_FLAG_TEST;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/MRB_GC_BLACK;   name=MRB_GC_BLACK --><a name="//mruby_c_api/c/macro/MRB_GC_BLACK"></a>
+<h3><a name="MRB_GC_BLACK">MRB_GC_BLACK</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRB_GC_BLACK;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRB_GC_BLACK" logicalPath="//mruby_c_api/c/cl/MRB_GC_BLACK //mruby_c_api/c/tdef/MRB_GC_BLACK //mruby_c_api/c/tag/MRB_GC_BLACK //mruby_c_api/c/struct/MRB_GC_BLACK //mruby_c_api/c/intf/MRB_GC_BLACK //mruby_c_api/c/econst/MRB_GC_BLACK //mruby_c_api/c/data/MRB_GC_BLACK //mruby_c_api/c/clconst/MRB_GC_BLACK //mruby_c_api/c/instm/MRB_GC_BLACK //mruby_c_api/c/clm/MRB_GC_BLACK //mruby_c_api/c/intfcm/MRB_GC_BLACK //mruby_c_api/c/intfm/MRB_GC_BLACK //mruby_c_api/c/func/MRB_GC_BLACK //mruby_c_api/c/ftmplt/MRB_GC_BLACK //mruby_c_api/c/defn/MRB_GC_BLACK //mruby_c_api/c/macro/MRB_GC_BLACK" target="_top"><span class="preprocessor">MRB_GC_BLACK</span></a> <span class="ignore"></span><span class="ignore"></span><span class="ignore"></span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRB_GC_BLACK;name=end --></pre>
+</div>
+<p><b>Value</b></p>
+
+<p>0x4 (4)</p>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/MRB_GC_COLOR_MASK;   name=MRB_GC_COLOR_MASK --><a name="//mruby_c_api/c/macro/MRB_GC_COLOR_MASK"></a>
+<h3><a name="MRB_GC_COLOR_MASK">MRB_GC_COLOR_MASK</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRB_GC_COLOR_MASK;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRB_GC_COLOR_MASK" logicalPath="//mruby_c_api/c/cl/MRB_GC_COLOR_MASK //mruby_c_api/c/tdef/MRB_GC_COLOR_MASK //mruby_c_api/c/tag/MRB_GC_COLOR_MASK //mruby_c_api/c/struct/MRB_GC_COLOR_MASK //mruby_c_api/c/intf/MRB_GC_COLOR_MASK //mruby_c_api/c/econst/MRB_GC_COLOR_MASK //mruby_c_api/c/data/MRB_GC_COLOR_MASK //mruby_c_api/c/clconst/MRB_GC_COLOR_MASK //mruby_c_api/c/instm/MRB_GC_COLOR_MASK //mruby_c_api/c/clm/MRB_GC_COLOR_MASK //mruby_c_api/c/intfcm/MRB_GC_COLOR_MASK //mruby_c_api/c/intfm/MRB_GC_COLOR_MASK //mruby_c_api/c/func/MRB_GC_COLOR_MASK //mruby_c_api/c/ftmplt/MRB_GC_COLOR_MASK //mruby_c_api/c/defn/MRB_GC_COLOR_MASK //mruby_c_api/c/macro/MRB_GC_COLOR_MASK" target="_top"><span class="preprocessor">MRB_GC_COLOR_MASK</span></a> <span class="preprocessor">7</span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRB_GC_COLOR_MASK;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/MRB_GC_GRAY;   name=MRB_GC_GRAY --><a name="//mruby_c_api/c/macro/MRB_GC_GRAY"></a>
+<h3><a name="MRB_GC_GRAY">MRB_GC_GRAY</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRB_GC_GRAY;name=start --><span class="comment">/* white: 011, black: 100, gray: 000 */</span>
+<span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRB_GC_GRAY" logicalPath="//mruby_c_api/c/cl/MRB_GC_GRAY //mruby_c_api/c/tdef/MRB_GC_GRAY //mruby_c_api/c/tag/MRB_GC_GRAY //mruby_c_api/c/struct/MRB_GC_GRAY //mruby_c_api/c/intf/MRB_GC_GRAY //mruby_c_api/c/econst/MRB_GC_GRAY //mruby_c_api/c/data/MRB_GC_GRAY //mruby_c_api/c/clconst/MRB_GC_GRAY //mruby_c_api/c/instm/MRB_GC_GRAY //mruby_c_api/c/clm/MRB_GC_GRAY //mruby_c_api/c/intfcm/MRB_GC_GRAY //mruby_c_api/c/intfm/MRB_GC_GRAY //mruby_c_api/c/func/MRB_GC_GRAY //mruby_c_api/c/ftmplt/MRB_GC_GRAY //mruby_c_api/c/defn/MRB_GC_GRAY //mruby_c_api/c/macro/MRB_GC_GRAY" target="_top"><span class="preprocessor">MRB_GC_GRAY</span></a> <span class="preprocessor">0</span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRB_GC_GRAY;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/MRB_GC_WHITE_A;   name=MRB_GC_WHITE_A --><a name="//mruby_c_api/c/macro/MRB_GC_WHITE_A"></a>
+<h3><a name="MRB_GC_WHITE_A">MRB_GC_WHITE_A</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRB_GC_WHITE_A;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRB_GC_WHITE_A" logicalPath="//mruby_c_api/c/cl/MRB_GC_WHITE_A //mruby_c_api/c/tdef/MRB_GC_WHITE_A //mruby_c_api/c/tag/MRB_GC_WHITE_A //mruby_c_api/c/struct/MRB_GC_WHITE_A //mruby_c_api/c/intf/MRB_GC_WHITE_A //mruby_c_api/c/econst/MRB_GC_WHITE_A //mruby_c_api/c/data/MRB_GC_WHITE_A //mruby_c_api/c/clconst/MRB_GC_WHITE_A //mruby_c_api/c/instm/MRB_GC_WHITE_A //mruby_c_api/c/clm/MRB_GC_WHITE_A //mruby_c_api/c/intfcm/MRB_GC_WHITE_A //mruby_c_api/c/intfm/MRB_GC_WHITE_A //mruby_c_api/c/func/MRB_GC_WHITE_A //mruby_c_api/c/ftmplt/MRB_GC_WHITE_A //mruby_c_api/c/defn/MRB_GC_WHITE_A //mruby_c_api/c/macro/MRB_GC_WHITE_A" target="_top"><span class="preprocessor">MRB_GC_WHITE_A</span></a> <span class="preprocessor">1</span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRB_GC_WHITE_A;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/MRB_GC_WHITE_B;   name=MRB_GC_WHITE_B --><a name="//mruby_c_api/c/macro/MRB_GC_WHITE_B"></a>
+<h3><a name="MRB_GC_WHITE_B">MRB_GC_WHITE_B</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRB_GC_WHITE_B;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRB_GC_WHITE_B" logicalPath="//mruby_c_api/c/cl/MRB_GC_WHITE_B //mruby_c_api/c/tdef/MRB_GC_WHITE_B //mruby_c_api/c/tag/MRB_GC_WHITE_B //mruby_c_api/c/struct/MRB_GC_WHITE_B //mruby_c_api/c/intf/MRB_GC_WHITE_B //mruby_c_api/c/econst/MRB_GC_WHITE_B //mruby_c_api/c/data/MRB_GC_WHITE_B //mruby_c_api/c/clconst/MRB_GC_WHITE_B //mruby_c_api/c/instm/MRB_GC_WHITE_B //mruby_c_api/c/clm/MRB_GC_WHITE_B //mruby_c_api/c/intfcm/MRB_GC_WHITE_B //mruby_c_api/c/intfm/MRB_GC_WHITE_B //mruby_c_api/c/func/MRB_GC_WHITE_B //mruby_c_api/c/ftmplt/MRB_GC_WHITE_B //mruby_c_api/c/defn/MRB_GC_WHITE_B //mruby_c_api/c/macro/MRB_GC_WHITE_B" target="_top"><span class="preprocessor">MRB_GC_WHITE_B</span></a> <span class="ignore"></span><span class="ignore"></span><span class="ignore"></span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRB_GC_WHITE_B;name=end --></pre>
+</div>
+<p><b>Value</b></p>
+
+<p>0x2 (2)</p>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/MRB_GC_WHITES;   name=MRB_GC_WHITES --><a name="//mruby_c_api/c/macro/MRB_GC_WHITES"></a>
+<h3><a name="MRB_GC_WHITES">MRB_GC_WHITES</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRB_GC_WHITES;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRB_GC_WHITES" logicalPath="//mruby_c_api/c/cl/MRB_GC_WHITES //mruby_c_api/c/tdef/MRB_GC_WHITES //mruby_c_api/c/tag/MRB_GC_WHITES //mruby_c_api/c/struct/MRB_GC_WHITES //mruby_c_api/c/intf/MRB_GC_WHITES //mruby_c_api/c/econst/MRB_GC_WHITES //mruby_c_api/c/data/MRB_GC_WHITES //mruby_c_api/c/clconst/MRB_GC_WHITES //mruby_c_api/c/instm/MRB_GC_WHITES //mruby_c_api/c/clm/MRB_GC_WHITES //mruby_c_api/c/intfcm/MRB_GC_WHITES //mruby_c_api/c/intfm/MRB_GC_WHITES //mruby_c_api/c/func/MRB_GC_WHITES //mruby_c_api/c/ftmplt/MRB_GC_WHITES //mruby_c_api/c/defn/MRB_GC_WHITES //mruby_c_api/c/macro/MRB_GC_WHITES" target="_top"><span class="preprocessor">MRB_GC_WHITES</span></a> <span class="ignore"></span><span class="ignore"></span><span class="ignore"></span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRB_GC_WHITES;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/mrb_immediate_p;   name=mrb_immediate_p --><a name="//mruby_c_api/c/macro/mrb_immediate_p"></a>
+<h3><a name="mrb_immediate_p">mrb_immediate_p</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/mrb_immediate_p;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/mrb_immediate_p" logicalPath="//mruby_c_api/c/cl/mrb_immediate_p //mruby_c_api/c/tdef/mrb_immediate_p //mruby_c_api/c/tag/mrb_immediate_p //mruby_c_api/c/struct/mrb_immediate_p //mruby_c_api/c/intf/mrb_immediate_p //mruby_c_api/c/econst/mrb_immediate_p //mruby_c_api/c/data/mrb_immediate_p //mruby_c_api/c/clconst/mrb_immediate_p //mruby_c_api/c/instm/mrb_immediate_p //mruby_c_api/c/clm/mrb_immediate_p //mruby_c_api/c/intfcm/mrb_immediate_p //mruby_c_api/c/intfm/mrb_immediate_p //mruby_c_api/c/func/mrb_immediate_p //mruby_c_api/c/ftmplt/mrb_immediate_p //mruby_c_api/c/defn/mrb_immediate_p //mruby_c_api/c/macro/mrb_immediate_p" target="_top"><span class="preprocessor">mrb_immediate_p</span></a><span class="preprocessor">(</span><!-- a logicalPath="//mruby_c_api/c/cl/x //mruby_c_api/c/tdef/x //mruby_c_api/c/tag/x //mruby_c_api/c/struct/x //mruby_c_api/c/intf/x //mruby_c_api/c/econst/x //mruby_c_api/c/data/x //mruby_c_api/c/clconst/x //mruby_c_api/c/instm/x //mruby_c_api/c/clm/x //mruby_c_api/c/intfcm/x //mruby_c_api/c/intfm/x //mruby_c_api/c/func/x //mruby_c_api/c/ftmplt/x //mruby_c_api/c/defn/x //mruby_c_api/c/macro/x //mruby_c_api/doc/com/intfm/x //mruby_c_api/doc/anysymbol/x" machineGenerated="true" --><span class="preprocessor">x</span><!-- /a --><span class="preprocessor">)</span> <span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/mrb_immediate_p;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/mrb_obj_ptr;   name=mrb_obj_ptr --><a name="//mruby_c_api/c/macro/mrb_obj_ptr"></a>
+<h3><a name="mrb_obj_ptr">mrb_obj_ptr</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/mrb_obj_ptr;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/mrb_obj_ptr" logicalPath="//mruby_c_api/c/cl/mrb_obj_ptr //mruby_c_api/c/tdef/mrb_obj_ptr //mruby_c_api/c/tag/mrb_obj_ptr //mruby_c_api/c/struct/mrb_obj_ptr //mruby_c_api/c/intf/mrb_obj_ptr //mruby_c_api/c/econst/mrb_obj_ptr //mruby_c_api/c/data/mrb_obj_ptr //mruby_c_api/c/clconst/mrb_obj_ptr //mruby_c_api/c/instm/mrb_obj_ptr //mruby_c_api/c/clm/mrb_obj_ptr //mruby_c_api/c/intfcm/mrb_obj_ptr //mruby_c_api/c/intfm/mrb_obj_ptr //mruby_c_api/c/func/mrb_obj_ptr //mruby_c_api/c/ftmplt/mrb_obj_ptr //mruby_c_api/c/defn/mrb_obj_ptr //mruby_c_api/c/macro/mrb_obj_ptr" target="_top"><span class="preprocessor">mrb_obj_ptr</span></a><span class="preprocessor">(</span><!-- a logicalPath="//mruby_c_api/c/cl/v //mruby_c_api/c/tdef/v //mruby_c_api/c/tag/v //mruby_c_api/c/struct/v //mruby_c_api/c/intf/v //mruby_c_api/c/econst/v //mruby_c_api/c/data/v //mruby_c_api/c/clconst/v //mruby_c_api/c/instm/v //mruby_c_api/c/clm/v //mruby_c_api/c/intfcm/v //mruby_c_api/c/intfm/v //mruby_c_api/c/func/v //mruby_c_api/c/ftmplt/v //mruby_c_api/c/defn/v //mruby_c_api/c/macro/v //mruby_c_api/doc/com/intfm/v //mruby_c_api/doc/anysymbol/v" machineGenerated="true" --><span class="preprocessor">v</span><!-- /a --><span class="preprocessor">)</span> <span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/mrb_obj_ptr;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/MRB_OBJECT_HEADER;   name=MRB_OBJECT_HEADER --><a name="//mruby_c_api/c/macro/MRB_OBJECT_HEADER"></a>
+<h3><a name="MRB_OBJECT_HEADER">MRB_OBJECT_HEADER</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRB_OBJECT_HEADER;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRB_OBJECT_HEADER" logicalPath="//mruby_c_api/c/cl/MRB_OBJECT_HEADER //mruby_c_api/c/tdef/MRB_OBJECT_HEADER //mruby_c_api/c/tag/MRB_OBJECT_HEADER //mruby_c_api/c/struct/MRB_OBJECT_HEADER //mruby_c_api/c/intf/MRB_OBJECT_HEADER //mruby_c_api/c/econst/MRB_OBJECT_HEADER //mruby_c_api/c/data/MRB_OBJECT_HEADER //mruby_c_api/c/clconst/MRB_OBJECT_HEADER //mruby_c_api/c/instm/MRB_OBJECT_HEADER //mruby_c_api/c/clm/MRB_OBJECT_HEADER //mruby_c_api/c/intfcm/MRB_OBJECT_HEADER //mruby_c_api/c/intfm/MRB_OBJECT_HEADER //mruby_c_api/c/func/MRB_OBJECT_HEADER //mruby_c_api/c/ftmplt/MRB_OBJECT_HEADER //mruby_c_api/c/defn/MRB_OBJECT_HEADER //mruby_c_api/c/macro/MRB_OBJECT_HEADER" target="_top"><span class="preprocessor">MRB_OBJECT_HEADER</span></a> <span class="preprocessor">\</span> 
+    <!-- a logicalPath="//mruby_c_api/c/cl/enum //mruby_c_api/c/tdef/enum //mruby_c_api/c/tag/enum //mruby_c_api/c/struct/enum //mruby_c_api/c/intf/enum //mruby_c_api/c/econst/enum //mruby_c_api/c/data/enum //mruby_c_api/c/clconst/enum //mruby_c_api/c/instm/enum //mruby_c_api/c/clm/enum //mruby_c_api/c/intfcm/enum //mruby_c_api/c/intfm/enum //mruby_c_api/c/func/enum //mruby_c_api/c/ftmplt/enum //mruby_c_api/c/defn/enum //mruby_c_api/c/macro/enum //mruby_c_api/doc/com/intfm/enum //mruby_c_api/doc/anysymbol/enum" machineGenerated="true" --><span class="preprocessor">enum</span><!-- /a --> <a machinegenerated="true" href="../value_h/index.html#//mruby_c_api/c/tag/mrb_vtype" logicalPath="//mruby_c_api/c/cl/mrb_vtype //mruby_c_api/c/tdef/mrb_vtype //mruby_c_api/c/tag/mrb_vtype" target="_top"><span class="preprocessor">mrb_vtype</span></a> <!-- a logicalPath="//mruby_c_api/c/cl/tt //mruby_c_api/c/tdef/tt //mruby_c_api/c/tag/tt //mruby_c_api/c/struct/tt //mruby_c_api/c/intf/tt //mruby_c_api/c/econst/tt //mruby_c_api/c/data/tt //mruby_c_api/c/clconst/tt //mruby_c_api/c/instm/tt //mruby_c_api/c/clm/tt //mruby_c_api/c/intfcm/tt //mruby_c_api/c/intfm/tt //mruby_c_api/c/func/tt //mruby_c_api/c/ftmplt/tt //mruby_c_api/c/defn/tt //mruby_c_api/c/macro/tt //mruby_c_api/doc/com/intfm/tt //mruby_c_api/doc/anysymbol/tt" machineGenerated="true" --><span class="preprocessor">tt</span><!-- /a --><span class="preprocessor">:</span><span class="preprocessor">8</span><span class="preprocessor">;</span><span class="preprocessor">\</span> 
+    <!-- a logicalPath="//mruby_c_api/c/cl/uint32_t //mruby_c_api/c/tdef/uint32_t //mruby_c_api/c/tag/uint32_t //mruby_c_api/c/struct/uint32_t //mruby_c_api/c/intf/uint32_t //mruby_c_api/c/econst/uint32_t //mruby_c_api/c/data/uint32_t //mruby_c_api/c/clconst/uint32_t //mruby_c_api/c/instm/uint32_t //mruby_c_api/c/clm/uint32_t //mruby_c_api/c/intfcm/uint32_t //mruby_c_api/c/intfm/uint32_t //mruby_c_api/c/func/uint32_t //mruby_c_api/c/ftmplt/uint32_t //mruby_c_api/c/defn/uint32_t //mruby_c_api/c/macro/uint32_t //mruby_c_api/doc/com/intfm/uint32_t //mruby_c_api/doc/anysymbol/uint32_t" machineGenerated="true" --><span class="preprocessor">uint32_t</span><!-- /a --> <!-- a logicalPath="//mruby_c_api/c/cl/color //mruby_c_api/c/tdef/color //mruby_c_api/c/tag/color //mruby_c_api/c/struct/color //mruby_c_api/c/intf/color //mruby_c_api/c/econst/color //mruby_c_api/c/data/color //mruby_c_api/c/clconst/color //mruby_c_api/c/instm/color //mruby_c_api/c/clm/color //mruby_c_api/c/intfcm/color //mruby_c_api/c/intfm/color //mruby_c_api/c/func/color //mruby_c_api/c/ftmplt/color //mruby_c_api/c/defn/color //mruby_c_api/c/macro/color //mruby_c_api/doc/com/intfm/color //mruby_c_api/doc/anysymbol/color" machineGenerated="true" --><span class="preprocessor">color</span><!-- /a --><span class="preprocessor">:</span><span class="preprocessor">3</span><span class="preprocessor">;</span><span class="preprocessor">\</span> 
+    <!-- a logicalPath="//mruby_c_api/c/cl/uint32_t //mruby_c_api/c/tdef/uint32_t //mruby_c_api/c/tag/uint32_t //mruby_c_api/c/struct/uint32_t //mruby_c_api/c/intf/uint32_t //mruby_c_api/c/econst/uint32_t //mruby_c_api/c/data/uint32_t //mruby_c_api/c/clconst/uint32_t //mruby_c_api/c/instm/uint32_t //mruby_c_api/c/clm/uint32_t //mruby_c_api/c/intfcm/uint32_t //mruby_c_api/c/intfm/uint32_t //mruby_c_api/c/func/uint32_t //mruby_c_api/c/ftmplt/uint32_t //mruby_c_api/c/defn/uint32_t //mruby_c_api/c/macro/uint32_t //mruby_c_api/doc/com/intfm/uint32_t //mruby_c_api/doc/anysymbol/uint32_t" machineGenerated="true" --><span class="preprocessor">uint32_t</span><!-- /a --> <!-- a logicalPath="//mruby_c_api/c/cl/flags //mruby_c_api/c/tdef/flags //mruby_c_api/c/tag/flags //mruby_c_api/c/struct/flags //mruby_c_api/c/intf/flags //mruby_c_api/c/econst/flags //mruby_c_api/c/data/flags //mruby_c_api/c/clconst/flags //mruby_c_api/c/instm/flags //mruby_c_api/c/clm/flags //mruby_c_api/c/intfcm/flags //mruby_c_api/c/intfm/flags //mruby_c_api/c/func/flags //mruby_c_api/c/ftmplt/flags //mruby_c_api/c/defn/flags //mruby_c_api/c/macro/flags //mruby_c_api/doc/com/intfm/flags //mruby_c_api/doc/anysymbol/flags" machineGenerated="true" --><span class="preprocessor">flags</span><!-- /a --><span class="preprocessor">:</span><span class="preprocessor">21</span><span class="preprocessor">;</span><span class="preprocessor">\</span> 
+    <!-- a logicalPath="//mruby_c_api/c/cl/struct //mruby_c_api/c/tdef/struct //mruby_c_api/c/tag/struct //mruby_c_api/c/struct/struct //mruby_c_api/c/intf/struct //mruby_c_api/c/econst/struct //mruby_c_api/c/data/struct //mruby_c_api/c/clconst/struct //mruby_c_api/c/instm/struct //mruby_c_api/c/clm/struct //mruby_c_api/c/intfcm/struct //mruby_c_api/c/intfm/struct //mruby_c_api/c/func/struct //mruby_c_api/c/ftmplt/struct //mruby_c_api/c/defn/struct //mruby_c_api/c/macro/struct //mruby_c_api/doc/com/intfm/struct //mruby_c_api/doc/anysymbol/struct" machineGenerated="true" --><span class="preprocessor">struct</span><!-- /a --> <a machinegenerated="true" href="../class_h/index.html#//mruby_c_api/c/tag/RClass" logicalPath="//mruby_c_api/c/cl/RClass //mruby_c_api/c/tdef/RClass //mruby_c_api/c/tag/RClass" target="_top"><span class="preprocessor">RClass</span></a> <span class="preprocessor">*</span><!-- a logicalPath="//mruby_c_api/c/cl/c //mruby_c_api/c/tdef/c //mruby_c_api/c/tag/c //mruby_c_api/c/struct/c //mruby_c_api/c/intf/c //mruby_c_api/c/econst/c //mruby_c_api/c/data/c //mruby_c_api/c/clconst/c //mruby_c_api/c/instm/c //mruby_c_api/c/clm/c //mruby_c_api/c/intfcm/c //mruby_c_api/c/intfm/c //mruby_c_api/c/func/c //mruby_c_api/c/ftmplt/c //mruby_c_api/c/defn/c //mruby_c_api/c/macro/c //mruby_c_api/doc/com/intfm/c //mruby_c_api/doc/anysymbol/c" machineGenerated="true" --><span class="preprocessor">c</span><!-- /a --><span class="preprocessor">;</span><span class="preprocessor">\</span> 
+    <!-- a logicalPath="//mruby_c_api/c/cl/struct //mruby_c_api/c/tdef/struct //mruby_c_api/c/tag/struct //mruby_c_api/c/struct/struct //mruby_c_api/c/intf/struct //mruby_c_api/c/econst/struct //mruby_c_api/c/data/struct //mruby_c_api/c/clconst/struct //mruby_c_api/c/instm/struct //mruby_c_api/c/clm/struct //mruby_c_api/c/intfcm/struct //mruby_c_api/c/intfm/struct //mruby_c_api/c/func/struct //mruby_c_api/c/ftmplt/struct //mruby_c_api/c/defn/struct //mruby_c_api/c/macro/struct //mruby_c_api/doc/com/intfm/struct //mruby_c_api/doc/anysymbol/struct" machineGenerated="true" --><span class="preprocessor">struct</span><!-- /a --> <a machinegenerated="true" href="index.html#//mruby_c_api/c/tag/RBasic" logicalPath="//mruby_c_api/c/cl/RBasic //mruby_c_api/c/tdef/RBasic //mruby_c_api/c/tag/RBasic" target="_top"><span class="preprocessor">RBasic</span></a> <span class="preprocessor">*</span><!-- a logicalPath="//mruby_c_api/c/cl/gcnext //mruby_c_api/c/tdef/gcnext //mruby_c_api/c/tag/gcnext //mruby_c_api/c/struct/gcnext //mruby_c_api/c/intf/gcnext //mruby_c_api/c/econst/gcnext //mruby_c_api/c/data/gcnext //mruby_c_api/c/clconst/gcnext //mruby_c_api/c/instm/gcnext //mruby_c_api/c/clm/gcnext //mruby_c_api/c/intfcm/gcnext //mruby_c_api/c/intfm/gcnext //mruby_c_api/c/func/gcnext //mruby_c_api/c/ftmplt/gcnext //mruby_c_api/c/defn/gcnext //mruby_c_api/c/macro/gcnext //mruby_c_api/doc/com/intfm/gcnext //mruby_c_api/doc/anysymbol/gcnext" machineGenerated="true" --><span class="preprocessor">gcnext</span><!-- /a --> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRB_OBJECT_HEADER;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/mrb_special_const_p;   name=mrb_special_const_p --><a name="//mruby_c_api/c/macro/mrb_special_const_p"></a>
+<h3><a name="mrb_special_const_p">mrb_special_const_p</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/mrb_special_const_p;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/mrb_special_const_p" logicalPath="//mruby_c_api/c/cl/mrb_special_const_p //mruby_c_api/c/tdef/mrb_special_const_p //mruby_c_api/c/tag/mrb_special_const_p //mruby_c_api/c/struct/mrb_special_const_p //mruby_c_api/c/intf/mrb_special_const_p //mruby_c_api/c/econst/mrb_special_const_p //mruby_c_api/c/data/mrb_special_const_p //mruby_c_api/c/clconst/mrb_special_const_p //mruby_c_api/c/instm/mrb_special_const_p //mruby_c_api/c/clm/mrb_special_const_p //mruby_c_api/c/intfcm/mrb_special_const_p //mruby_c_api/c/intfm/mrb_special_const_p //mruby_c_api/c/func/mrb_special_const_p //mruby_c_api/c/ftmplt/mrb_special_const_p //mruby_c_api/c/defn/mrb_special_const_p //mruby_c_api/c/macro/mrb_special_const_p" target="_top"><span class="preprocessor">mrb_special_const_p</span></a><span class="preprocessor">(</span><!-- a logicalPath="//mruby_c_api/c/cl/x //mruby_c_api/c/tdef/x //mruby_c_api/c/tag/x //mruby_c_api/c/struct/x //mruby_c_api/c/intf/x //mruby_c_api/c/econst/x //mruby_c_api/c/data/x //mruby_c_api/c/clconst/x //mruby_c_api/c/instm/x //mruby_c_api/c/clm/x //mruby_c_api/c/intfcm/x //mruby_c_api/c/intfm/x //mruby_c_api/c/func/x //mruby_c_api/c/ftmplt/x //mruby_c_api/c/defn/x //mruby_c_api/c/macro/x //mruby_c_api/doc/com/intfm/x //mruby_c_api/doc/anysymbol/x" machineGenerated="true" --><span class="preprocessor">x</span><!-- /a --><span class="preprocessor">)</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/mrb_immediate_p" logicalPath="//mruby_c_api/c/cl/mrb_immediate_p //mruby_c_api/c/tdef/mrb_immediate_p //mruby_c_api/c/tag/mrb_immediate_p //mruby_c_api/c/struct/mrb_immediate_p //mruby_c_api/c/intf/mrb_immediate_p //mruby_c_api/c/econst/mrb_immediate_p //mruby_c_api/c/data/mrb_immediate_p //mruby_c_api/c/clconst/mrb_immediate_p //mruby_c_api/c/instm/mrb_immediate_p //mruby_c_api/c/clm/mrb_immediate_p //mruby_c_api/c/intfcm/mrb_immediate_p //mruby_c_api/c/intfm/mrb_immediate_p //mruby_c_api/c/func/mrb_immediate_p //mruby_c_api/c/ftmplt/mrb_immediate_p //mruby_c_api/c/defn/mrb_immediate_p //mruby_c_api/c/macro/mrb_immediate_p" target="_top"><span class="preprocessor">mrb_immediate_p</span></a><span class="preprocessor">(</span><!-- a logicalPath="//mruby_c_api/c/cl/x //mruby_c_api/c/tdef/x //mruby_c_api/c/tag/x //mruby_c_api/c/struct/x //mruby_c_api/c/intf/x //mruby_c_api/c/econst/x //mruby_c_api/c/data/x //mruby_c_api/c/clconst/x //mruby_c_api/c/instm/x //mruby_c_api/c/clm/x //mruby_c_api/c/intfcm/x //mruby_c_api/c/intfm/x //mruby_c_api/c/func/x //mruby_c_api/c/ftmplt/x //mruby_c_api/c/defn/x //mruby_c_api/c/macro/x //mruby_c_api/doc/com/intfm/x //mruby_c_api/doc/anysymbol/x" machineGenerated="true" --><span class="preprocessor">x</span><!-- /a --><span class="preprocessor">)</span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/mrb_special_const_p;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/MRUBY_OBJECT_H;   name=MRUBY_OBJECT_H --><a name="//mruby_c_api/c/macro/MRUBY_OBJECT_H"></a>
+<h3><a name="MRUBY_OBJECT_H">MRUBY_OBJECT_H</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRUBY_OBJECT_H;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/MRUBY_OBJECT_H" logicalPath="//mruby_c_api/c/cl/MRUBY_OBJECT_H //mruby_c_api/c/tdef/MRUBY_OBJECT_H //mruby_c_api/c/tag/MRUBY_OBJECT_H //mruby_c_api/c/struct/MRUBY_OBJECT_H //mruby_c_api/c/intf/MRUBY_OBJECT_H //mruby_c_api/c/econst/MRUBY_OBJECT_H //mruby_c_api/c/data/MRUBY_OBJECT_H //mruby_c_api/c/clconst/MRUBY_OBJECT_H //mruby_c_api/c/instm/MRUBY_OBJECT_H //mruby_c_api/c/clm/MRUBY_OBJECT_H //mruby_c_api/c/intfcm/MRUBY_OBJECT_H //mruby_c_api/c/intfm/MRUBY_OBJECT_H //mruby_c_api/c/func/MRUBY_OBJECT_H //mruby_c_api/c/ftmplt/MRUBY_OBJECT_H //mruby_c_api/c/defn/MRUBY_OBJECT_H //mruby_c_api/c/macro/MRUBY_OBJECT_H" target="_top"><span class="preprocessor">MRUBY_OBJECT_H</span></a> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/MRUBY_OBJECT_H;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/other_white_part;   name=other_white_part --><a name="//mruby_c_api/c/macro/other_white_part"></a>
+<h3><a name="other_white_part">other_white_part</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/other_white_part;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/other_white_part" logicalPath="//mruby_c_api/c/cl/other_white_part //mruby_c_api/c/tdef/other_white_part //mruby_c_api/c/tag/other_white_part //mruby_c_api/c/struct/other_white_part //mruby_c_api/c/intf/other_white_part //mruby_c_api/c/econst/other_white_part //mruby_c_api/c/data/other_white_part //mruby_c_api/c/clconst/other_white_part //mruby_c_api/c/instm/other_white_part //mruby_c_api/c/clm/other_white_part //mruby_c_api/c/intfcm/other_white_part //mruby_c_api/c/intfm/other_white_part //mruby_c_api/c/func/other_white_part //mruby_c_api/c/ftmplt/other_white_part //mruby_c_api/c/defn/other_white_part //mruby_c_api/c/macro/other_white_part" target="_top"><span class="preprocessor">other_white_part</span></a><span class="preprocessor">(</span><!-- a logicalPath="//mruby_c_api/c/cl/s //mruby_c_api/c/tdef/s //mruby_c_api/c/tag/s //mruby_c_api/c/struct/s //mruby_c_api/c/intf/s //mruby_c_api/c/econst/s //mruby_c_api/c/data/s //mruby_c_api/c/clconst/s //mruby_c_api/c/instm/s //mruby_c_api/c/clm/s //mruby_c_api/c/intfcm/s //mruby_c_api/c/intfm/s //mruby_c_api/c/func/s //mruby_c_api/c/ftmplt/s //mruby_c_api/c/defn/s //mruby_c_api/c/macro/s //mruby_c_api/doc/com/intfm/s //mruby_c_api/doc/anysymbol/s" machineGenerated="true" --><span class="preprocessor">s</span><!-- /a --><span class="preprocessor">)</span> <span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/other_white_part;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/paint_black;   name=paint_black --><a name="//mruby_c_api/c/macro/paint_black"></a>
+<h3><a name="paint_black">paint_black</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/paint_black;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/paint_black" logicalPath="//mruby_c_api/c/cl/paint_black //mruby_c_api/c/tdef/paint_black //mruby_c_api/c/tag/paint_black //mruby_c_api/c/struct/paint_black //mruby_c_api/c/intf/paint_black //mruby_c_api/c/econst/paint_black //mruby_c_api/c/data/paint_black //mruby_c_api/c/clconst/paint_black //mruby_c_api/c/instm/paint_black //mruby_c_api/c/clm/paint_black //mruby_c_api/c/intfcm/paint_black //mruby_c_api/c/intfm/paint_black //mruby_c_api/c/func/paint_black //mruby_c_api/c/ftmplt/paint_black //mruby_c_api/c/defn/paint_black //mruby_c_api/c/macro/paint_black" target="_top"><span class="preprocessor">paint_black</span></a><span class="preprocessor">(</span><!-- a logicalPath="//mruby_c_api/c/cl/o //mruby_c_api/c/tdef/o //mruby_c_api/c/tag/o //mruby_c_api/c/struct/o //mruby_c_api/c/intf/o //mruby_c_api/c/econst/o //mruby_c_api/c/data/o //mruby_c_api/c/clconst/o //mruby_c_api/c/instm/o //mruby_c_api/c/clm/o //mruby_c_api/c/intfcm/o //mruby_c_api/c/intfm/o //mruby_c_api/c/func/o //mruby_c_api/c/ftmplt/o //mruby_c_api/c/defn/o //mruby_c_api/c/macro/o //mruby_c_api/doc/com/intfm/o //mruby_c_api/doc/anysymbol/o" machineGenerated="true" --><span class="preprocessor">o</span><!-- /a --><span class="preprocessor">)</span> <span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/paint_black;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/paint_gray;   name=paint_gray --><a name="//mruby_c_api/c/macro/paint_gray"></a>
+<h3><a name="paint_gray">paint_gray</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/paint_gray;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/paint_gray" logicalPath="//mruby_c_api/c/cl/paint_gray //mruby_c_api/c/tdef/paint_gray //mruby_c_api/c/tag/paint_gray //mruby_c_api/c/struct/paint_gray //mruby_c_api/c/intf/paint_gray //mruby_c_api/c/econst/paint_gray //mruby_c_api/c/data/paint_gray //mruby_c_api/c/clconst/paint_gray //mruby_c_api/c/instm/paint_gray //mruby_c_api/c/clm/paint_gray //mruby_c_api/c/intfcm/paint_gray //mruby_c_api/c/intfm/paint_gray //mruby_c_api/c/func/paint_gray //mruby_c_api/c/ftmplt/paint_gray //mruby_c_api/c/defn/paint_gray //mruby_c_api/c/macro/paint_gray" target="_top"><span class="preprocessor">paint_gray</span></a><span class="preprocessor">(</span><!-- a logicalPath="//mruby_c_api/c/cl/o //mruby_c_api/c/tdef/o //mruby_c_api/c/tag/o //mruby_c_api/c/struct/o //mruby_c_api/c/intf/o //mruby_c_api/c/econst/o //mruby_c_api/c/data/o //mruby_c_api/c/clconst/o //mruby_c_api/c/instm/o //mruby_c_api/c/clm/o //mruby_c_api/c/intfcm/o //mruby_c_api/c/intfm/o //mruby_c_api/c/func/o //mruby_c_api/c/ftmplt/o //mruby_c_api/c/defn/o //mruby_c_api/c/macro/o //mruby_c_api/doc/com/intfm/o //mruby_c_api/doc/anysymbol/o" machineGenerated="true" --><span class="preprocessor">o</span><!-- /a --><span class="preprocessor">)</span> <span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/paint_gray;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/paint_partial_white;   name=paint_partial_white --><a name="//mruby_c_api/c/macro/paint_partial_white"></a>
+<h3><a name="paint_partial_white">paint_partial_white</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/paint_partial_white;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/paint_partial_white" logicalPath="//mruby_c_api/c/cl/paint_partial_white //mruby_c_api/c/tdef/paint_partial_white //mruby_c_api/c/tag/paint_partial_white //mruby_c_api/c/struct/paint_partial_white //mruby_c_api/c/intf/paint_partial_white //mruby_c_api/c/econst/paint_partial_white //mruby_c_api/c/data/paint_partial_white //mruby_c_api/c/clconst/paint_partial_white //mruby_c_api/c/instm/paint_partial_white //mruby_c_api/c/clm/paint_partial_white //mruby_c_api/c/intfcm/paint_partial_white //mruby_c_api/c/intfm/paint_partial_white //mruby_c_api/c/func/paint_partial_white //mruby_c_api/c/ftmplt/paint_partial_white //mruby_c_api/c/defn/paint_partial_white //mruby_c_api/c/macro/paint_partial_white" target="_top"><span class="preprocessor">paint_partial_white</span></a><span class="preprocessor">(</span><!-- a logicalPath="//mruby_c_api/c/cl/s //mruby_c_api/c/tdef/s //mruby_c_api/c/tag/s //mruby_c_api/c/struct/s //mruby_c_api/c/intf/s //mruby_c_api/c/econst/s //mruby_c_api/c/data/s //mruby_c_api/c/clconst/s //mruby_c_api/c/instm/s //mruby_c_api/c/clm/s //mruby_c_api/c/intfcm/s //mruby_c_api/c/intfm/s //mruby_c_api/c/func/s //mruby_c_api/c/ftmplt/s //mruby_c_api/c/defn/s //mruby_c_api/c/macro/s //mruby_c_api/doc/com/intfm/s //mruby_c_api/doc/anysymbol/s" machineGenerated="true" --><span class="preprocessor">s</span><!-- /a --><span class="preprocessor">,</span> <!-- a logicalPath="//mruby_c_api/c/cl/o //mruby_c_api/c/tdef/o //mruby_c_api/c/tag/o //mruby_c_api/c/struct/o //mruby_c_api/c/intf/o //mruby_c_api/c/econst/o //mruby_c_api/c/data/o //mruby_c_api/c/clconst/o //mruby_c_api/c/instm/o //mruby_c_api/c/clm/o //mruby_c_api/c/intfcm/o //mruby_c_api/c/intfm/o //mruby_c_api/c/func/o //mruby_c_api/c/ftmplt/o //mruby_c_api/c/defn/o //mruby_c_api/c/macro/o //mruby_c_api/doc/com/intfm/o //mruby_c_api/doc/anysymbol/o" machineGenerated="true" --><span class="preprocessor">o</span><!-- /a --><span class="preprocessor">)</span> <span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/paint_partial_white;name=end --></pre>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=macro;  uid=//mruby_c_api/c/macro/paint_white;   name=paint_white --><a name="//mruby_c_api/c/macro/paint_white"></a>
+<h3><a name="paint_white">paint_white</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/paint_white;name=start --><span class="preprocessor">#define</span> <a machinegenerated="true" href="index.html#//mruby_c_api/c/macro/paint_white" logicalPath="//mruby_c_api/c/cl/paint_white //mruby_c_api/c/tdef/paint_white //mruby_c_api/c/tag/paint_white //mruby_c_api/c/struct/paint_white //mruby_c_api/c/intf/paint_white //mruby_c_api/c/econst/paint_white //mruby_c_api/c/data/paint_white //mruby_c_api/c/clconst/paint_white //mruby_c_api/c/instm/paint_white //mruby_c_api/c/clm/paint_white //mruby_c_api/c/intfcm/paint_white //mruby_c_api/c/intfm/paint_white //mruby_c_api/c/func/paint_white //mruby_c_api/c/ftmplt/paint_white //mruby_c_api/c/defn/paint_white //mruby_c_api/c/macro/paint_white" target="_top"><span class="preprocessor">paint_white</span></a><span class="preprocessor">(</span><!-- a logicalPath="//mruby_c_api/c/cl/o //mruby_c_api/c/tdef/o //mruby_c_api/c/tag/o //mruby_c_api/c/struct/o //mruby_c_api/c/intf/o //mruby_c_api/c/econst/o //mruby_c_api/c/data/o //mruby_c_api/c/clconst/o //mruby_c_api/c/instm/o //mruby_c_api/c/clm/o //mruby_c_api/c/intfcm/o //mruby_c_api/c/intfm/o //mruby_c_api/c/func/o //mruby_c_api/c/ftmplt/o //mruby_c_api/c/defn/o //mruby_c_api/c/macro/o //mruby_c_api/doc/com/intfm/o //mruby_c_api/doc/anysymbol/o" machineGenerated="true" --><span class="preprocessor">o</span><!-- /a --><span class="preprocessor">)</span> <span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span><span class="ignore"></span> <!-- headerDoc=declaration;uid=//mruby_c_api/c/macro/paint_white;name=end --></pre>
+</div>
+<p class="gapBeforeFooter">&nbsp;</p>
+<hr class="afterFooter">
+<div class="hd_copyright_and_timestamp">
+<p class="hd_copyright">&copy; MRuby developers </p>
+<p class="hd_timestamp">Last Updated: September 18, 2015
+</p>
+</div>
+</td>
+</tr></table>
+</body>
+</html>
