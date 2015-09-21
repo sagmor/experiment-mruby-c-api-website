@@ -9,7 +9,7 @@ It's spread on two fronts:
 
 ## Usage
 
-To use this website just browse the [files tab](http://sagmor.com/mruby-c-api/files.html) or use the search box at the top left to find the method you are looking for.
+To use this website just browse the [modules tab](http://sagmor.com/mruby-c-api/modules.html).
 
 ## Website generation
 
