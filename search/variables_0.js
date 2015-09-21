@@ -1,19 +1,4 @@
 var searchData=
 [
-  ['acc',['acc',['../structmrb__callinfo.html#a3eb17739bd932dbcbb7bb2c3eb21d555',1,'mrb_callinfo']]],
-  ['all_5fheredocs',['all_heredocs',['../structmrb__parser__state.html#ab53a7a20a32e093dedbd8651f06344eb',1,'mrb_parser_state']]],
-  ['allocf',['allocf',['../structmrb__state.html#aa8010fe2e5e9d5fda5aac803d32270f0',1,'mrb_state']]],
-  ['allocf_5fud',['allocf_ud',['../structmrb__state.html#a638c013831d3feb25e0459feccf6d1ea',1,'mrb_state']]],
-  ['allow_5findent',['allow_indent',['../structmrb__parser__heredoc__info.html#a3a33144a9a2351696dde0e428e99db8e',1,'mrb_parser_heredoc_info']]],
-  ['arena',['arena',['../structmrb__state.html#a74db70aa3583e9fe84b7e42509e9f193',1,'mrb_state']]],
-  ['arena_5fcapa',['arena_capa',['../structmrb__state.html#ae0700372a34fe584ca0bf4d219a2a09b',1,'mrb_state']]],
-  ['arena_5fidx',['arena_idx',['../structmrb__state.html#aa5285f0cd6b326f0927dcf64a0516a27',1,'mrb_state']]],
-  ['argc',['argc',['../structmrb__callinfo.html#a9426dbcfb6e825ca0559fa4ea617aaf2',1,'mrb_callinfo']]],
-  ['array_5fclass',['array_class',['../structmrb__state.html#a82d09bd67ade7231cf17be05ad95d606',1,'mrb_state']]],
-  ['ary',['ary',['../structmrb__irep__debug__info__file.html#ac061d2cd6014d9e212314b2d8eb9ee54',1,'mrb_irep_debug_info_file::ary()'],['../struct_r_string.html#a8d6293024f5ee35de0ff69314e0138a7',1,'RString::ary()']]],
-  ['as',['as',['../struct_r_string.html#a760cb039c4870a4266a1c33e30568fc2',1,'RString']]],
-  ['atexit_5fstack',['atexit_stack',['../structmrb__state.html#a0636f2b8c615ede2610d396f630a1c3e',1,'mrb_state']]],
-  ['atexit_5fstack_5flen',['atexit_stack_len',['../structmrb__state.html#a51c5c6dfe47ffc22a2862e290d2f86c4',1,'mrb_state']]],
-  ['atomic_5fgray_5flist',['atomic_gray_list',['../structmrb__state.html#a4e179f850c8c83a18a47cfc066ed5681',1,'mrb_state']]],
-  ['aux',['aux',['../struct_r_array.html#adad143f4aa9b1d9e46d75e8cff6c5413',1,'RArray::aux()'],['../struct_r_string.html#ad9225f9734d63093106646db1af12755',1,'RString::aux()']]]
+  ['dfree',['dfree',['../structmrb__data__type.html#ab3bcc6452eed9e4ebb914df7c06b2304',1,'mrb_data_type']]]
 ];

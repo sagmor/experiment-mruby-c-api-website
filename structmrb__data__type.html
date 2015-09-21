@@ -70,6 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li><a href="classes.html"><span>Data&#160;Structure&#160;Index</span></a></li>
+      <li><a href="functions.html"><span>Data&#160;Fields</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -91,20 +92,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">mrb_data_type Struct Reference<div class="ingroups"><a class="el" href="group__mruby.html">MRuby C API</a> &raquo; <a class="el" href="group__mruby__data.html">User defined objects.</a></div></div>  </div>
+<div class="title">mrb_data_type Struct Reference<div class="ingroups"><a class="el" href="group__mruby.html">MRuby C API</a> &raquo; <a class="el" href="group__mruby__data.html">Custom C wrapped data.</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Custom data type description.  
+ <a href="structmrb__data__type.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="data_8h_source.html">data.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:a53ba50686e2a28e8e36fb06c9620316f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a53ba50686e2a28e8e36fb06c9620316f"></a>
-const char *&#160;</td><td class="memItemRight" valign="bottom"><b>struct_name</b></td></tr>
+const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmrb__data__type.html#a53ba50686e2a28e8e36fb06c9620316f">struct_name</a></td></tr>
+<tr class="memdesc:a53ba50686e2a28e8e36fb06c9620316f"><td class="mdescLeft">&#160;</td><td class="mdescRight">data type name <br /></td></tr>
 <tr class="separator:a53ba50686e2a28e8e36fb06c9620316f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3bcc6452eed9e4ebb914df7c06b2304"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab3bcc6452eed9e4ebb914df7c06b2304"></a>
-void(*&#160;</td><td class="memItemRight" valign="bottom"><b>dfree</b> )(<a class="el" href="structmrb__state.html">mrb_state</a> *mrb, void *)</td></tr>
+void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmrb__data__type.html#ab3bcc6452eed9e4ebb914df7c06b2304">dfree</a> )(<a class="el" href="structmrb__state.html">mrb_state</a> *mrb, void *)</td></tr>
+<tr class="memdesc:ab3bcc6452eed9e4ebb914df7c06b2304"><td class="mdescLeft">&#160;</td><td class="mdescRight">data type release function pointer <br /></td></tr>
 <tr class="separator:ab3bcc6452eed9e4ebb914df7c06b2304"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Custom data type description. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>mruby/<a class="el" href="data_8h_source.html">data.h</a></li>
 </ul>
 </div><!-- contents -->

@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.9.1"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>MRuby C API: User defined objects.</title>
+        <title>MRuby C API: Custom C wrapped data.</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -88,13 +88,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">User defined objects.<div class="ingroups"><a class="el" href="group__mruby.html">MRuby C API</a></div></div>  </div>
+<div class="title">Custom C wrapped data.<div class="ingroups"><a class="el" href="group__mruby.html">MRuby C API</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Defining Ruby wrappers around native objects.  
+<a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmrb__data__type.html">mrb_data_type</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Custom data type description.  <a href="structmrb__data__type.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_r_data.html">RData</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -136,7 +140,8 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:ga086b6ff821ad7fcf3f950a083a30cc84"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga086b6ff821ad7fcf3f950a083a30cc84"></a>
-typedef <a class="el" href="group__mruby__common.html#ga97677ac769c7bdd7f18d40d387f36553">MRB_BEGIN_DECL</a> struct <a class="el" href="structmrb__data__type.html">mrb_data_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mrb_data_type</b></td></tr>
+typedef <a class="el" href="group__mruby__common.html#ga97677ac769c7bdd7f18d40d387f36553">MRB_BEGIN_DECL</a> struct <a class="el" href="structmrb__data__type.html">mrb_data_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mruby__data.html#ga086b6ff821ad7fcf3f950a083a30cc84">mrb_data_type</a></td></tr>
+<tr class="memdesc:ga086b6ff821ad7fcf3f950a083a30cc84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Custom data type description. <br /></td></tr>
 <tr class="separator:ga086b6ff821ad7fcf3f950a083a30cc84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -155,6 +160,7 @@ Functions</h2></td></tr>
 <tr class="separator:ga4ff8009662fd674fc8686c41eb2a955d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>Defining Ruby wrappers around native objects. </p>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a class="anchor" id="ga4667dea5e5ff93ac556f692f482c0a88"></a>
 <div class="memitem">
