@@ -3,7 +3,7 @@ set -euo pipefail
 IFS=$'\n\t'
 
 # Fetch latest MRuby changes
-git submodule update src
+git submodule update --remote src
 
 # Generate docs
 doxygen Doxyfile
