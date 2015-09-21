@@ -105,9 +105,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef MRUBY_VALUE_H</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define MRUBY_VALUE_H</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;mruby/common.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="common_8h.html">mruby/common.h</a>&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;MRB_BEGIN_DECL</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<a class="code" href="group__mruby__common.html#ga97677ac769c7bdd7f18d40d387f36553">MRB_BEGIN_DECL</a></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">typedef</span> uint32_t mrb_sym;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">typedef</span> uint8_t mrb_bool;</div>
@@ -147,8 +147,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#  define inline __inline</span></div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor"># endif</span></div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor"># include &lt;stdarg.h&gt;</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;MRB_API <span class="keywordtype">int</span> mrb_msvc_vsnprintf(<span class="keywordtype">char</span> *s, <span class="keywordtype">size_t</span> n, <span class="keyword">const</span> <span class="keywordtype">char</span> *format, va_list arg);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;MRB_API <span class="keywordtype">int</span> mrb_msvc_snprintf(<span class="keywordtype">char</span> *s, <span class="keywordtype">size_t</span> n, <span class="keyword">const</span> <span class="keywordtype">char</span> *format, ...);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<a class="code" href="group__mruby__common.html#gab33860705c91ca5736335f59d007845c">MRB_API</a> <span class="keywordtype">int</span> mrb_msvc_vsnprintf(<span class="keywordtype">char</span> *s, <span class="keywordtype">size_t</span> n, <span class="keyword">const</span> <span class="keywordtype">char</span> *format, va_list arg);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<a class="code" href="group__mruby__common.html#gab33860705c91ca5736335f59d007845c">MRB_API</a> <span class="keywordtype">int</span> mrb_msvc_snprintf(<span class="keywordtype">char</span> *s, <span class="keywordtype">size_t</span> n, <span class="keyword">const</span> <span class="keywordtype">char</span> *format, ...);</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor"># define vsnprintf(s, n, format, arg) mrb_msvc_vsnprintf(s, n, format, arg)</span></div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor"># define snprintf(s, n, format, ...) mrb_msvc_snprintf(s, n, format, __VA_ARGS__)</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor"># if _MSC_VER &lt; 1800</span></div>
@@ -221,7 +221,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor">#define mrb_cptr_p(o) (mrb_type(o) == MRB_TT_CPTR)</span></div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="preprocessor">#define mrb_exception_p(o) (mrb_type(o) == MRB_TT_EXCEPTION)</span></div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">#define mrb_test(o)   mrb_bool(o)</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;MRB_API mrb_bool mrb_regexp_p(<span class="keyword">struct</span> <a class="code" href="structmrb__state.html">mrb_state</a>*, <a class="code" href="structmrb__value.html">mrb_value</a>);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<a class="code" href="group__mruby__common.html#gab33860705c91ca5736335f59d007845c">MRB_API</a> mrb_bool mrb_regexp_p(<span class="keyword">struct</span> <a class="code" href="structmrb__state.html">mrb_state</a>*, <a class="code" href="structmrb__value.html">mrb_value</a>);</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="structmrb__value.html">mrb_value</a></div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;mrb_float_value(<span class="keyword">struct</span> <a class="code" href="structmrb__state.html">mrb_state</a> *mrb, mrb_float f)</div>
@@ -328,12 +328,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="preprocessor"># define mrb_ro_data_p(p) FALSE</span></div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;MRB_END_DECL</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<a class="code" href="group__mruby__common.html#ga7e9674ff871a8abbcaf9ba23fa4b72d3">MRB_END_DECL</a></div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* MRUBY_VALUE_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="group__mruby__common_html_gab33860705c91ca5736335f59d007845c"><div class="ttname"><a href="group__mruby__common.html#gab33860705c91ca5736335f59d007845c">MRB_API</a></div><div class="ttdeci">#define MRB_API</div><div class="ttdoc">Declare a public MRuby API function. </div><div class="ttdef"><b>Definition:</b> common.h:63</div></div>
 <div class="ttc" id="struct_r_basic_html"><div class="ttname"><a href="struct_r_basic.html">RBasic</a></div><div class="ttdef"><b>Definition:</b> object.h:38</div></div>
+<div class="ttc" id="group__mruby__common_html_ga97677ac769c7bdd7f18d40d387f36553"><div class="ttname"><a href="group__mruby__common.html#ga97677ac769c7bdd7f18d40d387f36553">MRB_BEGIN_DECL</a></div><div class="ttdeci">#define MRB_BEGIN_DECL</div><div class="ttdoc">Start declarations in C mode. </div><div class="ttdef"><b>Definition:</b> common.h:22</div></div>
+<div class="ttc" id="common_8h_html"><div class="ttname"><a href="common_8h.html">common.h</a></div></div>
+<div class="ttc" id="group__mruby__common_html_ga7e9674ff871a8abbcaf9ba23fa4b72d3"><div class="ttname"><a href="group__mruby__common.html#ga7e9674ff871a8abbcaf9ba23fa4b72d3">MRB_END_DECL</a></div><div class="ttdeci">#define MRB_END_DECL</div><div class="ttdoc">End declarations in C mode. </div><div class="ttdef"><b>Definition:</b> common.h:24</div></div>
 <div class="ttc" id="structmrb__value_html"><div class="ttname"><a href="structmrb__value.html">mrb_value</a></div><div class="ttdef"><b>Definition:</b> boxing_nan.h:35</div></div>
-<div class="ttc" id="structmrb__state_html"><div class="ttname"><a href="structmrb__state.html">mrb_state</a></div><div class="ttdef"><b>Definition:</b> mruby.h:128</div></div>
+<div class="ttc" id="structmrb__state_html"><div class="ttname"><a href="structmrb__state.html">mrb_state</a></div><div class="ttdef"><b>Definition:</b> mruby.h:129</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->

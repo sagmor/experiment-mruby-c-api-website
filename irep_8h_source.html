@@ -105,10 +105,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef MRUBY_IREP_H</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define MRUBY_IREP_H</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;mruby/common.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="common_8h.html">mruby/common.h</a>&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="compile_8h.html">mruby/compile.h</a>&quot;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;MRB_BEGIN_DECL</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<a class="code" href="group__mruby__common.html#ga97677ac769c7bdd7f18d40d387f36553">MRB_BEGIN_DECL</a></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">enum</span> irep_pool_type {</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  IREP_TT_STRING,</div>
@@ -143,23 +143,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#define MRB_ISEQ_NO_FREE 1</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;MRB_API <a class="code" href="structmrb__irep.html">mrb_irep</a> *mrb_add_irep(<a class="code" href="structmrb__state.html">mrb_state</a> *mrb);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;MRB_API <a class="code" href="structmrb__value.html">mrb_value</a> mrb_load_irep(<a class="code" href="structmrb__state.html">mrb_state</a>*, <span class="keyword">const</span> uint8_t*);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;MRB_API <a class="code" href="structmrb__value.html">mrb_value</a> mrb_load_irep_cxt(<a class="code" href="structmrb__state.html">mrb_state</a>*, <span class="keyword">const</span> uint8_t*, <a class="code" href="structmrbc__context.html">mrbc_context</a>*);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<a class="code" href="group__mruby__common.html#gab33860705c91ca5736335f59d007845c">MRB_API</a> <a class="code" href="structmrb__irep.html">mrb_irep</a> *mrb_add_irep(<a class="code" href="structmrb__state.html">mrb_state</a> *mrb);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<a class="code" href="group__mruby__common.html#gab33860705c91ca5736335f59d007845c">MRB_API</a> <a class="code" href="structmrb__value.html">mrb_value</a> mrb_load_irep(<a class="code" href="structmrb__state.html">mrb_state</a>*, <span class="keyword">const</span> uint8_t*);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<a class="code" href="group__mruby__common.html#gab33860705c91ca5736335f59d007845c">MRB_API</a> <a class="code" href="structmrb__value.html">mrb_value</a> mrb_load_irep_cxt(<a class="code" href="structmrb__state.html">mrb_state</a>*, <span class="keyword">const</span> uint8_t*, <a class="code" href="structmrbc__context.html">mrbc_context</a>*);</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keywordtype">void</span> mrb_irep_free(<a class="code" href="structmrb__state.html">mrb_state</a>*, <span class="keyword">struct</span> <a class="code" href="structmrb__irep.html">mrb_irep</a>*);</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keywordtype">void</span> mrb_irep_incref(<a class="code" href="structmrb__state.html">mrb_state</a>*, <span class="keyword">struct</span> <a class="code" href="structmrb__irep.html">mrb_irep</a>*);</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keywordtype">void</span> mrb_irep_decref(<a class="code" href="structmrb__state.html">mrb_state</a>*, <span class="keyword">struct</span> <a class="code" href="structmrb__irep.html">mrb_irep</a>*);</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;MRB_END_DECL</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<a class="code" href="group__mruby__common.html#ga7e9674ff871a8abbcaf9ba23fa4b72d3">MRB_END_DECL</a></div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* MRUBY_IREP_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="group__mruby__common_html_gab33860705c91ca5736335f59d007845c"><div class="ttname"><a href="group__mruby__common.html#gab33860705c91ca5736335f59d007845c">MRB_API</a></div><div class="ttdeci">#define MRB_API</div><div class="ttdoc">Declare a public MRuby API function. </div><div class="ttdef"><b>Definition:</b> common.h:63</div></div>
 <div class="ttc" id="structmrb__locals_html"><div class="ttname"><a href="structmrb__locals.html">mrb_locals</a></div><div class="ttdef"><b>Definition:</b> irep.h:27</div></div>
 <div class="ttc" id="structmrb__irep__debug__info_html"><div class="ttname"><a href="structmrb__irep__debug__info.html">mrb_irep_debug_info</a></div><div class="ttdef"><b>Definition:</b> debug.h:43</div></div>
 <div class="ttc" id="structmrbc__context_html"><div class="ttname"><a href="structmrbc__context.html">mrbc_context</a></div><div class="ttdef"><b>Definition:</b> compile.h:26</div></div>
 <div class="ttc" id="structmrb__irep_html"><div class="ttname"><a href="structmrb__irep.html">mrb_irep</a></div><div class="ttdef"><b>Definition:</b> irep.h:33</div></div>
 <div class="ttc" id="compile_8h_html"><div class="ttname"><a href="compile_8h.html">compile.h</a></div></div>
+<div class="ttc" id="group__mruby__common_html_ga97677ac769c7bdd7f18d40d387f36553"><div class="ttname"><a href="group__mruby__common.html#ga97677ac769c7bdd7f18d40d387f36553">MRB_BEGIN_DECL</a></div><div class="ttdeci">#define MRB_BEGIN_DECL</div><div class="ttdoc">Start declarations in C mode. </div><div class="ttdef"><b>Definition:</b> common.h:22</div></div>
+<div class="ttc" id="common_8h_html"><div class="ttname"><a href="common_8h.html">common.h</a></div></div>
+<div class="ttc" id="group__mruby__common_html_ga7e9674ff871a8abbcaf9ba23fa4b72d3"><div class="ttname"><a href="group__mruby__common.html#ga7e9674ff871a8abbcaf9ba23fa4b72d3">MRB_END_DECL</a></div><div class="ttdeci">#define MRB_END_DECL</div><div class="ttdoc">End declarations in C mode. </div><div class="ttdef"><b>Definition:</b> common.h:24</div></div>
 <div class="ttc" id="structmrb__value_html"><div class="ttname"><a href="structmrb__value.html">mrb_value</a></div><div class="ttdef"><b>Definition:</b> boxing_nan.h:35</div></div>
-<div class="ttc" id="structmrb__state_html"><div class="ttname"><a href="structmrb__state.html">mrb_state</a></div><div class="ttdef"><b>Definition:</b> mruby.h:128</div></div>
+<div class="ttc" id="structmrb__state_html"><div class="ttname"><a href="structmrb__state.html">mrb_state</a></div><div class="ttdef"><b>Definition:</b> mruby.h:129</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->

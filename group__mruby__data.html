@@ -136,22 +136,22 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:ga086b6ff821ad7fcf3f950a083a30cc84"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga086b6ff821ad7fcf3f950a083a30cc84"></a>
-typedef MRB_BEGIN_DECL struct <a class="el" href="structmrb__data__type.html">mrb_data_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mrb_data_type</b></td></tr>
+typedef <a class="el" href="group__mruby__common.html#ga97677ac769c7bdd7f18d40d387f36553">MRB_BEGIN_DECL</a> struct <a class="el" href="structmrb__data__type.html">mrb_data_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mrb_data_type</b></td></tr>
 <tr class="separator:ga086b6ff821ad7fcf3f950a083a30cc84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ga510ceeb9e8fdce133db936293b8100aa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga510ceeb9e8fdce133db936293b8100aa"></a>
-MRB_API struct <a class="el" href="struct_r_data.html">RData</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>mrb_data_object_alloc</b> (<a class="el" href="structmrb__state.html">mrb_state</a> *mrb, struct <a class="el" href="struct_r_class.html">RClass</a> *klass, void *datap, const <a class="el" href="structmrb__data__type.html">mrb_data_type</a> *type)</td></tr>
+<a class="el" href="group__mruby__common.html#gab33860705c91ca5736335f59d007845c">MRB_API</a> struct <a class="el" href="struct_r_data.html">RData</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>mrb_data_object_alloc</b> (<a class="el" href="structmrb__state.html">mrb_state</a> *mrb, struct <a class="el" href="struct_r_class.html">RClass</a> *klass, void *datap, const <a class="el" href="structmrb__data__type.html">mrb_data_type</a> *type)</td></tr>
 <tr class="separator:ga510ceeb9e8fdce133db936293b8100aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga797b77486ad1a7511534f73dd47d7b55"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga797b77486ad1a7511534f73dd47d7b55"></a>
-MRB_API void&#160;</td><td class="memItemRight" valign="bottom"><b>mrb_data_check_type</b> (<a class="el" href="structmrb__state.html">mrb_state</a> *mrb, <a class="el" href="structmrb__value.html">mrb_value</a>, const <a class="el" href="structmrb__data__type.html">mrb_data_type</a> *)</td></tr>
+<a class="el" href="group__mruby__common.html#gab33860705c91ca5736335f59d007845c">MRB_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><b>mrb_data_check_type</b> (<a class="el" href="structmrb__state.html">mrb_state</a> *mrb, <a class="el" href="structmrb__value.html">mrb_value</a>, const <a class="el" href="structmrb__data__type.html">mrb_data_type</a> *)</td></tr>
 <tr class="separator:ga797b77486ad1a7511534f73dd47d7b55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa06bd2af565c91784fd9237b02d17799"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaa06bd2af565c91784fd9237b02d17799"></a>
-MRB_API void *&#160;</td><td class="memItemRight" valign="bottom"><b>mrb_data_get_ptr</b> (<a class="el" href="structmrb__state.html">mrb_state</a> *mrb, <a class="el" href="structmrb__value.html">mrb_value</a>, const <a class="el" href="structmrb__data__type.html">mrb_data_type</a> *)</td></tr>
+<a class="el" href="group__mruby__common.html#gab33860705c91ca5736335f59d007845c">MRB_API</a> void *&#160;</td><td class="memItemRight" valign="bottom"><b>mrb_data_get_ptr</b> (<a class="el" href="structmrb__state.html">mrb_state</a> *mrb, <a class="el" href="structmrb__value.html">mrb_value</a>, const <a class="el" href="structmrb__data__type.html">mrb_data_type</a> *)</td></tr>
 <tr class="separator:gaa06bd2af565c91784fd9237b02d17799"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4ff8009662fd674fc8686c41eb2a955d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga4ff8009662fd674fc8686c41eb2a955d"></a>
-MRB_API void *&#160;</td><td class="memItemRight" valign="bottom"><b>mrb_data_check_get_ptr</b> (<a class="el" href="structmrb__state.html">mrb_state</a> *mrb, <a class="el" href="structmrb__value.html">mrb_value</a>, const <a class="el" href="structmrb__data__type.html">mrb_data_type</a> *)</td></tr>
+<a class="el" href="group__mruby__common.html#gab33860705c91ca5736335f59d007845c">MRB_API</a> void *&#160;</td><td class="memItemRight" valign="bottom"><b>mrb_data_check_get_ptr</b> (<a class="el" href="structmrb__state.html">mrb_state</a> *mrb, <a class="el" href="structmrb__value.html">mrb_value</a>, const <a class="el" href="structmrb__data__type.html">mrb_data_type</a> *)</td></tr>
 <tr class="separator:ga4ff8009662fd674fc8686c41eb2a955d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>

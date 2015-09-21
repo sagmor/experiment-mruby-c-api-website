@@ -107,9 +107,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="mruby_8h.html">mruby.h</a>&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="irep_8h.html">mruby/irep.h</a>&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;mruby/common.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="common_8h.html">mruby/common.h</a>&quot;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;MRB_BEGIN_DECL</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<a class="code" href="group__mruby__common.html#ga97677ac769c7bdd7f18d40d387f36553">MRB_BEGIN_DECL</a></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#define DUMP_DEBUG_INFO 1</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#define DUMP_ENDIAN_BIG 2</span></div>
@@ -122,10 +122,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">int</span> mrb_dump_irep_binary(<a class="code" href="structmrb__state.html">mrb_state</a>*, <a class="code" href="structmrb__irep.html">mrb_irep</a>*, uint8_t, FILE*);</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">int</span> mrb_dump_irep_cfunc(<a class="code" href="structmrb__state.html">mrb_state</a> *mrb, <a class="code" href="structmrb__irep.html">mrb_irep</a>*, uint8_t flags, FILE *f, <span class="keyword">const</span> <span class="keywordtype">char</span> *initname);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<a class="code" href="structmrb__irep.html">mrb_irep</a> *mrb_read_irep_file(<a class="code" href="structmrb__state.html">mrb_state</a>*, FILE*);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;MRB_API <a class="code" href="structmrb__value.html">mrb_value</a> mrb_load_irep_file(<a class="code" href="structmrb__state.html">mrb_state</a>*,FILE*);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;MRB_API <a class="code" href="structmrb__value.html">mrb_value</a> mrb_load_irep_file_cxt(<a class="code" href="structmrb__state.html">mrb_state</a>*, FILE*, <a class="code" href="structmrbc__context.html">mrbc_context</a>*);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<a class="code" href="group__mruby__common.html#gab33860705c91ca5736335f59d007845c">MRB_API</a> <a class="code" href="structmrb__value.html">mrb_value</a> mrb_load_irep_file(<a class="code" href="structmrb__state.html">mrb_state</a>*,FILE*);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<a class="code" href="group__mruby__common.html#gab33860705c91ca5736335f59d007845c">MRB_API</a> <a class="code" href="structmrb__value.html">mrb_value</a> mrb_load_irep_file_cxt(<a class="code" href="structmrb__state.html">mrb_state</a>*, FILE*, <a class="code" href="structmrbc__context.html">mrbc_context</a>*);</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;MRB_API <a class="code" href="structmrb__irep.html">mrb_irep</a> *mrb_read_irep(<a class="code" href="structmrb__state.html">mrb_state</a>*, <span class="keyword">const</span> uint8_t*);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<a class="code" href="group__mruby__common.html#gab33860705c91ca5736335f59d007845c">MRB_API</a> <a class="code" href="structmrb__irep.html">mrb_irep</a> *mrb_read_irep(<a class="code" href="structmrb__state.html">mrb_state</a>*, <span class="keyword">const</span> uint8_t*);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">/* dump/load error code</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment"> *</span></div>
@@ -282,12 +282,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  <span class="keywordflow">return</span> (uint8_t)bin[0];</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;}</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;MRB_END_DECL</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<a class="code" href="group__mruby__common.html#ga7e9674ff871a8abbcaf9ba23fa4b72d3">MRB_END_DECL</a></div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;uint16_t</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;calc_crc_16_ccitt(<span class="keyword">const</span> uint8_t *src, <span class="keywordtype">size_t</span> nbytes, uint16_t crc);</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* MRUBY_DUMP_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="group__mruby__common_html_gab33860705c91ca5736335f59d007845c"><div class="ttname"><a href="group__mruby__common.html#gab33860705c91ca5736335f59d007845c">MRB_API</a></div><div class="ttdeci">#define MRB_API</div><div class="ttdoc">Declare a public MRuby API function. </div><div class="ttdef"><b>Definition:</b> common.h:63</div></div>
 <div class="ttc" id="structrite__section__debug__header_html"><div class="ttname"><a href="structrite__section__debug__header.html">rite_section_debug_header</a></div><div class="ttdef"><b>Definition:</b> dump.h:102</div></div>
 <div class="ttc" id="structrite__binary__header_html"><div class="ttname"><a href="structrite__binary__header.html">rite_binary_header</a></div><div class="ttdef"><b>Definition:</b> dump.h:74</div></div>
 <div class="ttc" id="structmrbc__context_html"><div class="ttname"><a href="structmrbc__context.html">mrbc_context</a></div><div class="ttdef"><b>Definition:</b> compile.h:26</div></div>
@@ -296,11 +297,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="irep_8h_html"><div class="ttname"><a href="irep_8h.html">irep.h</a></div></div>
 <div class="ttc" id="structrite__section__irep__header_html"><div class="ttname"><a href="structrite__section__irep__header.html">rite_section_irep_header</a></div><div class="ttdef"><b>Definition:</b> dump.h:92</div></div>
 <div class="ttc" id="structrite__binary__footer_html"><div class="ttname"><a href="structrite__binary__footer.html">rite_binary_footer</a></div><div class="ttdef"><b>Definition:</b> dump.h:112</div></div>
-<div class="ttc" id="mruby_8h_html"><div class="ttname"><a href="mruby_8h.html">mruby.h</a></div><div class="ttdoc">Main header of mruby C API. </div></div>
+<div class="ttc" id="mruby_8h_html"><div class="ttname"><a href="mruby_8h.html">mruby.h</a></div></div>
+<div class="ttc" id="group__mruby__common_html_ga97677ac769c7bdd7f18d40d387f36553"><div class="ttname"><a href="group__mruby__common.html#ga97677ac769c7bdd7f18d40d387f36553">MRB_BEGIN_DECL</a></div><div class="ttdeci">#define MRB_BEGIN_DECL</div><div class="ttdoc">Start declarations in C mode. </div><div class="ttdef"><b>Definition:</b> common.h:22</div></div>
 <div class="ttc" id="structrite__section__header_html"><div class="ttname"><a href="structrite__section__header.html">rite_section_header</a></div><div class="ttdef"><b>Definition:</b> dump.h:88</div></div>
+<div class="ttc" id="common_8h_html"><div class="ttname"><a href="common_8h.html">common.h</a></div></div>
+<div class="ttc" id="group__mruby__common_html_ga7e9674ff871a8abbcaf9ba23fa4b72d3"><div class="ttname"><a href="group__mruby__common.html#ga7e9674ff871a8abbcaf9ba23fa4b72d3">MRB_END_DECL</a></div><div class="ttdeci">#define MRB_END_DECL</div><div class="ttdoc">End declarations in C mode. </div><div class="ttdef"><b>Definition:</b> common.h:24</div></div>
 <div class="ttc" id="structrite__section__lineno__header_html"><div class="ttname"><a href="structrite__section__lineno__header.html">rite_section_lineno_header</a></div><div class="ttdef"><b>Definition:</b> dump.h:98</div></div>
 <div class="ttc" id="structmrb__value_html"><div class="ttname"><a href="structmrb__value.html">mrb_value</a></div><div class="ttdef"><b>Definition:</b> boxing_nan.h:35</div></div>
-<div class="ttc" id="structmrb__state_html"><div class="ttname"><a href="structmrb__state.html">mrb_state</a></div><div class="ttdef"><b>Definition:</b> mruby.h:128</div></div>
+<div class="ttc" id="structmrb__state_html"><div class="ttname"><a href="structmrb__state.html">mrb_state</a></div><div class="ttdef"><b>Definition:</b> mruby.h:129</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->

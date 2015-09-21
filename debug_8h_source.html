@@ -105,9 +105,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef MRUBY_DEBUG_H</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define MRUBY_DEBUG_H</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;mruby/common.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="common_8h.html">mruby/common.h</a>&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;MRB_BEGIN_DECL</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<a class="code" href="group__mruby__common.html#ga97677ac769c7bdd7f18d40d387f36553">MRB_BEGIN_DECL</a></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> mrb_debug_line_type {</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  mrb_debug_line_ary = 0,</div>
@@ -142,27 +142,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment"> * get line from irep&#39;s debug info and program counter</span></div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment"> * @return returns NULL if not found</span></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;MRB_API <span class="keyword">const</span> <span class="keywordtype">char</span> *mrb_debug_get_filename(<a class="code" href="structmrb__irep.html">mrb_irep</a> *irep, uint32_t pc);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<a class="code" href="group__mruby__common.html#gab33860705c91ca5736335f59d007845c">MRB_API</a> <span class="keyword">const</span> <span class="keywordtype">char</span> *mrb_debug_get_filename(<a class="code" href="structmrb__irep.html">mrb_irep</a> *irep, uint32_t pc);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment"> * get line from irep&#39;s debug info and program counter</span></div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment"> * @return returns -1 if not found</span></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;MRB_API int32_t mrb_debug_get_line(<a class="code" href="structmrb__irep.html">mrb_irep</a> *irep, uint32_t pc);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<a class="code" href="group__mruby__common.html#gab33860705c91ca5736335f59d007845c">MRB_API</a> int32_t mrb_debug_get_line(<a class="code" href="structmrb__irep.html">mrb_irep</a> *irep, uint32_t pc);</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;MRB_API <a class="code" href="structmrb__irep__debug__info__file.html">mrb_irep_debug_info_file</a> *mrb_debug_info_append_file(</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<a class="code" href="group__mruby__common.html#gab33860705c91ca5736335f59d007845c">MRB_API</a> <a class="code" href="structmrb__irep__debug__info__file.html">mrb_irep_debug_info_file</a> *mrb_debug_info_append_file(</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="structmrb__state.html">mrb_state</a> *mrb, <a class="code" href="structmrb__irep.html">mrb_irep</a> *irep,</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    uint32_t start_pos, uint32_t end_pos);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;MRB_API <a class="code" href="structmrb__irep__debug__info.html">mrb_irep_debug_info</a> *mrb_debug_info_alloc(<a class="code" href="structmrb__state.html">mrb_state</a> *mrb, <a class="code" href="structmrb__irep.html">mrb_irep</a> *irep);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;MRB_API <span class="keywordtype">void</span> mrb_debug_info_free(<a class="code" href="structmrb__state.html">mrb_state</a> *mrb, <a class="code" href="structmrb__irep__debug__info.html">mrb_irep_debug_info</a> *d);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<a class="code" href="group__mruby__common.html#gab33860705c91ca5736335f59d007845c">MRB_API</a> <a class="code" href="structmrb__irep__debug__info.html">mrb_irep_debug_info</a> *mrb_debug_info_alloc(<a class="code" href="structmrb__state.html">mrb_state</a> *mrb, <a class="code" href="structmrb__irep.html">mrb_irep</a> *irep);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<a class="code" href="group__mruby__common.html#gab33860705c91ca5736335f59d007845c">MRB_API</a> <span class="keywordtype">void</span> mrb_debug_info_free(<a class="code" href="structmrb__state.html">mrb_state</a> *mrb, <a class="code" href="structmrb__irep__debug__info.html">mrb_irep_debug_info</a> *d);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;MRB_END_DECL</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<a class="code" href="group__mruby__common.html#ga7e9674ff871a8abbcaf9ba23fa4b72d3">MRB_END_DECL</a></div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* MRUBY_DEBUG_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="group__mruby__common_html_gab33860705c91ca5736335f59d007845c"><div class="ttname"><a href="group__mruby__common.html#gab33860705c91ca5736335f59d007845c">MRB_API</a></div><div class="ttdeci">#define MRB_API</div><div class="ttdoc">Declare a public MRuby API function. </div><div class="ttdef"><b>Definition:</b> common.h:63</div></div>
 <div class="ttc" id="structmrb__irep__debug__info_html"><div class="ttname"><a href="structmrb__irep__debug__info.html">mrb_irep_debug_info</a></div><div class="ttdef"><b>Definition:</b> debug.h:43</div></div>
 <div class="ttc" id="structmrb__irep_html"><div class="ttname"><a href="structmrb__irep.html">mrb_irep</a></div><div class="ttdef"><b>Definition:</b> irep.h:33</div></div>
+<div class="ttc" id="group__mruby__common_html_ga97677ac769c7bdd7f18d40d387f36553"><div class="ttname"><a href="group__mruby__common.html#ga97677ac769c7bdd7f18d40d387f36553">MRB_BEGIN_DECL</a></div><div class="ttdeci">#define MRB_BEGIN_DECL</div><div class="ttdoc">Start declarations in C mode. </div><div class="ttdef"><b>Definition:</b> common.h:22</div></div>
+<div class="ttc" id="common_8h_html"><div class="ttname"><a href="common_8h.html">common.h</a></div></div>
+<div class="ttc" id="group__mruby__common_html_ga7e9674ff871a8abbcaf9ba23fa4b72d3"><div class="ttname"><a href="group__mruby__common.html#ga7e9674ff871a8abbcaf9ba23fa4b72d3">MRB_END_DECL</a></div><div class="ttdeci">#define MRB_END_DECL</div><div class="ttdoc">End declarations in C mode. </div><div class="ttdef"><b>Definition:</b> common.h:24</div></div>
 <div class="ttc" id="structmrb__irep__debug__info__file_html"><div class="ttname"><a href="structmrb__irep__debug__info__file.html">mrb_irep_debug_info_file</a></div><div class="ttdef"><b>Definition:</b> debug.h:30</div></div>
-<div class="ttc" id="structmrb__state_html"><div class="ttname"><a href="structmrb__state.html">mrb_state</a></div><div class="ttdef"><b>Definition:</b> mruby.h:128</div></div>
+<div class="ttc" id="structmrb__state_html"><div class="ttname"><a href="structmrb__state.html">mrb_state</a></div><div class="ttdef"><b>Definition:</b> mruby.h:129</div></div>
 <div class="ttc" id="structmrb__irep__debug__info__line_html"><div class="ttname"><a href="structmrb__irep__debug__info__line.html">mrb_irep_debug_info_line</a></div><div class="ttdef"><b>Definition:</b> debug.h:25</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
