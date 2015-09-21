@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['functions_20to_20access_20to_20mruby_20variables_2e',['Functions to access to mruby variables.',['../group__mrb__variable.html',1,'']]]
+  ['debugging_2e',['Debugging.',['../group__mruby__debug.html',1,'']]],
+  ['dumping_20compiled_20mruby_20script_2e',['Dumping compiled mruby script.',['../group__mruby__dump.html',1,'']]]
 ];

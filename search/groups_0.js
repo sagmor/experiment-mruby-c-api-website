@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['compiled_20mruby_20script_2e',['Compiled mruby script.',['../group__mrb__irep.html',1,'']]]
+  ['array_20class',['Array class',['../group__mruby__array.html',1,'']]]
 ];

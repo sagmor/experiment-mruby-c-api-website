@@ -107,64 +107,64 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;mruby/common.h&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;MRB_BEGIN_DECL</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structmrb__data__type.html">   21</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structmrb__data__type.html">mrb_data_type</a> {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> *struct_name;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  void (*dfree)(<a class="code" href="structmrb__state.html">mrb_state</a> *mrb, <span class="keywordtype">void</span>*);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;} <a class="code" href="structmrb__data__type.html">mrb_data_type</a>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="struct_r_data.html">   26</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_r_data.html">RData</a> {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  MRB_OBJECT_HEADER;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">struct </span>iv_tbl *iv;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">const</span> <a class="code" href="structmrb__data__type.html">mrb_data_type</a> *type;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordtype">void</span> *data;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;};</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;MRB_API <span class="keyword">struct </span><a class="code" href="struct_r_data.html">RData</a> *mrb_data_object_alloc(<a class="code" href="structmrb__state.html">mrb_state</a> *mrb, <span class="keyword">struct</span> <a class="code" href="struct_r_class.html">RClass</a>* klass, <span class="keywordtype">void</span> *datap, <span class="keyword">const</span> <a class="code" href="structmrb__data__type.html">mrb_data_type</a> *type);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#define Data_Wrap_Struct(mrb,klass,type,ptr)\</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">  mrb_data_object_alloc(mrb,klass,ptr,type)</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#define Data_Make_Struct(mrb,klass,strct,type,sval,data) do { \</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">  sval = mrb_malloc(mrb, sizeof(strct));                     \</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">  { static const strct zero = { 0 }; *sval = zero; };\</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">  data = Data_Wrap_Struct(mrb,klass,type,sval);\</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">} while (0)</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#define RDATA(obj)         ((struct RData *)(mrb_ptr(obj)))</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#define DATA_PTR(d)        (RDATA(d)-&gt;data)</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#define DATA_TYPE(d)       (RDATA(d)-&gt;type)</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;MRB_API <span class="keywordtype">void</span> mrb_data_check_type(<a class="code" href="structmrb__state.html">mrb_state</a> *mrb, <a class="code" href="structmrb__value.html">mrb_value</a>, <span class="keyword">const</span> <a class="code" href="structmrb__data__type.html">mrb_data_type</a>*);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;MRB_API <span class="keywordtype">void</span> *mrb_data_get_ptr(<a class="code" href="structmrb__state.html">mrb_state</a> *mrb, <a class="code" href="structmrb__value.html">mrb_value</a>, <span class="keyword">const</span> <a class="code" href="structmrb__data__type.html">mrb_data_type</a>*);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#define DATA_GET_PTR(mrb,obj,dtype,type) (type*)mrb_data_get_ptr(mrb,obj,dtype)</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;MRB_API <span class="keywordtype">void</span> *mrb_data_check_get_ptr(<a class="code" href="structmrb__state.html">mrb_state</a> *mrb, <a class="code" href="structmrb__value.html">mrb_value</a>, <span class="keyword">const</span> <a class="code" href="structmrb__data__type.html">mrb_data_type</a>*);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#define DATA_CHECK_GET_PTR(mrb,obj,dtype,type) (type*)mrb_data_check_get_ptr(mrb,obj,dtype)</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">/* obsolete functions and macros */</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#define mrb_data_check_and_get(mrb,obj,dtype) mrb_data_get_ptr(mrb,obj,dtype)</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#define mrb_get_datatype(mrb,val,type) mrb_data_get_ptr(mrb, val, type)</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#define mrb_check_datatype(mrb,val,type) mrb_data_get_ptr(mrb, val, type)</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#define Data_Get_Struct(mrb,obj,type,sval) do {\</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">  *(void**)&amp;sval = mrb_data_get_ptr(mrb, obj, type); \</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">} while (0)</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;mrb_data_init(<a class="code" href="structmrb__value.html">mrb_value</a> v, <span class="keywordtype">void</span> *ptr, <span class="keyword">const</span> <a class="code" href="structmrb__data__type.html">mrb_data_type</a> *type)</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  mrb_assert(mrb_type(v) == MRB_TT_DATA);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  DATA_PTR(v) = ptr;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  DATA_TYPE(v) = type;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;MRB_END_DECL</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* MRUBY_DATA_H */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="struct_r_data_html"><div class="ttname"><a href="struct_r_data.html">RData</a></div><div class="ttdef"><b>Definition:</b> data.h:26</div></div>
-<div class="ttc" id="structmrb__data__type_html"><div class="ttname"><a href="structmrb__data__type.html">mrb_data_type</a></div><div class="ttdef"><b>Definition:</b> data.h:21</div></div>
-<div class="ttc" id="struct_r_class_html"><div class="ttname"><a href="struct_r_class.html">RClass</a></div><div class="ttdef"><b>Definition:</b> class.h:21</div></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;MRB_BEGIN_DECL</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structmrb__data__type.html">   20</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structmrb__data__type.html">mrb_data_type</a> {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> *struct_name;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  void (*dfree)(<a class="code" href="structmrb__state.html">mrb_state</a> *mrb, <span class="keywordtype">void</span>*);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;} <a class="code" href="structmrb__data__type.html">mrb_data_type</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="struct_r_data.html">   25</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_r_data.html">RData</a> {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  MRB_OBJECT_HEADER;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keyword">struct </span>iv_tbl *iv;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">const</span> <a class="code" href="structmrb__data__type.html">mrb_data_type</a> *type;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordtype">void</span> *data;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;MRB_API <span class="keyword">struct </span><a class="code" href="struct_r_data.html">RData</a> *mrb_data_object_alloc(<a class="code" href="structmrb__state.html">mrb_state</a> *mrb, <span class="keyword">struct</span> <a class="code" href="struct_r_class.html">RClass</a>* klass, <span class="keywordtype">void</span> *datap, <span class="keyword">const</span> <a class="code" href="structmrb__data__type.html">mrb_data_type</a> *type);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#define Data_Wrap_Struct(mrb,klass,type,ptr)\</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">  mrb_data_object_alloc(mrb,klass,ptr,type)</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#define Data_Make_Struct(mrb,klass,strct,type,sval,data) do { \</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">  sval = mrb_malloc(mrb, sizeof(strct));                     \</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">  { static const strct zero = { 0 }; *sval = zero; };\</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">  data = Data_Wrap_Struct(mrb,klass,type,sval);\</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">} while (0)</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#define RDATA(obj)         ((struct RData *)(mrb_ptr(obj)))</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#define DATA_PTR(d)        (RDATA(d)-&gt;data)</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#define DATA_TYPE(d)       (RDATA(d)-&gt;type)</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;MRB_API <span class="keywordtype">void</span> mrb_data_check_type(<a class="code" href="structmrb__state.html">mrb_state</a> *mrb, <a class="code" href="structmrb__value.html">mrb_value</a>, <span class="keyword">const</span> <a class="code" href="structmrb__data__type.html">mrb_data_type</a>*);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;MRB_API <span class="keywordtype">void</span> *mrb_data_get_ptr(<a class="code" href="structmrb__state.html">mrb_state</a> *mrb, <a class="code" href="structmrb__value.html">mrb_value</a>, <span class="keyword">const</span> <a class="code" href="structmrb__data__type.html">mrb_data_type</a>*);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#define DATA_GET_PTR(mrb,obj,dtype,type) (type*)mrb_data_get_ptr(mrb,obj,dtype)</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;MRB_API <span class="keywordtype">void</span> *mrb_data_check_get_ptr(<a class="code" href="structmrb__state.html">mrb_state</a> *mrb, <a class="code" href="structmrb__value.html">mrb_value</a>, <span class="keyword">const</span> <a class="code" href="structmrb__data__type.html">mrb_data_type</a>*);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#define DATA_CHECK_GET_PTR(mrb,obj,dtype,type) (type*)mrb_data_check_get_ptr(mrb,obj,dtype)</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">/* obsolete functions and macros */</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#define mrb_data_check_and_get(mrb,obj,dtype) mrb_data_get_ptr(mrb,obj,dtype)</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#define mrb_get_datatype(mrb,val,type) mrb_data_get_ptr(mrb, val, type)</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#define mrb_check_datatype(mrb,val,type) mrb_data_get_ptr(mrb, val, type)</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#define Data_Get_Struct(mrb,obj,type,sval) do {\</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">  *(void**)&amp;sval = mrb_data_get_ptr(mrb, obj, type); \</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">} while (0)</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;mrb_data_init(<a class="code" href="structmrb__value.html">mrb_value</a> v, <span class="keywordtype">void</span> *ptr, <span class="keyword">const</span> <a class="code" href="structmrb__data__type.html">mrb_data_type</a> *type)</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  mrb_assert(mrb_type(v) == MRB_TT_DATA);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  DATA_PTR(v) = ptr;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  DATA_TYPE(v) = type;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;MRB_END_DECL</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* MRUBY_DATA_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="struct_r_data_html"><div class="ttname"><a href="struct_r_data.html">RData</a></div><div class="ttdef"><b>Definition:</b> data.h:25</div></div>
+<div class="ttc" id="structmrb__data__type_html"><div class="ttname"><a href="structmrb__data__type.html">mrb_data_type</a></div><div class="ttdef"><b>Definition:</b> data.h:20</div></div>
+<div class="ttc" id="struct_r_class_html"><div class="ttname"><a href="struct_r_class.html">RClass</a></div><div class="ttdef"><b>Definition:</b> class.h:20</div></div>
 <div class="ttc" id="structmrb__value_html"><div class="ttname"><a href="structmrb__value.html">mrb_value</a></div><div class="ttdef"><b>Definition:</b> boxing_nan.h:35</div></div>
-<div class="ttc" id="structmrb__state_html"><div class="ttname"><a href="structmrb__state.html">mrb_state</a></div><div class="ttdef"><b>Definition:</b> mruby.h:124</div></div>
+<div class="ttc" id="structmrb__state_html"><div class="ttname"><a href="structmrb__state.html">mrb_state</a></div><div class="ttdef"><b>Definition:</b> mruby.h:128</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->
