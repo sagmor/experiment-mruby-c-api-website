@@ -5,29 +5,5 @@ IFS=$'\n\t'
 # Fetch latest MRuby changes
 git submodule update src
 
-base="src/include"
-
-if [[ $# -ne 0 ]]; then
-	files=( $@ )
-else
-	files=( $(ls $base/*.h $base/*/*.h) )
-fi
-
-echo "Processing ${files[@]}"
-# Generate documentation
-for path in ${files[@]} ; do
-	header=${path#$base/}
-	echo " - Now processing $header"
-	headerdoc2html \
-		--allow-javadoc-syntax \
-		--output-directory "docs/$(dirname $header)" \
-		--config-file .headerdoc \
-		--process-everything \
-		--quiet \
-		$path
-done
-
-# Generate master TOC
-gatherheaderdoc \
-	-c .headerdoc \
-	. index.html
+# Generate docs
+doxygen Doxyfile
