@@ -1,0 +1,27 @@
+var class_8h =
+[
+    [ "MRB_CLASS_ORIGIN", "group__mrb__class.html#ga3cf8c757d732742094ae64e0cb99b364", null ],
+    [ "mrb_class_ptr", "group__mrb__class.html#ga7736ec13f8aa3ae57b1b30fce9335406", null ],
+    [ "MRB_FLAG_IS_ORIGIN", "group__mrb__class.html#gab796a3ab145ad700f0af91eb10fb3b3f", null ],
+    [ "MRB_FLAG_IS_PREPENDED", "group__mrb__class.html#ga1dda17389c4f40a2422f108c33c7ff69", null ],
+    [ "MRB_INSTANCE_TT", "group__mrb__class.html#gac9fb6ffe81b956a9d1c435de33a4a7e1", null ],
+    [ "MRB_INSTANCE_TT_MASK", "group__mrb__class.html#ga373a977a8ae2aeb885760ff7fbf17b22", null ],
+    [ "MRB_SET_INSTANCE_TT", "group__mrb__class.html#ga24f2bcd88b16afab3a99bf988fb85781", null ],
+    [ "RCLASS_IV_TBL", "group__mrb__class.html#ga12d370503a20e0d50005e5f7312486b9", null ],
+    [ "RCLASS_M_TBL", "group__mrb__class.html#ga6921d296b321dd126ee80040168d1c71", null ],
+    [ "RCLASS_SUPER", "group__mrb__class.html#gac98d928bb110aed4d66f82a5de1f2f72", null ],
+    [ "mrb_alias_method", "group__mrb__class.html#ga92fd8911a86a1da959eb70f29179b72e", null ],
+    [ "mrb_class_outer_module", "group__mrb__class.html#ga85b25a00a48bdce31cd4ce3af4823539", null ],
+    [ "mrb_class_real", "group__mrb__class.html#ga9960fe3043f6f1615e964db20c72f319", null ],
+    [ "mrb_define_class_id", "group__mrb__class.html#gab53bd6f9da7189baf75217d134b0fe0a", null ],
+    [ "mrb_define_method_id", "group__mrb__class.html#gab25bd3f1148cc6d53a42bbc207e3db08", null ],
+    [ "mrb_define_method_raw", "group__mrb__class.html#ga97440f6f4a26aab16c3cb79a9aadf5dc", null ],
+    [ "mrb_define_module_id", "group__mrb__class.html#ga0b9f2602473f9c385d6eaa8d99aa4411", null ],
+    [ "mrb_gc_free_mt", "group__mrb__class.html#ga79f156d0e6a4338de21aa43d6b9da0d3", null ],
+    [ "mrb_gc_mark_mt", "group__mrb__class.html#gadddf5e6f441ffdac384b9e61555ff606", null ],
+    [ "mrb_gc_mark_mt_size", "group__mrb__class.html#gac176833b0aeeb3ea41adc6a4488e91d7", null ],
+    [ "mrb_method_search", "group__mrb__class.html#ga467064dba9f61c26eac7b6e93afa0f84", null ],
+    [ "mrb_method_search_vm", "group__mrb__class.html#gacdd9f04a400b9bc5bbebeb2fd8175cd9", null ],
+    [ "mrb_vm_define_class", "group__mrb__class.html#ga88ba39af7f98e46fb48fdbb8343ce13e", null ],
+    [ "mrb_vm_define_module", "group__mrb__class.html#gae8769feaa2a865d12b19a36bc4ed3cfa", null ]
+];
